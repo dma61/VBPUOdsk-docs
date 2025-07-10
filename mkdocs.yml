@@ -1,0 +1,56 @@
+# ------------------
+# PROJECT INFORMATIE
+# ------------------
+site_name: VB-PUO Standard Documentation
+site_description: 'Functional and technical documentation for the data exchange standard between Asset Management and Pension Administration.'
+site_author: 'SIVI'
+site_url: 'https://dma61.github.io/VBPUOdsk-docs/' # Belangrijk voor correcte links
+
+# ------------------
+# THEMA & UITERLIJK
+# ------------------
+theme:
+  name: material
+  # Logo en favicon (optioneel)
+  # logo: assets/logo.svg
+  # favicon: assets/favicon.png
+  palette:
+    # Kleurenpalet voor licht/donker modus
+    - scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tooltips
+
+# ------------------
+# NAVIGATIESTRUCTUUR
+# ------------------
+# Hier definieert u de structuur van de handleiding.
+# Voeg hier bestanden toe naarmate u ze aanmaakt in de 'docs' map.
+nav:
+  - 'Home': 'index.md'
+  - 'Chapter 1: Introduction': 'chapter-1-introduction.md'
+  - 'Chapter 2: Principles': 'chapter-2-principles.md'
+  # - 'Chapter 3: SPR Processes': 'chapter-3-spr-processes.md' # Voorbeeld voor toekomstige pagina's
+  # - 'Chapter 4: FPR Processes': 'chapter-4-fpr-processes.md'
+  # - 'Chapter 5: Data Standard Setup': 'chapter-5-data-standard-setup.md'
+  # - 'Chapter 6: Functional Specifications':
+  #   - 'Introduction': 'chapter-6-specs/index.md'
+  #   - 'Attributes - party.sender': 'chapter-6-specs/attributes-party-sender.md'
+  #   - ...
+  # - 'Chapter 7: Technical Specifications': 'chapter-7-tech-specs.md'
