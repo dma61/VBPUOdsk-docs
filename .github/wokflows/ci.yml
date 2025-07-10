@@ -1,24 +1,41 @@
+# Naam van de workflow, zichtbaar in het "Actions" tabblad op GitHub
 name: Publish Documentation to GitHub Pages
 
+# Trigger: Wanneer moet deze workflow draaien?
 on:
+  # Draai de workflow bij elke push naar de 'main' branch
   push:
     branches:
-      - main  # Of 'master', afhankelijk van je default branch
+      - main
 
+# Permissies: Geef de workflow toestemming om naar de repo te schrijven
+# Dit is nodig voor de 'gh-deploy' stap om de 'gh-pages' branch te kunnen aanmaken/updaten.
+permissions:
+  contents: write
+
+# Jobs: De taken die uitgevoerd moeten worden
 jobs:
+  # We definiëren één job genaamd 'deploy'
   deploy:
+    # Draai deze job op de laatste versie van Ubuntu (een virtuele Linux machine)
     runs-on: ubuntu-latest
+    
+    # Stappen: De opeenvolgende acties binnen de 'deploy' job
     steps:
+      # Stap 1: Checkout de code van de repository naar de virtuele machine
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Stap 2: Installeer Python, want MkDocs is een Python tool
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
+      # Stap 3: Installeer de benodigde Python packages (MkDocs zelf en het Material thema)
       - name: Install dependencies
         run: pip install mkdocs-material
 
+      # Stap 4: Draai het MkDocs commando om de site te bouwen en te deployen naar de 'gh-pages' branch
       - name: Deploy documentation
         run: mkdocs gh-deploy --force --clean
