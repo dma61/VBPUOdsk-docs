@@ -1,60 +1,30 @@
-# ------------------
-# PROJECT INFORMATIE
-# ------------------
-# Deze informatie wordt gebruikt in de site metadata en header.
 site_name: VB-PUO Standard Documentation
-site_description: 'Functional and technical documentation for the data exchange standard between Asset Management and Pension Administration.'
-site_author: 'SIVI'
-site_url: 'https://dma61.github.io/VBPUOdsk-docs/'
-
-# ------------------
-# NAVIGATIESTRUCTUUR
-# ------------------
-# Dit bepaalt de volgorde en hiërarchie van de items in de navigatiebalk.
-# De tekst voor de dubbele punt is wat de gebruiker ziet, de tekst erna is de bestandsnaam.
-nav:
-  - 'Home': 'index.md'
-  - 'Chapter 1: Introduction': 'chapter-1-introduction.md'
-  - 'Chapter 2: Principles': 'chapter-2-principles.md'
-  - 'Chapter 3: SPR Processes': 'chapter-3-spr-processes.md'
-  - 'Chapter 4: FPR Processes': 'chapter-4-fpr-processes.md'
-  - 'Chapter 5: Data Standard Setup': 'chapter-5-data-standard-setup.md'
-  - 'Chapter 6: Functional Specifications': 'chapter-6-functional-specs.md'
-  - 'Chapter 7: Technical Specifications': 'chapter-7-tech-specs.md'
-
-# ------------------
-# THEMA & UITERLIJK
-# ------------------
-# Hier configureren we het 'Material for MkDocs' thema.
+site_description: Functional and technical documentation for the data exchange standard.
+site_author: SIVI
+site_url: https://dma61.github.io/VBPUOdsk-docs/
 theme:
   name: material
-  
-  # Logo en favicon (optioneel, u kunt dit later toevoegen)
-  # Maak een 'docs/assets' map aan en plaats de bestanden daar.
-  # logo: assets/logo.svg
-  # favicon: assets/favicon.png
-
-  # Kleurenpalet, inclusief een knop om te wisselen tussen licht en donker.
-  palette:
-    - scheme: default  # Lichte modus
-      primary: 'indigo'
-      accent: 'indigo'
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate    # Donkere modus
-      primary: 'indigo'
-      accent: 'indigo'
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-        
-  # Extra functionaliteit van het thema.
   features:
-    - navigation.tabs      # Toont de top-level navigatie als tabs.
-    - navigation.top       # Voegt een 'Terug naar boven' knop toe.
-    - navigation.instant   # Laadt pagina's sneller zonder volledige herlading.
-    - search.suggest       # Geeft zoeksuggesties terwijl u typt.
-    - search.highlight     # Markeer zoektermen op de resultatenpagina.
-    - content.code.copy    # Voegt een kopieer-knop toe aan codeblokken.
-    - content.tooltips     # Activeert tooltips.
+  - navigation.tabs
+  - navigation.top
+  - search.suggest
+  - content.code.copy
+  - navigation.instant
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+nav:
+- Home: index.md
+- 'Chapter 1: Introduction': chapter-1-introduction.md
+- 'Chapter 2: Principles': chapter-2-principles.md
+- 'Chapter 3: SPR Processes': chapter-3-spr-processes.md
+- 'Chapter 4: FPR Processes': chapter-4-fpr-processes.md
+- 'Chapter 5: Data Standard Setup': chapter-5-data-standard-setup.md
+- 'Chapter 6: Functional Specifications': chapter-6-functional-specs.md
+- 'Chapter 7: Technical Specifications': chapter-7-tech-specs.md

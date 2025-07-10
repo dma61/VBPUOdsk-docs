@@ -1,9 +1,8 @@
 # Chapter 2: Principles
-
             This chapter discusses the most important principles for the development, setup, and governance of the standard.
 
             ## 2.1 Reason
-            The Future Pensions Act (Wtp) intensifies the need for standardized information exchange. A new data stream is required for the solidarity premium scheme (SPR). For the flexible premium scheme (FPR), needs are similar to current DC schemes but will align with the SPR during the collective payout phase.
+            The Future Pensions Act (Wtp) intensifies the need for standardized information exchange between pension administrators and asset managers. For the solidarity premium scheme (SPR), a new data stream is required. For the flexible premium scheme (FPR), the needs are similar to current DC schemes but will align with the SPR during the collective payout phase.
 
             ## 2.2 Out of Scope
             The standard does not cover:
@@ -32,12 +31,15 @@
             *   **Costs**: Assumed to build upon existing processes (e.g., J402 DNB annual statement).
             *   **Language**: The standard is in Dutch, but variable names are in English for international understanding.
 
-            ## 2.5-2.8 Technology, Governance, and Transport
+            ## 2.5 - 2.8 Technology, Governance, and Transport
             The technical implementation uses **RESTful Web services** and **JSON**, conforming to **AFD 2.0**. Message processing is asynchronous. Security is handled via **mutual-TLS** and digital signatures.
 
             **Handling Large Messages (Chunking)**: A chunking mechanism is provided for messages over ~4 MB.
-            **Transport**: The standard supports a **RESTful API/webservice**.
-            **Governance and Releases**: The standard follows an annual release cycle with continuous development on GitHub. The two preceding annual releases remain supported.
+
+            **Transport**: The standard supports a **RESTful API/webservice** based on the SIVI-API framework.
+
+            **Governance and Releases**: The standard follows an annual release cycle (prerelease in June, final in September), with continuous development on GitHub. The two preceding annual releases remain supported.
+
 
 ---
 <div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 1: Introduction](chapter-1-introduction.md)</div><div>[Next: Chapter 3: SPR Processes>](chapter-3-spr-processes.md)</div></div>
