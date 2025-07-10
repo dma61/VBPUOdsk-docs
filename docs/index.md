@@ -17,4 +17,4 @@ This site provides functional and technical details needed for implementation. U
 
 
 ---
-<div style='display: flex; justify-content: space-between;'><div></div><div>[Next: Chapter 1: Introduction>](chapter-1-introduction.md)</div></div>
+[Next: Chapter 1: Introduction>](chapter-1-introduction.md)
