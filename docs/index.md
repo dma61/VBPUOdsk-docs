@@ -14,7 +14,3 @@ This site provides functional and technical details needed for implementation. U
 ## External Links
 *   [Technical Repository (JSON Schemas)](https://github.com/dma61/VBPUOdsk)
 *   [Official SIVI Project Page](https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/)
-
-
----
-[Next: Chapter 1: Introduction>](chapter-1-introduction.md)
