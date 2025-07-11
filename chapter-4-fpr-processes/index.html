@@ -1,0 +1,866 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI">
+      
+      
+        <link rel="canonical" href="https://dma61.github.io/VBPUOdsk-docs/chapter-4-fpr-processes/">
+      
+      
+        <link rel="prev" href="../chapter-3-spr-processes/">
+      
+      
+        <link rel="next" href="../chapter-5-data-standard-setup/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Chapter 4: FPR Processes - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-processes-information-flows-flexible-premium-scheme-fpr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 4: FPR Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-1-introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 1: Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-2-principles/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 2: Principles
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-3-spr-processes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 3: SPR Processes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 4: FPR Processes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 5: Data Standard Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-6-functional-specs/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 6: Functional Specifications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../chapter-7-tech-specs/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Chapter 7: Technical Specifications
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: SPR Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-model-1-simpler-direct-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Model 1: Simpler, Direct Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-model-2-more-extensive-layered-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Model 2: More Extensive, Layered Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-information-flows-fpr-model-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Information Flows FPR - Model 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-information-flows-fpr-model-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Information Flows FPR - Model 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-feedback-message-resending" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Feedback Message (&amp; Resending)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Data Standard Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Functional Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7: Technical Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-model-1-simpler-direct-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Model 1: Simpler, Direct Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-model-2-more-extensive-layered-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Model 2: More Extensive, Layered Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-information-flows-fpr-model-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Information Flows FPR - Model 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-information-flows-fpr-model-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Information Flows FPR - Model 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-feedback-message-resending" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Feedback Message (&amp; Resending)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-processes-information-flows-flexible-premium-scheme-fpr">Chapter 4: Processes &amp; Information Flows – Flexible Premium Scheme (FPR)</h1>
+<h2 id="41-introduction">4.1 Introduction</h2>
+<p>This chapter describes the necessary information exchange for the Flexible Premium Scheme (FPR). Two main models for ordering investments are distinguished:
+1.  <strong>Model 1:</strong> A simpler, direct order model.
+2.  <strong>Model 2:</strong> A more extensive, layered order model.</p>
+<h2 id="42-model-1-simpler-direct-order-model">4.2 Model 1: Simpler, Direct Order Model</h2>
+<p>In this model, investments consist of directly tradable funds (e.g., via platforms like AllFunds). The PUO translates participant-level mutations into aggregated orders for these funds. The fiduciary manager typically supports the design of the lifecycles. A <strong>cohort pool</strong> is an administrative grouping of participants with the same investment allocation, often based on age, status (active, deferred), and risk profile. Rebalancing occurs based on age (moving to a new cohort) or due to market movements causing deviations from target weights.</p>
+<h2 id="43-model-2-more-extensive-layered-order-model">4.3 Model 2: More Extensive, Layered Order Model</h2>
+<p>This model accommodates less liquid or non-platform-tradable assets and mandates. It has a layered structure: participants invest in <strong>cohort pools</strong>, which in turn invest in <strong>investment pools</strong> (e.g., equities, fixed income). These investment pools hold the underlying assets. This structure allows for robust and traceable allocation, as units are issued for each pool. The process involves multiple roles that can be combined or separated: the PUO, a pool administrator, the fiduciary manager, and the investment administrator/custodian.</p>
+<h2 id="44-information-flows-fpr-model-1">4.4 Information Flows FPR - Model 1</h2>
+<p>This model involves direct orders from the PUO to brokers, transfer agents, or order desks.
+*   <strong>Message 5. Order Instruction (00541)</strong>: The PUO sends an order instruction with the minimal required data to execute a trade or switch in a specific investment fund.
+*   <strong>Message 6. Order Confirmation (00542)</strong>: The executing party sends back a confirmation of the executed order.</p>
+<h2 id="45-information-flows-fpr-model-2">4.5 Information Flows FPR - Model 2</h2>
+<p>This model has a more complex, multi-step process flow. The core idea is that the PUO provides mutation data, which the pool administrator uses to calculate necessary transactions. These are instructed to the fiduciary manager, executed, and reconciled, leading to new unit values.
+The key messages in this flow are:
+*   <strong>Message 7. Balance Adjustments (00551)</strong>: PUO sends aggregated mutations (purchases, sales, switches) per cohort pool to the pool administrator.
+*   <strong>Message 8. Reconciliation Information (00552a)</strong> &amp; <strong>9. PUO Reconciliation Information (00552b)</strong>: Used to reconcile positions between the pool administrator, fiduciary manager, and the investment administrator. Message 9 is for the variant where the PUO acts as the cohort pool administrator.
+*   <strong>Message 10. Control Information Investment Pools (00553)</strong>: The pool administrator calculates the required cash transactions per investment pool and instructs the fiduciary manager.
+*   <strong>Message 11. Rebalancing Information (00554)</strong>: The pool administrator sends month-end rebalancing transactions to the fiduciary manager.
+*   <strong>Message 12. Value Information Cohort Pool (00555a)</strong> &amp; <strong>13. Value Information Investment Pool (00555b)</strong>: The final unit/participation values are calculated and distributed back to the PUO and fiduciary manager.
+*   <strong>Message 14. Payment Information (00556)</strong>: The pool administrator sends payment instructions for withdrawals to the fiduciary manager.</p>
+<h2 id="46-feedback-message-resending">4.6 Feedback Message (&amp; Resending)</h2>
+<p>It is essential for the sender to know if a message was received and processed correctly. The feedback message is used for both asynchronous and synchronous processing to provide status (Accepted/Rejected) and detailed error information.
+The process for corrections is strict: <strong>"Once accepted messages are not unilaterally corrected."</strong> If a correction is needed after acceptance, the sender must contact the receiver to agree on the procedure.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="../chapter-3-spr-processes/">&lt; Previous: Chapter 3: SPR Processes</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="../chapter-5-data-standard-setup/">Next: Chapter 5: Data Standard Setup &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
