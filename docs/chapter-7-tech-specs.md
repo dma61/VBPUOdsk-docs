@@ -31,6 +31,6 @@ This protocol describes how to split (sender) and process (receiver) large messa
 *   **Splitting (Sender)**: The sender creates multiple chunks by dividing the data from large, repeating arrays. Each chunk gets a `chunkMeta` block with metadata.
 *   **Reconstruction (Receiver)**: The receiver uses the shared `messageId` to collect chunks and reconstructs the original message using `chunkFragmentPaths`.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 6: Functional Specifications](chapter-6-functional-specs.md)</div><div></div></div>
+| <div align="left">[< Previous: Chapter 6: Functional Specifications](chapter-6-functional-specs.md)</div> | <div align="right"></div> |
+|:---|---:|

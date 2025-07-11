@@ -43,6 +43,6 @@ The standard supports a **RESTful API/webservice**. Other solutions are consider
 ### Governance and Releases
 The standard is owned by the Pension Federation and managed by SIVI. It follows an annual release cycle (prerelease in June, final in September), with continuous development on GitHub. The two preceding annual releases remain supported.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 1: Introduction](chapter-1-introduction.md)</div><div>[Next: Chapter 3: SPR Processes>](chapter-3-spr-processes.md)</div></div>
+| <div align="left">[< Previous: Chapter 1: Introduction](chapter-1-introduction.md)</div> | <div align="right">[Next: Chapter 3: SPR Processes >](chapter-3-spr-processes.md)</div> |
+|:---|---:|

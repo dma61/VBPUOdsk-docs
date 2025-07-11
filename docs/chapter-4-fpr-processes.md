@@ -30,6 +30,6 @@ The key messages in this flow are:
 It is essential for the sender to know if a message was received and processed correctly. The feedback message is used for both asynchronous and synchronous processing to provide status (Accepted/Rejected) and detailed error information.
 The process for corrections is strict: **"Once accepted messages are not unilaterally corrected."** If a correction is needed after acceptance, the sender must contact the receiver to agree on the procedure.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 3: SPR Processes](chapter-3-spr-processes.md)</div><div>[Next: Chapter 5: Data Standard Setup>](chapter-5-data-standard-setup.md)</div></div>
+| <div align="left">[< Previous: Chapter 3: SPR Processes](chapter-3-spr-processes.md)</div> | <div align="right">[Next: Chapter 5: Data Standard Setup >](chapter-5-data-standard-setup.md)</div> |
+|:---|---:|

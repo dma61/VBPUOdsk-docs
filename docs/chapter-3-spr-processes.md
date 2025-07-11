@@ -14,6 +14,6 @@ The information flow from the PUO to the fiduciary/investment administrator (str
 The information flow from the investment administrator to the PUO (stream 2) consists of:
 *   **Message 4. Return Information (2)**: The PUO receives the start and end values (`startAmount`, `endAmount`) and the return (`returnPercentage`) for the period, per portfolio. This information is crucial for allocating returns to participants. Depending on whether the scheme uses direct (actual) or indirect (theoretical) protection returns, the message will contain either the total return or a breakdown by protection and excess return portfolios.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 2: Principles](chapter-2-principles.md)</div><div>[Next: Chapter 4: FPR Processes>](chapter-4-fpr-processes.md)</div></div>
+| <div align="left">[< Previous: Chapter 2: Principles](chapter-2-principles.md)</div> | <div align="right">[Next: Chapter 4: FPR Processes >](chapter-4-fpr-processes.md)</div> |
+|:---|---:|

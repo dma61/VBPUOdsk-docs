@@ -15,6 +15,6 @@ The hierarchical structure for each of the 14 functional messages and the feedba
 ## 6.5 Cross-Reference Attributes & Messages
 A matrix showing which attributes are mandatory (V), optional (O), or not applicable within each message. This section will link to a structured, readable view of the cross-reference table.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 5: Data Standard Setup](chapter-5-data-standard-setup.md)</div><div>[Next: Chapter 7: Technical Specifications>](chapter-7-tech-specs.md)</div></div>
+| <div align="left">[< Previous: Chapter 5: Data Standard Setup](chapter-5-data-standard-setup.md)</div> | <div align="right">[Next: Chapter 7: Technical Specifications >](chapter-7-tech-specs.md)</div> |
+|:---|---:|

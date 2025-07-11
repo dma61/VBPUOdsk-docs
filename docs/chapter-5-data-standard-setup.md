@@ -13,6 +13,6 @@ The process starts with describing the business processes (as done in Chapters 3
 ## 5.6 Relationship with SIVI AFS
 This standard is built using components from the **SIVI All Finance Standard (AFD 2.0)**. AFD 2.0 is an English-language standard that provides building blocks (entities, attributes, code lists) for the financial sector. Where necessary, this standard proposes new elements to be added to AFD 2.0. The use of JSON is a core principle of AFD 2.0.
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Chapter 4: FPR Processes](chapter-4-fpr-processes.md)</div><div>[Next: Chapter 6: Functional Specifications>](chapter-6-functional-specs.md)</div></div>
+| <div align="left">[< Previous: Chapter 4: FPR Processes](chapter-4-fpr-processes.md)</div> | <div align="right">[Next: Chapter 6: Functional Specifications >](chapter-6-functional-specs.md)</div> |
+|:---|---:|

@@ -38,6 +38,6 @@ The complete Translation Table is in the appendices. Links in this document are 
 ### 1.6 Source of image on title page
 [https://www.flaticon.com/free-icon/data-exchange_4995192](https://www.flaticon.com/free-icon/data-exchange_4995192)
 
-
 ---
-<div style='display: flex; justify-content: space-between;'><div>[< Previous: Home](index.md)</div><div>[Next: Chapter 2: Principles>](chapter-2-principles.md)</div></div>
+| <div align="left">[< Previous: Home](index.md)</div> | <div align="right">[Next: Chapter 2: Principles >](chapter-2-principles.md)</div> |
+|:---|---:|
