@@ -4,38 +4,41 @@ In this introduction, we discuss the context, purpose, and target audience of th
 ## 1.1 Context
 ### Final Report
 In early September 2023, the final report "Research Results: Standard for data exchange between pension administration & asset management parties" was published.
-
-With the introduction/implementation of the Future Pensions Act (Wtp), a tighter alignment between fund assets and the collective administration of personal pension assets is necessary. This increases the frequency of the required information exchange. In current practice, pension administrators and asset management parties arrange information exchange among themselves. Due to the intensification of information exchange, standardization of information exchange is desired. The aforementioned final report describes the functional data required for the exchange, the information flows, and the participant communication dependent on them. The data and information flows have been elaborated for both the solidarity premium scheme and the flexible premium scheme.
-
-The final report is based on contributions from various organizations, including APG, AZL, Caceis, Capgemini, H&C, Van Lanschot Kempen IM, MN, Pensioenfederatie, SIVI, and TKP. Through a consultation round, various other implementing organizations, fiduciaries, custodians, and pension funds were involved. This consultation round has been completed, and the input received has been processed.
+With the introduction/implementation of the Future Pensions Act (Wtp), a tighter alignment between fund assets and the collective administration of personal pension assets is necessary.
 
 ### Follow-up & Governance
-SIVI is translating the final report into a data standard based on AFD 2.0 from SVI AFS. This data standard is accompanied by a base message from which we derive 14 messages. The messages are exchanged via REST-API endpoints. In addition to the 14 content-specific messages, a Feedback_Message is available for potential feedback on the 14 messages.
-
-The standard represents a shared interest of pension administration and asset management, for which both governance and content management must be established. After the introduction of the standard, new requirements will arise that may or may not need to be included. It has been agreed that:
-*   Ownership of the standard rests with the Pension Federation.
-*   Content and governance management around the standard will be formally structured.
-*   The standard will be managed by the SIVI management organization.
-*   An advisory board will support the management and any further development.
+SIVI is translating the final report into a data standard based on AFD 2.0. The standard is owned by the Pension Federation and managed by SIVI.
 
 ## 1.2 Purpose
-This manual provides an explanation of the standard for data exchange between asset management and pension administration. The manual offers:
-*   Analysts and developers a guide to (facilitate) implementing the standard.
-*   Stakeholders insight into the management of the standard.
+This manual provides analysts and developers with a guide to implement the standard and gives stakeholders insight into its management.
 
 ## 1.3 Target Audience
-This manual is intended for consultants, analysts, and developers involved in the implementation of the standard for data exchange between asset management and pension administration parties.
+This manual is for consultants, analysts, and developers involved in implementing the data exchange standard.
 
-## 1.4 Setup & 1.5 Links
+## 1.4 Setup
+This section outlines the structure of the manual.
+
+| Chapter | Content |
+| :------ | :------ |
+| **1**   | **Introduction**<br>In this introduction, we discuss the context, purpose, and target audience of this manual. We also present (in considerable detail) the setup of the manual. |
+| **2**   | **Principles**<br>In this chapter, we discuss the most important principles for the development, setup, and governance of the standard. |
+| **3**   | **Processes & information flows – Solidarity Premium Scheme**<br>The processes & information flows are extensively described in the original report. |
+| **4**   | **Processes & information flows – Flexible Premium Scheme**<br>The processes & information flows are extensively described in the original report. |
+| **5**   | **Approach/setup data standard**<br>In this chapter, we explain how we arrive at the specifications of the messages and the relationship with SIVI AFS. |
+| **6**   | **Functional specifications**<br>This chapter contains the functional specifications, including the Data Dictionary and message structures. |
+| **7**   | **Technical specifications**<br>The technical data specifications based on AFD 2.0 are explained in this chapter. |
+| **8**   | **Appendices**<br>In the appendices, you will find glossaries and other reference material. |
+
 ### 1.4.1 Attribute Name Notation
-In the descriptive texts of this manual, you will encounter a dual naming convention for data fields, in the following format:
+In the descriptive texts of this manual, you will encounter a dual naming convention for data fields:
 `technicalName` (Functional Name)
-*   **`technicalName`**: This is the definitive, technical attribute name according to the SIVI AFD 2.0 standard, displayed in a monospace font. This is the name that must actually be used in the JSON messages.
-*   **(Functional Name)**: This is the original, functional name as it was used during the requirements and design phase. This name is temporarily included to enhance recognition during the transition. It will be removed in a future release.
+*   **`technicalName`**: The definitive, technical attribute name according to the SIVI AFD 2.0 standard.
+*   **(Functional Name)**: The original, functional name used during the design phase.
 
-The complete Translation Table is in the appendices. Links in this document are colored blue.
+## 1.5 Links
+Links in this document are colored blue.
 
-### 1.6 Source of image on title page
+## 1.6 Source of image on title page
 [https://www.flaticon.com/free-icon/data-exchange_4995192](https://www.flaticon.com/free-icon/data-exchange_4995192)
 
 ---
