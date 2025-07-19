@@ -5,7 +5,9 @@ This chapter discusses the most important principles for the development, setup,
 With the introduction of the Wtp, information needs will change and the frequency of exchange will increase. For the solidarity premium scheme (SPR), an entirely new data stream is required for both accumulation and payout phases. For the flexible premium scheme (FPR), the information need will largely align with current 'defined contribution' schemes.
 
 ## 2.2 Out of Scope
+
 The following aspects are out of scope:
+
 *   **Contractual agreements** regarding the overall asset management process.
 *   **Existing processes** that do not fundamentally change, such as reconciliation between the fiduciary manager and the investment administrator.
 *   **Information used by only one party** in the chain.
