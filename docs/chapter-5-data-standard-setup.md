@@ -1,6 +1,7 @@
 # Chapter 5: Approach/Setup of the Data Standard
 
 This chapter explains how the message specifications are derived. The steps to arrive at the functional specifications are:
+
 1.  **Create descriptions of the processes and information flows.**
 2.  **Create a list of entities and associated attributes.**
 3.  **Determine the basic structure of the messages.**
