@@ -21,6 +21,7 @@ The roles of the various parties in the scheme are further explained below:
 
 ## 3.2 SPR Information Flows
 The information flows for SPR products between the fiduciary manager, the investment administrator, and the pension administration organization are:
+
 *   Information from the PUO about assets, cash inflow and outflow, and projected cash flows to be hedged (optionally per cohort) to enable the fiduciary manager and investment administrator to fulfill their roles.
 *   Information from the investment administrator or fiduciary manager about returns that the pension administrator needs to correctly allocate to participants.
 
