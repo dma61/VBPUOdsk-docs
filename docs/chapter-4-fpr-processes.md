@@ -1,7 +1,3 @@
-{
-        'filename': 'chapter-4-fpr-processes.md',
-        'title': 'Chapter 4: FPR Processes',
-        'content': """
 # Chapter 4: Processes & Information Flows – Flexible Premium Scheme (FPR)
 
 ## 4.1 Introduction
