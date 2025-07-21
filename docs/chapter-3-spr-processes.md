@@ -81,3 +81,8 @@ If the SPR is designed with **indirect (theoretical) protection returns**, infor
 If the SPR bases the protection return on the **direct (actual) achieved return**, the PUO must have a breakdown of the achieved return. The investment administrator must then provide the return for sub-portfolios, at least distinguishing between the protection portfolio and the excess return portfolio.
 
 _For the functional elaboration into a message, see chapter 6, specifically Message Structure 4. Return Information (00002). A graphical overview of the message structure can be found on GitHub, but the JSON schemas and this manual are leading.
+
+---
+| <div align="left">[< Previous: Chapter 2: Principles](chapter-2-principles.md)</div> | <div align="right">[Next: Chapter 4: FPR Processes >](chapter-4-fpr-processes.md)</div> |
+|:---|---:|
+
