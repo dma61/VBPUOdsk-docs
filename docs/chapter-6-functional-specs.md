@@ -74,6 +74,7 @@ The tables in this section detail the attributes per entity/entity type combinat
 Data type descriptions are available in the SIVI All-Finance Standard manual.
 
 **Interpretation rules:**
+
 *   **`string`:** Max length is specified unless a code list applies (then 'length' is empty).
 *   **`decimal`:** Defaults to 2 decimal places. Deviations are specified in the data type column.
 
@@ -367,6 +368,7 @@ Below (in Figure 12) is an overview of the messages and the roles (sender/receiv
 | Feedback Message*** | Beide | | | | | |
 
 **Legend for the roles:**
+
 *   **PUO:** Pension Administration Organizations
 *   **FM:** Fiduciary Managers
 *   **BA:** Investment Administrators / Asset Service Provider
