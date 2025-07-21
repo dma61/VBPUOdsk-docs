@@ -6,12 +6,14 @@ This section describes the necessary information exchange between the involved p
 Figure 1, which can be found in the official Dutch manual available for download at [sivi.org](https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/), schematically illustrates the information exchange between the involved parties. The investment administrator provides the pension administration organization with information independently of the fiduciary manager and can also perform a reviewing role. If this is not chosen and the fiduciary also conducts the leading investment administration, information flow 2 will run from the fiduciary manager to the pension administration organization.
 
 **Legend (information flows/messages):**
+
 *   1a - Assets per cohort
 *   1b - Cash flow (contributions and withdrawals)
 *   1c - Pension projections / projected cash flows
 *   2 - Returns and assets
 
 The roles of the various parties in the scheme are further explained below:
+
 *   The **Pension Administration Organization (PUO)** is responsible for allocating returns to participants' personal pension assets (possibly via a collective payout phase), the solidarity reserve, any compensation deposit, and other possible reserves, in accordance with the allocation rules set by the pension administrator. Based on these personal pension assets, benefits are determined and projected in line with the pension administrator's principles. The pension assets and projected benefits are delivered per cohort to the fiduciary manager and/or the investment administrator. The PUO processes premiums, benefits, and changes in the participant base and handles participant communication.
 *   The **Fiduciary Manager** supports the pension administrator in establishing the integrated investment policy, ensures its execution, and directs the operational asset managers. The fiduciary manager will also maintain a (shadow) investment administration. For large pension administrators without a fiduciary manager, the pension administrator itself is responsible for directing both internal and external asset managers.
 *   The **Operational Asset Managers** manage parts of the portfolio and are directed by the fiduciary manager. It is possible that (for certain parts) the fiduciary manager and the operational asset manager belong to the same organization.
@@ -49,10 +51,14 @@ The inflow and outflow include not only premiums, value transfers, and benefits,
 
 **Applications of the Cashflow Message**
 The standard offers the flexibility to use this message for two different purposes, which can coexist in practice:
+
 1.  **Prospective Application (Forward-looking):**
+
     *   **Purpose:** Liquidity management. An estimate of the expected net cash flow for the upcoming period is provided. The net amount (`netAmount`) serves as input for the actual monthly (de)allocation payment between the PUO and the asset manager.
     *   **Characteristics:** Typically a net amount at the total scheme level.
+
 2.  **Retrospective Application (Backward-looking):**
+
     *   **Purpose:** Analysis and accountability. The actual realized cash flows from a closed period are reported. This information is separate from the monthly allocation payment.
     *   **Characteristics:** The cash flow can be provided as a net amount (`netAmount`) or split (`contributionAmount` / `withdrawalAmount`). This variant is suitable for providing details at the cohort level.
 
