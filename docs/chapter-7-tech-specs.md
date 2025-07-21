@@ -6,6 +6,7 @@ Each message can concern multiple schemes (`pension.scheme`). However, it always
 
 ## 7.2 Validations
 The following validation rules can be implemented using the technical specifications:
+
 *   Check if the message structure is correct;
 *   Verify the data type (including numbers, strings);
 *   Check for minimum and maximum values;
@@ -100,6 +101,7 @@ This section describes the protocol for splitting (by the sender) and processing
 
 ### 7.6.1 Fundamental Principles of Chunking
 Before we describe the splitting and merging process, the following fundamental rules apply to the chunking mechanism:
+
 *   **Validity per Chunk:** Each chunk must be a standalone, fully JSON-schema-compliant message. This means that each chunk contains all mandatory "header" blocks, such as `commonTechnical` and `commonFunctional`.
 *   **Shared `messageId`:** All chunks that are part of one logical message share the exact same `messageId` in the `commonTechnical` block. This is the unique identifier of the overarching, logical message.
 *   **Mandatory `chunkMeta` attributes:** If the `chunkMeta.default` entity is present to indicate that chunking is being used, all attributes within this entity are mandatory. This is essential for a robust and deterministic reconstruction process on the receiver's side.
@@ -119,17 +121,27 @@ The `chunkFragmentPaths` field contains the essential instructions for the recei
 ### 7.6.3 Processing Received Chunks (Receiver's Side)
 
 #### 1. The Reconstruction Process
+
 The receiver uses the shared `messageId` to collect the chunks.
 *   **Start with the First Chunk:** The chunk with `chunkSequenceNumber: 1` serves as the base or 'template' for the reconstruction.
 *   **Place Data Fragments:** For all subsequent chunks, the data fragments are placed into the correct position within the template, guided by their respective `chunkFragmentPaths`.
 *   **Determine Completeness:** The message is considered complete when the number of received chunks equals the `totalNumberOfChunks`.
 
 #### 2. Processing Strategies
+
 Once conceptually complete, the receiver can choose one of the following strategies:
 *   **Reconstruct-first (Batch approach):** Build the entire message in memory and then validate it.
 *   **Streaming processing (Direct processing):** Save data fragments from each chunk directly and perform overarching validations later on the database.
 
 #### 3. Error Handling and Incompleteness
+
 The integrity of the complete logical message is crucial.
+
 *   If a single chunk fails (for example, due to a technical validation error, or if it is not received within a certain timeframe), the entire logical message is considered failed and unprocessable.
 *   In such a case, the sender must, after potential consultation, resubmit the entire message with a new `messageId`, split into a new set of chunks.
+
+---
+| <div align="left">[< Previous: Chapter 6: Functional Specifications](chapter-6-functional-specs.md)</div> | <div align="right"></div> |
+|:---|---:|
+
+*   
