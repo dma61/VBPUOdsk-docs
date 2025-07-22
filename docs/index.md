@@ -17,3 +17,15 @@ This site provides functional and technical details needed for implementation. U
 ## External Links
 *   [Technical Repository (JSON Schemas)](https://github.com/dma61/VBPUOdsk)
 *   [Official SIVI Project Page](https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/)
+
+## Feedback or Issues Regarding This Translation
+
+If you encounter any issues, errors, or ambiguities in this translated version, please report them at:  
+[https://github.com/dma61/VBPUOdsk-docs/issues](https://github.com/dma61/VBPUOdsk-docs/issues)
+
+When reporting an issue, please include:
+- The **translated English text as-is**
+- The **new suggested translation text**
+- A reference to the relevant **section or paragraph number**
+
+This helps us ensure the highest possible quality of the translation and keep the documentation clear for all users.
