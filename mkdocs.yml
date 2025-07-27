@@ -5,20 +5,20 @@ site_url: https://dma61.github.io/VBPUOdsk-docs/
 theme:
   name: material
   features:
-  - navigation.tabs
-  - navigation.top
-  - search.suggest
-  - content.code.copy
-  - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - navigation.instant
   palette:
-  - scheme: default
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
-  - scheme: slate
-    toggle:
-      icon: material/brightness-4
-      name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 nav:
   - 'Home': 'index.md'
   - 'Chapter 1: Introduction': 'chapter-1-introduction.md'
@@ -28,4 +28,3 @@ nav:
   - 'Chapter 5: Data Standard Setup': 'chapter-5-data-standard-setup.md'
   - 'Chapter 6: Functional Specifications': 'chapter-6-functional-specs.md'
   - 'Chapter 7: Technical Specifications': 'chapter-7-tech-specs.md'
-  - '' : ''
