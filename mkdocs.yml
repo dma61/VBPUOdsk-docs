@@ -1,6 +1,6 @@
 site_name: VB-PUO Standard Documentation
 site_description: Functional and technical documentation for the data exchange standard.
-site_author: SIVI
+site_author: SIVI_r
 site_url: https://dma61.github.io/VBPUOdsk-docs/
 theme:
   name: material
