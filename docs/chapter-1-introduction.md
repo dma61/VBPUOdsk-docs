@@ -32,6 +32,7 @@ This section outlines the structure of the manual.
 ### 1.4.1 Attribute Name Notation
 In the descriptive texts of this manual, you will encounter a dual naming convention for data fields:
 `technicalName` (Functional Name)
+
 *   **`technicalName`**: The definitive, technical attribute name according to the SIVI AFD 2.0 standard.
 *   **(Functional Name)**: The original, functional name used during the design phase.
 

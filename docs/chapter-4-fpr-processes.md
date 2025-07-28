@@ -21,6 +21,7 @@ When a participant ages by one year, an **age-based rebalance** is performed. Ea
 Another form of rebalancing is **target-weight rebalancing**. This can be performed when the actual allocation of investments falls outside pre-established bandwidths due to market movements. This form of rebalancing also leads to buy and sell orders.
 
 A group (cohort) of participants can be composed in various ways. Generally, three aspects play a role:
+
 *   Age (or period to retirement, birth year/month).
 *   Status (e.g., accumulating vs. decumulating, active/deferred/disabled).
 *   Investment profile.
@@ -147,6 +148,7 @@ _For the functional elaboration, see chapter 6, section 6.4.15._
 ## 4.6 Feedback Message (& Resending)
 ### Purpose and Function
 When exchanging messages, it is essential for the sender to know if a message has been correctly received and processed. The feedback message is designed to provide this certainty in the following situations:
+
 *   **For asynchronous processing:** To provide the final status (both success and failure) of a message after background processing is complete.
 *   **For synchronous processing:** To provide immediate, detailed error information when a message cannot be accepted.
 
@@ -158,6 +160,7 @@ The feedback message has a compact, fixed structure optimized for communicating 
 ![Feedback Message Structure](https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_message.svg)
 
 The core of the message is formed by the following components:
+
 *   **commonTechnical:** Contains the technical identification of the feedback message itself, such as a new, unique `messageId`.
 *   **commonFunctional:** Contains the functional metadata, including:
     *   `statusType`: The status of the original message: Accepted (8) or Rejected (0).
@@ -176,6 +179,7 @@ A visual overview of these scenarios can be found on GitHub:
 ![Feedback Sequence Diagram](https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_sequencediagram.svg)
 
 The scenarios are explained functionally below:
+
 1.  **Synchronous validation - Success:** Immediate 200 OK.
 2.  **Synchronous validation - Error:** Immediate 400 Bad Request with a feedback message in the body.
 3.  **Asynchronous validation - Success:** First a 202 Accepted, later followed by a callback with an "Accepted" feedback message.
@@ -194,6 +198,7 @@ The received feedback message is the primary form of communication that determin
 
 **Scenario 1: Correction after an Error Message (Feedback "Rejected")**
 If the receiving party has sent a feedback message with the status "Rejected," this serves as the official request for correction.
+
 *   The receiving party expects a new, corrected message.
 *   The sending party may and must send a corrected message without further, separate coordination.
 
@@ -201,6 +206,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 This scenario occurs when a message has been successfully accepted (via a 200 OK), and the sending party subsequently discovers an error. Since there is no official trigger for a correction, unilaterally sending a new version of the message (a correction message) is not permitted.
 
 In such situations, the sending party must contact the receiving party to discuss the situation. The outcome of this consultation determines the follow-up action. Possible solutions are:
+
 *   Ad hoc agreement for resubmission.
 *   Correction in the next regular delivery.
 *   Following an agreed-upon incident procedure.

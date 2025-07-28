@@ -365,7 +365,7 @@ Below (in Figure 12) is an overview of the messages and the roles (sender/receiv
 | 12. Waarde-informatie cohortenpool (00555a) | FPR** | from | to | | from | |
 | 13. Waarde-informatie beleggingspool (00555b) | FPR** | to | to | | from | |
 | 14. Betaalinformatie (00556) | FPR** | | to | | from | |
-| Feedback Message*** | Beide | | | | | |
+| Feedback Message*** | Both | | | | | |
 
 **Legend for the roles:**
 
