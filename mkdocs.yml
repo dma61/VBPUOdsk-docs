@@ -5,7 +5,7 @@ site_url: https://dma61.github.io/VBPUOdsk-docs/
 theme:
   name: material
   features:
-    - navigation.tabs
+    - navigation.sections
     - navigation.top
     - search.suggest
     - content.code.copy
