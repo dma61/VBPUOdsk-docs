@@ -145,7 +145,17 @@ _For the functional elaboration, see chapter 6, section 6.4.14._
 
 The administrator sends the payment instruction for withdrawals to the fiduciary manager.
 _For the functional elaboration, see chapter 6, section 6.4.15._
-## 4.6 Feedback Message (& Resending)
+
+## 4.6 Use of SPR Messages in FPR
+
+Within a Flexible Premium Arrangement (FPR), in addition to the individual *unitized* cash flows, there are also collective premium flows.  
+These are cash flows that do not belong to a single specific participant, such as risk premiums, contributions to reserves, or withdrawals from a collective benefit pool.  
+
+The standard FPR messages (5 through 14) are purely aimed at the *unitized* world and do not support these collective flows.  
+To address this, it has been agreed that parties will revert to the proven SPR messages 1, 2, 3, and/or 4 for the exchange of this information.  
+This method applies to both the direct (Model 1) and the layered (Model 2) FPR order model.
+
+## 4.7 Feedback Message (& Resending)
 ### Purpose and Function
 When exchanging messages, it is essential for the sender to know if a message has been correctly received and processed. The feedback message is designed to provide this certainty in the following situations:
 
