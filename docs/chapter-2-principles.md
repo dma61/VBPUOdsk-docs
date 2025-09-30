@@ -4,7 +4,7 @@ This chapter discusses the most important principles for the development, setup,
 ## 2.1 Reason
 With the introduction of the Wtp, information needs will change and the frequency of exchange will increase. For the solidarity premium scheme (SPR), an entirely new data stream is required for both accumulation and payout phases. For the flexible premium scheme (FPR), the information need will largely align with current 'defined contribution' schemes.
 
-> ## PREAMBLE: PRINCIPLES OF STANDARDIZATION VBPUO
+> ## PREAMBLE: STANDARDIZATION VBPUO
 >
 > The purpose of standardization is seamless and efficient information exchange between all parties in the chain.  
 > The VBPUO standard is based on the following principles:
