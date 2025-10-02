@@ -155,7 +155,7 @@ The standard FPR messages (5 through 14) are purely aimed at the *unitized* worl
 To address this, it has been agreed that parties will revert to the proven SPR messages 1, 2, 3, and/or 4 for the exchange of this information.  
 This method applies to both the direct (Model 1) and the layered (Model 2) FPR order model.
 
-## 4.7 Feedback Message (& Resending)
+## 4.7 Feedback Message & Resending - (FPR and SPR)
 ### Purpose and Function
 When exchanging messages, it is essential for the sender to know if a message has been correctly received and processed. The feedback message is designed to provide this certainty in the following situations:
 
