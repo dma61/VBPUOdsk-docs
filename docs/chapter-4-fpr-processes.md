@@ -1,4 +1,4 @@
-# Chapter 4: Processes & Information Flows – Flexible Premium Scheme (FPR)
+# Chapter 4: Processes & Information Flows – Flexible Premium Scheme (FPR) & Feedback (SPR and FPR)
 
 ## 4.1 Introduction
 This chapter describes the information exchange for the Flexible Premium Scheme (FPR), distinguishing between a direct order model and a more extensive, layered order model.
@@ -162,7 +162,7 @@ When exchanging messages, it is essential for the sender to know if a message ha
 *   **For asynchronous processing:** To provide the final status (both success and failure) of a message after background processing is complete.
 *   **For synchronous processing:** To provide immediate, detailed error information when a message cannot be accepted.
 
-A feedback message is therefore always used to specify errors. In case of successful processing, it is only sent as part of an asynchronous process. For successful synchronous processing, an HTTP 200 OK status code is sufficient.
+A feedback message is therefore mandatory to specify errors. In case of successful processing, it is only sent as part of an asynchronous process. For successful synchronous processing, an HTTP 200 OK status code is sufficient.
 
 ### Structure of the Feedback Message
 The feedback message has a compact, fixed structure optimized for communicating status information. The image below (also available on GitHub in the message overview and in the MessageStructureView of the message) shows the hierarchical structure and the main entities.
