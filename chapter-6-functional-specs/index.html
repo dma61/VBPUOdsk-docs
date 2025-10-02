@@ -1,0 +1,2766 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://dma61.github.io/VBPUOdsk-docs/chapter-6-functional-specs/">
+      
+      
+        <link rel="prev" href="../chapter-5-data-standard-setup/">
+      
+      
+        <link rel="next" href="../chapter-7-tech-specs/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Chapter 6: Functional Specifications - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-6-functional-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6: Functional Specifications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: SPR Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes; Feedback for FPR and SPR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Data Standard Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Functional Specifications
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Functional Specifications
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-data-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Data Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-entity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Entity Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-attributes-in-entitiesentity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Attributes in Entities.Entity Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Attributes in Entities.Entity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commontechnicaldefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      commonTechnical.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partysender" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.sender
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partycontact" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.contact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partyreceiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.receiver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonfunctionaldefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      commonFunctional.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partypensionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.pensionProvider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensionscheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialinformationreportingperiod" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialInformation.reportingPeriod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactionpayment" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partycreditor" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.creditor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactioncashflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.cashflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensioncohort" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.cohort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensioncohortpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.cohortPool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.Pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentportfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.portfolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentinvestmentdetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.investmentDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactiontrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errordefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      error.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      document.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chunkmetadefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunkMeta.default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-cross-reference-attributes-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Cross-Reference Attributes &amp; Messages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7: Technical Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-data-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Data Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-entity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Entity Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-attributes-in-entitiesentity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Attributes in Entities.Entity Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Attributes in Entities.Entity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commontechnicaldefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      commonTechnical.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partysender" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.sender
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partycontact" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.contact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partyreceiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.receiver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonfunctionaldefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      commonFunctional.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partypensionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.pensionProvider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensionscheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialinformationreportingperiod" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialInformation.reportingPeriod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactionpayment" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partycreditor" class="md-nav__link">
+    <span class="md-ellipsis">
+      party.creditor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactioncashflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.cashflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensioncohort" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.cohort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pensioncohortpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      pension.cohortPool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.Pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentportfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.portfolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investmentinvestmentdetails" class="md-nav__link">
+    <span class="md-ellipsis">
+      investment.investmentDetails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financialtransactiontrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      financialTransaction.trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errordefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      error.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      document.default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chunkmetadefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunkMeta.default
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-cross-reference-attributes-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Cross-Reference Attributes &amp; Messages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-6-functional-specifications">Chapter 6: Functional Specifications</h1>
+<p>This chapter contains the detailed functional specifications.</p>
+<p>This chapter contains the functional specifications:</p>
+<ul>
+<li>Data Dictionary</li>
+<li>Base Message</li>
+<li>Cross-reference: Base Message &amp; Messages</li>
+</ul>
+<h2 id="61-data-dictionary">6.1 Data Dictionary</h2>
+<p>An overview of all entities and their purpose. This section will link to detailed pages or files for each entity.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Entity.entitytype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">commonTechnical.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.sender</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.contact</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.receiver</td>
+</tr>
+<tr>
+<td style="text-align: left;">commonFunctional.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.pensionProvider</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.scheme</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialInformation.reportingPeriod</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.payment</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.creditor</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.cashflow</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.expectedPayment</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.cohort</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.cohortPool</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.pool</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.portfolio</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.investmentDetails</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.trade</td>
+</tr>
+<tr>
+<td style="text-align: left;">error.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">document.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">chunckMeta.default</td>
+</tr>
+</tbody>
+</table>
+<h2 id="62-entity-types">6.2 Entity Types</h2>
+<p>This section describes the various entities and the attributes within those entities.</p>
+<p>Below is an explanation of the entities. This information is derived from AFD 2.0, which can be consulted via <a href="https://www.sivi.org/standaarden/sivi-all-finance-standaard/afd-online-2-0/">this link</a>.</p>
+<p><strong>Note:</strong> The entity type is mandatory.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Entity.entitytype</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>commonTechnical.default</code></td>
+<td style="text-align: left;">This entity contains technical details about sending and storing messages. It forms the basis for the technical aspects within the messaging system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.sender</code></td>
+<td style="text-align: left;">The "party.sender" entity refers to the sender of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.contact</code></td>
+<td style="text-align: left;">The "party.contact" entity represents a contact person within a legal entity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.receiver</code></td>
+<td style="text-align: left;">This entity represents the recipient of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>commonFunctional.default</code></td>
+<td style="text-align: left;">This entity contains domain-specific information about the content of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.pensionProvider</code></td>
+<td style="text-align: left;">This entity represents a pension provider (pension fund, insurer, or PPI).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.scheme</code></td>
+<td style="text-align: left;">This entity contains data at the level of the pension scheme or plan.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialInformation.reportingPeriod</code></td>
+<td style="text-align: left;">This entity relates to reporting periods, time intervals, and other generic dates.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.payment</code></td>
+<td style="text-align: left;">This entity/entity type combination contains data about a payment.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.creditor</code></td>
+<td style="text-align: left;">This entity represents the creditor; the recipient of the payments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.cashflow</code></td>
+<td style="text-align: left;">This entity deals with financial transactions related to pensions, specifically focusing on cash flows.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.expectedPayment</code></td>
+<td style="text-align: left;">This entity contains information about projected future cash flows/payments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.cohort</code></td>
+<td style="text-align: left;">This entity contains information about specific target groups (cohorts) within the pension scheme.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.cohortPool</code></td>
+<td style="text-align: left;">The pooled combination of investment pools for a cohort. Investments in a cohort pool are made for a group of participants with a similar investment allocation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.pool</code></td>
+<td style="text-align: left;">This entity (investment pool) represents collections of underlying investments (liquid, illiquid, funds, mandates).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.portfolio</code></td>
+<td style="text-align: left;">This entity relates to investment portfolios, which represent the total managed assets (or a sub-portfolio).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.investmentDetails</code></td>
+<td style="text-align: left;">This entity describes individual investments of a pension provider.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.trade</code></td>
+<td style="text-align: left;">This entity relates to trading activities within the pension scheme.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>error.default</code></td>
+<td style="text-align: left;">In case of errors, this entity is used to generate error messages.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>document.default</code></td>
+<td style="text-align: left;">This entity is intended for adding any attachments to messages.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkMeta.default</code></td>
+<td style="text-align: left;">This entity contains metadata for splitting and merging large messages (chunking).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="63-attributes-in-entitiesentity-types">6.3 Attributes in Entities.Entity Types</h2>
+<p>The tables in this section detail the attributes per entity/entity type combination. Each entry includes the attribute's name, definition, data type, max length, and a link to any code list.</p>
+<p><em>Note: Attribute descriptions in the feedback message may differ from those in the 14 content messages.</em></p>
+<p>Data type descriptions are available in the SIVI All-Finance Standard manual.</p>
+<p><strong>Interpretation rules:</strong></p>
+<ul>
+<li><strong><code>string</code>:</strong> Max length is specified unless a code list applies (then 'length' is empty).</li>
+<li><strong><code>decimal</code>:</strong> Defaults to 2 decimal places. Deviations are specified in the data type column.</li>
+</ul>
+<p>Attribute names have been aligned with AFD 2.0 conventions and differ from the consultation document. See Appendix 8.4 for the translation table.</p>
+<h3 id="commontechnicaldefault"><code>commonTechnical.default</code></h3>
+<p><em>The commonTechnical entity covers all information about sending or storing the message. This is typically technical information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>messageId</code></td>
+<td style="text-align: left;">Unique message identification</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>creationDateTime</code></td>
+<td style="text-align: left;">Creation date and time</td>
+<td style="text-align: left;">timestamp</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>testMessage</code></td>
+<td style="text-align: left;">Test message indicator</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="partysender"><code>party.sender</code></h3>
+<p><em>Sender of the message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Organization name of the sender.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applicationSenderName</code></td>
+<td style="text-align: left;">Name of the application that created the message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="partycontact"><code>party.contact</code></h3>
+<p><em>A natural person who can be contacted within a legal entity for further information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>emailWork</code></td>
+<td style="text-align: left;">Work email address</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>workPhoneNumber</code></td>
+<td style="text-align: left;">Work phone number</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="partyreceiver"><code>party.receiver</code></h3>
+<p><em>Receiver of the message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Name of the recipient organization(s).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="commonfunctionaldefault"><code>commonFunctional.default</code></h3>
+<p><em>The commonFunctional entity covers all information about the content of the message. This is typically domain-specific information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>function</code></td>
+<td style="text-align: left;">Message function code.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNFUN</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>statusType</code></td>
+<td style="text-align: left;">Status of the original message processing (Accepted or Rejected).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNSTS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>afdDefinitionName</code></td>
+<td style="text-align: left;">Type of message, name of the message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>afdDefinitionVersion</code></td>
+<td style="text-align: left;">Version of the <code>afdDefinition</code> of the message. See section 7.5.1 for details.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>originalMessageId</code></td>
+<td style="text-align: left;">The original <code>messageId</code> of the message being replaced or being responded to.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>originalMessageType</code></td>
+<td style="text-align: left;">Message type of the original request to which this message is a response. E.g. <code>0001a</code>, <code>0001b</code>, etc.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="partypensionprovider"><code>party.pensionProvider</code></h3>
+<p><em>Information on the Pension Provider level (Pension Fund, Insurer, PPI, APF).</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>puvCode</code></td>
+<td style="text-align: left;">ID of the pension provider (PUV-code).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AFDIDP</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Name of the pension provider.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pensionscheme"><code>pension.scheme</code></h3>
+<p><em>Data on the pension scheme level.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the pension scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pensionschemeName</code></td>
+<td style="text-align: left;">Name of the pension scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>StartAmount</code></td>
+<td style="text-align: left;">Total pension assets as of the start date.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradingPortfolioId</code></td>
+<td style="text-align: left;">Portfolio ID of the custodian.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="financialinformationreportingperiod"><code>financialInformation.reportingPeriod</code></h3>
+<p><em>Reporting period information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>startDate</code></td>
+<td style="text-align: left;">Start date of the data period or reference date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endDate</code></td>
+<td style="text-align: left;">End date of the data period.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeDate</code></td>
+<td style="text-align: left;">Desired trade date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investmentOrderSettlementDate</code></td>
+<td style="text-align: left;">Date by which the investment order cycle must be settled.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mutationValuationDate</code></td>
+<td style="text-align: left;">Date for processing mutations per age group.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>projectionDate</code></td>
+<td style="text-align: left;">Date of the pension benefit projection.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instructionDate</code></td>
+<td style="text-align: left;">Date of the instruction sent by the PUO.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitValueEstimationDate</code></td>
+<td style="text-align: left;">Date on which the preliminary unit value (investment pool) was determined.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationValuationDate</code></td>
+<td style="text-align: left;">Pricing date of the participation value (cohort pool).</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>positionDate</code></td>
+<td style="text-align: left;">Date on which the positions in the investment administration were established.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>valueDate</code></td>
+<td style="text-align: left;">Currency date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="financialtransactionpayment"><code>financialTransaction.payment</code></h3>
+<p><em>Information about payments.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the expected payment.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>amount</code></td>
+<td style="text-align: left;">Amount in currency / projected benefit.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency code.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountIban</code></td>
+<td style="text-align: left;">IBAN of the debit account.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description of the transaction (payment).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>expectedPensionPaymentDate</code></td>
+<td style="text-align: left;">Pension payment date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hedgedExpectedPensionPaymentAmount</code></td>
+<td style="text-align: left;">Cash flow to be hedged.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="partycreditor"><code>party.creditor</code></h3>
+<p><em>The party that has a claim.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountIban</code></td>
+<td style="text-align: left;">IBAN of the credit account per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountInNameOf</code></td>
+<td style="text-align: left;">Name of the counterparty per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountBic</code></td>
+<td style="text-align: left;">Business Identifier Code (BIC) per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountBicCorrespondent</code></td>
+<td style="text-align: left;">BIC correspondent per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="financialtransactioncashflow"><code>financialTransaction.cashflow</code></h3>
+<p><em>The sum of contributions and withdrawals on all cohorts.</em>*</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>contributionAmount</code></td>
+<td style="text-align: left;">Sum of contributions.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>contributionDate</code></td>
+<td style="text-align: left;">Date of receipt of the contribution.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalAmount</code></td>
+<td style="text-align: left;">Sum of withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalDate</code></td>
+<td style="text-align: left;">Date by which funds for withdrawal are available.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netDate</code></td>
+<td style="text-align: left;">Date on which the net cash flow is determined.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><em>*Note: The amount and date fields in <code>financialTransaction.cashflow</code> are optional. At least one pair must be used.</em></p>
+<h3 id="pensioncohort"><code>pension.cohort</code></h3>
+<p><em>Information on cohort (pension target audience) level.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description of the cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationStatus</code></td>
+<td style="text-align: left;">Status of the participants in a cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNDNS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAge</code></td>
+<td style="text-align: left;">Start age in months.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endAge</code></td>
+<td style="text-align: left;">End age in months.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveIndicator</code></td>
+<td style="text-align: left;">Indicates if the cohort represents a reserve.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveType</code></td>
+<td style="text-align: left;">Type of reserve.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AFDRES</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveDescription</code></td>
+<td style="text-align: left;">Description for "Other" reserve type.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAmount</code></td>
+<td style="text-align: left;">Pension assets of the cohort at the start date.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals per cohort.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>contributionAmount</code></td>
+<td style="text-align: left;">Inflow to be invested by the fiduciary manager.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalAmount</code></td>
+<td style="text-align: left;">Outflow to be invested by the fiduciary manager.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protectionReturnPercentage</code></td>
+<td style="text-align: left;">Achieved protection return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>excessReturnPercentage</code></td>
+<td style="text-align: left;">Achieved excess return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protectionReturnAmount</code></td>
+<td style="text-align: left;">Achieved protection return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>excessReturnAmount</code></td>
+<td style="text-align: left;">Achieved excess return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pensioncohortpool"><code>pension.cohortPool</code></h3>
+<p><em>The pooled combination of investments (investment pools) for a cohort.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the cohort pool.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cohortRef</code></td>
+<td style="text-align: left;">Reference to the cohort this pool belongs to.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the cohort data.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inflowPremiumAmount</code></td>
+<td style="text-align: left;">Premium contribution per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inflowRebalanceAmount</code></td>
+<td style="text-align: left;">Cash amount of rebalance transactions per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfNewParticipations</code></td>
+<td style="text-align: left;">New participations to be issued in the cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfParticipations</code></td>
+<td style="text-align: left;">Number of outstanding units (participations).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfRebalanceParticipations</code></td>
+<td style="text-align: left;">Rebalance participations per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationsSummedValueAmount</code></td>
+<td style="text-align: left;">Value per cohort pool (sum of participation value).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="investmentpool"><code>investment.Pool</code></h3>
+<p><em>Investment pool / investment portfolio.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the investment pool per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>marketValueAmount</code></td>
+<td style="text-align: left;">Market value.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitsSummedValueAmount</code></td>
+<td style="text-align: left;">Value per investment pool (unit value).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preliminaryMarketValueAmount</code></td>
+<td style="text-align: left;">Preliminary market value of the portfolio.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preliminaryUnitValueAmount</code></td>
+<td style="text-align: left;">Preliminary unit value.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfUnits</code></td>
+<td style="text-align: left;">Number of units issued for the investment pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the pool.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dummyCashId</code></td>
+<td style="text-align: left;">ID for a dummy cash instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>buySellId</code></td>
+<td style="text-align: left;">Buy/Sell indicator.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">sell; buy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeQuantity</code></td>
+<td style="text-align: left;">Number of units to be traded.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitPrice</code></td>
+<td style="text-align: left;">Unit value/price.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyExchangeRate</code></td>
+<td style="text-align: left;">FX rate.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="investmentportfolio"><code>investment.portfolio</code></h3>
+<p><em>Investment portfolio.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the Investment Portfolio.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAmount</code></td>
+<td style="text-align: left;">Total Market Value at the start of the period.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endAmount</code></td>
+<td style="text-align: left;">Total Market Value at the end of the period.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>returnPercentage</code></td>
+<td style="text-align: left;">Achieved return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>returnAmount</code></td>
+<td style="text-align: left;">Achieved return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startExposureAmount</code></td>
+<td style="text-align: left;">Allocation of pension assets to this portfolio.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startExposurePercentage</code></td>
+<td style="text-align: left;">Relative share of <code>startExposureAmount</code>.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="investmentinvestmentdetails"><code>investment.investmentDetails</code></h3>
+<p><em>An investment in either liquid or illiquid funds or pools thereof.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Identifier (e.g., ISIN or internal code).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Name of the investment/fund/instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfUnits</code></td>
+<td style="text-align: left;">Number of purchased units per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfHoldings</code></td>
+<td style="text-align: left;">Number of holdings per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>localPrice</code></td>
+<td style="text-align: left;">Price per instrument in original currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>localValueAmount</code></td>
+<td style="text-align: left;">Total market value in original currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Result</code></td>
+<td style="text-align: left;">Unrealized result per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>accruedInterest</code></td>
+<td style="text-align: left;">Accrued interest per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poolPercentage</code></td>
+<td style="text-align: left;">Weight in the portfolio per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyExchangeRate</code></td>
+<td style="text-align: left;">FX rate per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="financialtransactiontrade"><code>financialTransaction.trade</code></h3>
+<p><em>Trading/ordering; Buying and selling.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>tradeDate</code></td>
+<td style="text-align: left;">Desired trade date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentIndicator</code></td>
+<td style="text-align: left;">Adjusted trade instruction.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>buySellId</code></td>
+<td style="text-align: left;">Buy/Sell/Switch indicator.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">sell, buy, switch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeAmount</code></td>
+<td style="text-align: left;">Amount of the purchase in the investment's currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeQuantity</code></td>
+<td style="text-align: left;">Number of units to be traded.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradePrice</code></td>
+<td style="text-align: left;">Purchase price/rate.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>switchType</code></td>
+<td style="text-align: left;">Type of switch; one-day or sequential.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">sequential, one-day</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialInformationRef</code></td>
+<td style="text-align: left;">On a switch, reference to the target identifier.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Counterparty</code></td>
+<td style="text-align: left;">Transfer Agent; the party executing the trade.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Broker</code></td>
+<td style="text-align: left;">Broker executing investment orders.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>interestAmount</code></td>
+<td style="text-align: left;">Amount of applicable interest.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>commissionAmount</code></td>
+<td style="text-align: left;">Fee for executing the transaction.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clearingBroker</code></td>
+<td style="text-align: left;">Broker responsible for settlement.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clearingBrokerCashAccount</code></td>
+<td style="text-align: left;">Cash account (IBAN) at the clearing broker.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="errordefault"><code>error.default</code></h3>
+<p><em>Error message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorCode</code></td>
+<td style="text-align: left;">Error code type.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNFTM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorCodeExplanation</code></td>
+<td style="text-align: left;">Explanation of the error message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">300</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><em>See also the information about <code>error.default</code> in the SIVI All-Finance Standard.</em></p>
+<h3 id="documentdefault"><code>document.default</code></h3>
+<p><em>Information about an attachment/document.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fileName</code></td>
+<td style="text-align: left;">Name of the file for the attachment.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fileExtension</code></td>
+<td style="text-align: left;">Extension of the file (e.g., pdf, csv, txt).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">pdf;csv;txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chunkmetadefault"><code>chunkMeta.default</code></h3>
+<p><em>"Chunking" (splitting large messages) into partial messages.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>currentChunkId</code></td>
+<td style="text-align: left;">Unique reference (id) of the current chunk.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkSequenceNumber</code></td>
+<td style="text-align: left;">Sequence number of the current chunk.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>totalNumberOfChunks</code></td>
+<td style="text-align: left;">Total number of chunks the message is split into.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkFragmentPaths</code></td>
+<td style="text-align: left;">Array of JMESPath references to the message fragments.</td>
+<td style="text-align: left;">array</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="64-messages">6.4 Messages</h2>
+<p>The data exchange described in this document is supported by a set of 14 messages, supplemented by a feedback message. The messages are derived from the base message described below.</p>
+<p>Below (in Figure 12) is an overview of the messages and the roles (sender/receiver) involved.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Message Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">PUO</th>
+<th style="text-align: center;">FM</th>
+<th style="text-align: center;">BA</th>
+<th style="text-align: center;">ACB</th>
+<th style="text-align: center;">BR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. Vermogen (0001a)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2. Cashflow (0001b)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">3. Pensioenprojectie (0001c)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">4. Rendementsinformatie (00002)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">5. Orderopdracht (00541)</td>
+<td style="text-align: left;">FPR*</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+</tr>
+<tr>
+<td style="text-align: left;">6. Orderconfirmation (00542)</td>
+<td style="text-align: left;">FPR*</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+</tr>
+<tr>
+<td style="text-align: left;">7. Mutatiesaldi (00551)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">8. Reconciliatie-informatie (00552a)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">9. PUO-reconciliatie-informatie (00552b)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">10. Stuurinformatiebeleggingspools (00553)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11. Rebalancinginformatie (00554)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">12. Waarde-informatie cohortenpool (00555a)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">13. Waarde-informatie beleggingspool (00555b)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14. Betaalinformatie (00556)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Feedback Message***</td>
+<td style="text-align: left;">Both</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend for the roles:</strong></p>
+<ul>
+<li><strong>PUO:</strong> Pension Administration Organizations</li>
+<li><strong>FM:</strong> Fiduciary Managers</li>
+<li><strong>BA:</strong> Investment Administrators / Asset Service Provider</li>
+<li><strong>ACB:</strong> Administrators of Cohort and Investment Pools</li>
+<li><strong>BR:</strong> Brokers / Transfer Agents</li>
+</ul>
+<p><strong>Note:</strong> Each receiving party receives its information directly from the sending party.</p>
+<p><strong>Note:</strong> Each receiving party/role gets its information directly from the sending party. In addition to the parties/roles mentioned in Figure 12, messages can also be sent to other parties, such as Liability-Driven Investment managers (LDIs). The transmission to unmentioned parties/roles is also direct. Received information is not forwarded to other parties.</p>
+<p>The table below lists the message types and their meaning. In parentheses is the reference to the working group's final report: "Final Report Research Standard VB PUO (September 2023.pdf)".</p>
+<ul>
+<li><strong>PMT</strong> = <code>pensionMessageType</code> in AFD 2.0 (the descriptions of the message types are provided).</li>
+<li><strong>TAG</strong> = The identifier used for the message in the API.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Message Type</th>
+<th style="text-align: left;">PMT/TAG</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1a</strong> (4.2.1.1)</td>
+<td style="text-align: left;">Capital</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>On a periodic (expected monthly) basis, the fiduciary manager receives the total pension assets at the start of the period for a scheme. This can also be provided per cohort. With this information, the fiduciary manager can check alignment with the fund's policy and rebalance if necessary.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1b</strong> (4.2.1.3)</td>
+<td style="text-align: left;">Cashflow</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>Periodically, the fiduciary manager receives the inflow and outflow for a scheme. This can be provided at a total level and per cohort. The cash flow includes premiums, value transfers, benefits, and shifts between cohorts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1c</strong> (4.2.1.3)</td>
+<td style="text-align: left;">PensionProjection</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>Periodically, the fiduciary manager receives the projected benefits per scheme and cohort based on the accrued assets. It also includes the cash flows to be hedged per scheme, calculated as the sum of weighted projected benefits per cohort.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>2</strong> (4.2.2.)</td>
+<td style="text-align: left;">ReturnOnInvestment</td>
+<td style="text-align: left;"><strong>From Investment Administrator to PUO.</strong><br>The PUO periodically receives information about the achieved investment return, including start and end values and the return percentage per portfolio. This is necessary for the PUO to allocate returns to participants, the solidarity reserve, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>541</strong> (5.4.1.)</td>
+<td style="text-align: left;">Trade</td>
+<td style="text-align: left;"><strong>From PUO to Brokers/Transfer Agents/Order Desks.</strong><br>This message contains the minimum data set required to send an order or a switch to an order processing party. The PUO submits orders at the investment fund level.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>542</strong> (5.4.2.)</td>
+<td style="text-align: left;">Orderconfirmation</td>
+<td style="text-align: left;"><strong>From Brokers/Transfer Agents/Order Desks to PUO.</strong><br>The confirmation details of the order are returned from the order processing party to the PUO.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>551</strong> (5.5.1)</td>
+<td style="text-align: left;">BalanceAdjustments</td>
+<td style="text-align: left;"><strong>From PUO to Administrator of Cohort &amp; Investment Pools.</strong><br>This first monthly information flow concerns netted mutations (purchases, sales, switches) per cohort pool. The administrator uses this to calculate cash flows for the investment pools and instruct the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>552a</strong> (5.5.2)</td>
+<td style="text-align: left;">InvestmentDetails</td>
+<td style="text-align: left;"><strong>Between Administrator, Fiduciary Manager, and Investment Administrator.</strong><br>The administrator receives monthly positions from the investment administrator and reconciles them with their own administration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>552b</strong> (5.5.2)</td>
+<td style="text-align: left;">InvestmentDetailsPUO</td>
+<td style="text-align: left;"><strong>From Investment Pool Administrator to PUO.</strong><br>Additional information needed when the PUO also acts as the cohort pool administrator. This message provides the preliminary unit values of the investment pools to the PUO.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>553</strong> (5.5.3)</td>
+<td style="text-align: left;">ControlInformationInvestmentPools</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>The administrator calculates participation values and combines them with mutations to estimate the cash effects on the investment pools. These effects are then sent to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>554</strong> (5.5.4)</td>
+<td style="text-align: left;">RebalancingDetails</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>The administrator rebalances the relevant cohorts based on the unit values at time T and sends all month-end transactions to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>555a</strong> (5.5.5)</td>
+<td style="text-align: left;">ValueAmountCohortPool</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager (when PUO administers cohort pools).</strong><br>The administrator (or PUO, if applicable) calculates and distributes the participation values of the cohort pools.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>555b</strong> (5.5.5)</td>
+<td style="text-align: left;">ValueAmountInvestmentPool</td>
+<td style="text-align: left;"><strong>Between Investment Administrator, Administrator, Fiduciary Manager, and PUO.</strong><br>The administrator calculates the unit value per unit in the investment pool and the participation value per participation in the cohort pool and distributes them to the PUO and fiduciary.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>556</strong> (5.5.6)</td>
+<td style="text-align: left;">PaymentDetailsCreditor</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>At the beginning of the month, the administrator sends the payment instruction for withdrawals to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR/FPR</strong></td>
+<td style="text-align: left;">Feedback</td>
+<td style="text-align: left;">Feedback</td>
+<td style="text-align: left;"><strong>From the recipient of a content message (1-14) to the original sender.</strong><br>Provides feedback on errors or confirms the processability of a message.</td>
+</tr>
+</tbody>
+</table>
+<p>Unlike the Dutch manual, this documentation references the <code>MessageStructureView</code> folders on GitHub to illustrate the structure of each message. For example, the structure for <strong>Message 11</strong> can be viewed <a href="https://github.com/dma61/VBPUOdsk/tree/main/VBPUO-Bericht_11._Rebalancinginformatie_(00554)/MessageStructureView">here</a>.</p>
+<p>Below is a diagram depicting the structure of <strong>Message 11</strong>:</p>
+<p><img alt="Message 11 Structure" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO-Bericht_11._Rebalancinginformatie_(00554)/MessageStructureView/20250630_083428-00554.svg" /></p>
+<p>These diagrams clearly visualize the relationships between entities. For detailed text-based specifications, please refer to the original Dutch manual.</p>
+<h2 id="65-cross-reference-attributes-messages">6.5 Cross-Reference Attributes &amp; Messages</h2>
+<p>please refer to the original Dutch manual.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="../chapter-5-data-standard-setup/">&lt; Previous: Chapter 5: Data Standard Setup</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="../chapter-7-tech-specs/">Next: Chapter 7: Technical Specifications &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

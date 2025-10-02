@@ -1,0 +1,1221 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://dma61.github.io/VBPUOdsk-docs/chapter-7-tech-specs/">
+      
+      
+        <link rel="prev" href="../chapter-6-functional-specs/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Chapter 7: Technical Specifications - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-7-technical-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 7: Technical Specifications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: SPR Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes; Feedback for FPR and SPR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Data Standard Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Functional Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7: Technical Specifications
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7: Technical Specifications
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-messages-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Messages &amp; Schemes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Validations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-transport-openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Transport / OpenAPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Transport / OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-openapi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 OpenAPI Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-api-implementation-and-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 API Implementation and Backup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-message-composition-versioning-and-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Message Composition, Versioning, and Publication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Message Composition, Versioning, and Publication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751-explanation-of-using-afddefinitionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1 Explanation of using "afdDefinitionVersion"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5.1 Explanation of using &#34;afdDefinitionVersion&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-2-json-schemas-from-aos-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2: JSON Schemas (from AOS) Explained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7511-version-number-afddefinitionversion-in-a-github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1.1 Version Number / afdDefinitionVersion in a GitHub release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752-publication-on-github-version-number-and-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.2 Publication on GitHub: Version Number and Tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-processing-protocol-for-partial-messages-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 Processing Protocol for Partial Messages (Chunking)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Processing Protocol for Partial Messages (Chunking)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#761-fundamental-principles-of-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.1 Fundamental Principles of Chunking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#762-splitting-a-large-message-senders-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.2 Splitting a Large Message (Sender's Side)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6.2 Splitting a Large Message (Sender&#39;s Side)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-determining-the-necessity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Determining the Necessity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-splitting-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The Splitting Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-of-jmespath-in-chunkfragmentpaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use of JMESPath in chunkFragmentPaths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#763-processing-received-chunks-receivers-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.3 Processing Received Chunks (Receiver's Side)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6.3 Processing Received Chunks (Receiver&#39;s Side)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-reconstruction-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Reconstruction Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-processing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Processing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-error-handling-and-incompleteness" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Error Handling and Incompleteness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-messages-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Messages &amp; Schemes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Validations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-transport-openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Transport / OpenAPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Transport / OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-openapi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 OpenAPI Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-api-implementation-and-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 API Implementation and Backup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-message-composition-versioning-and-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Message Composition, Versioning, and Publication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Message Composition, Versioning, and Publication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751-explanation-of-using-afddefinitionversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1 Explanation of using "afdDefinitionVersion"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5.1 Explanation of using &#34;afdDefinitionVersion&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-2-json-schemas-from-aos-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2: JSON Schemas (from AOS) Explained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7511-version-number-afddefinitionversion-in-a-github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1.1 Version Number / afdDefinitionVersion in a GitHub release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752-publication-on-github-version-number-and-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.2 Publication on GitHub: Version Number and Tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-processing-protocol-for-partial-messages-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 Processing Protocol for Partial Messages (Chunking)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Processing Protocol for Partial Messages (Chunking)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#761-fundamental-principles-of-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.1 Fundamental Principles of Chunking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#762-splitting-a-large-message-senders-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.2 Splitting a Large Message (Sender's Side)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6.2 Splitting a Large Message (Sender&#39;s Side)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-determining-the-necessity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Determining the Necessity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-splitting-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The Splitting Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-of-jmespath-in-chunkfragmentpaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use of JMESPath in chunkFragmentPaths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#763-processing-received-chunks-receivers-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6.3 Processing Received Chunks (Receiver's Side)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6.3 Processing Received Chunks (Receiver&#39;s Side)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-reconstruction-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Reconstruction Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-processing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Processing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-error-handling-and-incompleteness" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Error Handling and Incompleteness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-7-technical-specifications">Chapter 7: Technical Specifications</h1>
+<p>The technical data specifications are based on AFD 2.0 from SIVI AFS. This chapter provides an explanation.</p>
+<h2 id="71-messages-schemes">7.1 Messages &amp; Schemes</h2>
+<p>Each message can concern multiple schemes (<code>pension.scheme</code>). However, it always pertains to a single <code>party.pensionProvider</code>. The transmission is per message, and that message thus contains 1 <code>pension.provider</code> and 1 or more <code>pension.scheme</code>'s.</p>
+<h2 id="72-validations">7.2 Validations</h2>
+<p>The following validation rules can be implemented using the technical specifications:</p>
+<ul>
+<li>Check if the message structure is correct;</li>
+<li>Verify the data type (including numbers, strings);</li>
+<li>Check for minimum and maximum values;</li>
+<li>Validate the field length;</li>
+<li>Check for the presence of mandatory entities and attributes;</li>
+<li>Check the number of repetitions of entities;</li>
+<li>Ensure the use of allowed codes from code lists.</li>
+</ul>
+<p><em>N.B.: Relational checks (validation rules between different data elements) are still in development. See also the JSON schemas.</em></p>
+<h2 id="73-json">7.3 JSON</h2>
+<p>The SIVI AFS team follows the specifications below for AFD 2.0 in combination with JSON (derived from Forum Standaardisatie):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concern</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Full Name</strong></td>
+<td style="text-align: left;">JavaScript Object Notation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Version</strong></td>
+<td style="text-align: left;">RFC8259, December 2017</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Specification Document</strong></td>
+<td style="text-align: left;"><a href="https://datatracker.ietf.org/doc/html/rfc8259">JSON Specification Document</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Managing Organization</strong></td>
+<td style="text-align: left;">Internet Engineering Task Force (IETF)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Functional Scope</strong></td>
+<td style="text-align: left;">Object notation for exchanging data structures, for example, in web applications that retrieve data asynchronously from a web server.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Typing</strong></td>
+<td style="text-align: left;">Exchange of data structures</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Benefit</strong></td>
+<td style="text-align: left;">JSON (JavaScript Object Notation) is a subset of the JavaScript programming language. The simplicity of JSON has led to its great popularity, especially as a 'light' alternative to XML.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Operation</strong></td>
+<td style="text-align: left;">JSON is a format for storing and sending data, similar to XML. It is used for exchanging data structures, particularly in web applications. The standard is aimed at efficient programming and has a compact notation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tools</strong></td>
+<td style="text-align: left;">Various online JSON validators and tools are available, also for different programming platforms. More information about the standard can also be found in publications from ECMA International.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Guideline:</strong> If a non-mandatory attribute has no value, the attribute should be completely omitted from the JSON message. This is a recommended practice according to JSON conventions.</p>
+<h2 id="74-transport-openapi">7.4 Transport / OpenAPI</h2>
+<h3 id="741-openapi-model">7.4.1 OpenAPI Model</h3>
+<p>Since early 2024, work has been done on a standard for the transport of messages. A number of PUOs and asset managers, in collaboration with SIVI, have taken steps to develop an OpenAPI specification within the previously outlined technical contours.
+This effort aimed to support all parties that will implement the RESTful API and to promote its uniform application. The specification can be found on GitHub. The proposed OpenAPI specification helps parties to unambiguously exchange the 14 message structures, for both SPR and FPR. In addition to the 14 content-based messages, a feedback message has also been realized to respond to the content-based messages.</p>
+<p>The API acts as a digital gateway, through which the various PUO and asset management parties can receive data. Communication is initiated by the sending party (push-model); the sending party delivers the messages to the receiving party without the latter having to actively request them. The specification begins with general information, stating the name, description, and version of the API.</p>
+<p>The core of the API describes the specific services that are available. For each service, a clear path is defined where messages can be delivered. This includes, for example, supplying information or performing certain actions. Each path provides a description of what the service does and how it can be used.</p>
+<p>Please note that in practice, not every party will offer all services from the OAS. For instance, parties that only handle SPR can, in addition to the feedback message, offer the SPR messages 1, 2, 3, and 4.</p>
+<p>Furthermore, the specification contains reusable building blocks, such as messages and entities. This ensures that the API is consistent and easy to understand and use. The reuse of these messages and entities simplifies development and reduces the chance of errors.</p>
+<p>To ensure the completeness and integrity of the messages, a mechanism has been introduced that allows for checking for changes during transport. This is the <code>x-jws-signature</code> header, which contains a digital signature of the payload. This provides a reliable basis for parties to trust that received messages exactly match what was sent. The use of this mechanism is an option, not a requirement. Parties can make different choices.</p>
+<p><strong>Important:</strong> The standard only supports the OAS API; other forms of data exchange are not supported. This means that all communication between parties must proceed according to the specified OpenAPI specification, and alternative methods fall outside the scope of the standard.</p>
+<p><strong>API Security Measures:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Security Measure</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Authentication with API key</strong></td>
+<td style="text-align: left;">Each request must contain a valid API key in the <code>x-api-key</code> header.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OAuth 2.0 Client Credentials Flow</strong></td>
+<td style="text-align: left;">The API uses OAuth 2.0. Clients must obtain an access token using their client ID and secret. Specific scopes are used to control access to different API functions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Digital Signatures with x-jws-signature (option)</strong></td>
+<td style="text-align: left;">If used, each request contains a digital signature of the payload in the <code>x-jws-signature</code> header to verify message integrity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encrypted Communication via HTTPS</strong></td>
+<td style="text-align: left;">All communication is via HTTPS, ensuring data encryption during transmission.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="742-api-implementation-and-backup">7.4.2 API Implementation and Backup</h3>
+<p>The deployment and operational maintenance of the APIs are the responsibility of the party offering the API and fall outside the scope of this standard. Temporary outages of the API data transport facility may occur. The risk of this is lower with an approach where multiple replicas of the API run simultaneously (on different environments and/or locations). Ultimately, this is a cost-benefit analysis; guaranteeing 99.9% uptime is more expensive than a 98% uptime guarantee.</p>
+<p>The assumption is that any outage will always be short-lived. In exceptional cases, email can serve as a "backup" transport mechanism.</p>
+<h2 id="75-message-composition-versioning-and-publication">7.5 Message Composition, Versioning, and Publication</h2>
+<h3 id="751-explanation-of-using-afddefinitionversion">7.5.1 Explanation of using "afdDefinitionVersion"</h3>
+<p><code>afdDefinitionVersion</code> is filled with the version number (from the "Schema Name") of the VBPUO JSON schema. The VBPUO JSON schema is maintained by SIVI using "AFD Online Samenstellen (AOS)" with the following metadata:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AOS Schema Metadata</th>
+<th style="text-align: left;">Values (example)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SIVI community</td>
+<td style="text-align: left;">AFD 2.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Message Type:</td>
+<td style="text-align: left;">Protocol PUO Asset Management</td>
+</tr>
+<tr>
+<td style="text-align: left;">Domain:</td>
+<td style="text-align: left;">General</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schema Name:</td>
+<td style="text-align: left;">VBPUO-###.##</td>
+</tr>
+</tbody>
+</table>
+<p>In the (AOS) VBPUO schema, the 14 VBPUO message structures are defined as "functions," for example, the function: "Bericht_9.<em>PUO-reconciliatie-informatie</em>(00552b)". For each "function," three JSON schemas are subsequently generated and published ("committed") to GitHub. These JSON schemas serve the following purposes:</p>
+<h4 id="table-2-json-schemas-from-aos-explained">Table 2: JSON Schemas (from AOS) Explained</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Detailed Description</th>
+<th style="text-align: left;">Example Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Message Structure</strong></td>
+<td style="text-align: left;">Defines the structure, mandatory elements, and field validations, with internal and external references to ensure data consistency and standardization.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a).json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Code Lists/Tables</strong></td>
+<td style="text-align: left;">Defines the code lists (e.g., pension provider and currency codes) used as references in the JSON schema for field validation.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a)-afdCodelists.json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Relational Checks</strong></td>
+<td style="text-align: left;">Defines the rules for relational checks within the JSON schema to ensure the validity and consistency of data relationships.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a)-validationRules.json</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="7511-version-number-afddefinitionversion-in-a-github-release">7.5.1.1 Version Number / <code>afdDefinitionVersion</code> in a GitHub release</h3>
+<p>The version number of an AOS schema must be included in every message that is sent. This number can be found in the Message Structure as a constant under <code>afdDefinitionVersion</code>.</p>
+<p>The JSON Schemas can be found under this number at <a href="https://portal.sivi.org/organisationschemas">https://portal.sivi.org/organisationschemas</a>. The messages created with this schema – which are defined as functions within the VBPUO schema – are published on GitHub.</p>
+<h3 id="752-publication-on-github-version-number-and-tag">7.5.2 Publication on GitHub: Version Number and Tag</h3>
+<p>When releasing on GitHub, the release gets a Name and a Tag (e.g., "2024_Juli" with tag <code>v1.1.0</code>). All JSON schemas, example messages, and the OAS fall under that release/tag. The GitHub release name and tag number are not found in the payload of the messages.</p>
+<h2 id="76-processing-protocol-for-partial-messages-chunking">7.6 Processing Protocol for Partial Messages (Chunking)</h2>
+<p>This section describes the protocol for splitting (by the sender) and processing (by the receiver) of large messages. The use of partial messages (chunks) is an optional mechanism that is applied when the size of a message exceeds the agreed-upon limits.</p>
+<h3 id="761-fundamental-principles-of-chunking">7.6.1 Fundamental Principles of Chunking</h3>
+<p>Before we describe the splitting and merging process, the following fundamental rules apply to the chunking mechanism:</p>
+<ul>
+<li><strong>Validity per Chunk:</strong> Each chunk must be a standalone, fully JSON-schema-compliant message. This means that each chunk contains all mandatory "header" blocks, such as <code>commonTechnical</code> and <code>commonFunctional</code>.</li>
+<li><strong>Shared <code>messageId</code>:</strong> All chunks that are part of one logical message share the exact same <code>messageId</code> in the <code>commonTechnical</code> block. This is the unique identifier of the overarching, logical message.</li>
+<li><strong>Mandatory <code>chunkMeta</code> attributes:</strong> If the <code>chunkMeta.default</code> entity is present to indicate that chunking is being used, all attributes within this entity are mandatory. This is essential for a robust and deterministic reconstruction process on the receiver's side.</li>
+<li><strong>Integrity of the logical message:</strong> An error in a single chunk (e.g., a validation error or the non-arrival of the chunk) invalidates the entire logical message. The message must then be resubmitted in its entirety, with a new <code>messageId</code>.</li>
+</ul>
+<h3 id="762-splitting-a-large-message-senders-side">7.6.2 Splitting a Large Message (Sender's Side)</h3>
+<h4 id="1-determining-the-necessity">1. Determining the Necessity</h4>
+<p>Splitting is required when a message exceeds the agreed-upon maximum size (default: 4 MB). The sender is responsible for correctly partitioning the data.</p>
+<h4 id="2-the-splitting-process">2. The Splitting Process</h4>
+<p>The sender creates multiple chunks by distributing the data from large, repeating arrays (such as a list of cohorts). Each chunk is assigned a <code>chunkMeta</code> block with the appropriate metadata (<code>chunkSequenceNumber</code>, <code>totalNumberOfChunks</code>, etc.) and the <code>chunkFragmentPaths</code> that describe the content of that specific chunk.</p>
+<h4 id="3-use-of-jmespath-in-chunkfragmentpaths">3. Use of JMESPath in <code>chunkFragmentPaths</code></h4>
+<p>The <code>chunkFragmentPaths</code> field contains the essential instructions for the receiver to correctly reconstruct the original message. The JMESPath can specify a particular range (slice), for example <code>pension[0:100]</code>, which guarantees that the receiver can place the data back in the exact correct order, even if the chunks are received in a different sequence.</p>
+<h3 id="763-processing-received-chunks-receivers-side">7.6.3 Processing Received Chunks (Receiver's Side)</h3>
+<h4 id="1-the-reconstruction-process">1. The Reconstruction Process</h4>
+<p>The receiver uses the shared <code>messageId</code> to collect the chunks.
+*   <strong>Start with the First Chunk:</strong> The chunk with <code>chunkSequenceNumber: 1</code> serves as the base or 'template' for the reconstruction.
+*   <strong>Place Data Fragments:</strong> For all subsequent chunks, the data fragments are placed into the correct position within the template, guided by their respective <code>chunkFragmentPaths</code>.
+*   <strong>Determine Completeness:</strong> The message is considered complete when the number of received chunks equals the <code>totalNumberOfChunks</code>.</p>
+<h4 id="2-processing-strategies">2. Processing Strategies</h4>
+<p>Once conceptually complete, the receiver can choose one of the following strategies:
+*   <strong>Reconstruct-first (Batch approach):</strong> Build the entire message in memory and then validate it.
+*   <strong>Streaming processing (Direct processing):</strong> Save data fragments from each chunk directly and perform overarching validations later on the database.</p>
+<h4 id="3-error-handling-and-incompleteness">3. Error Handling and Incompleteness</h4>
+<p>The integrity of the complete logical message is crucial.</p>
+<ul>
+<li>If a single chunk fails (for example, due to a technical validation error, or if it is not received within a certain timeframe), the entire logical message is considered failed and unprocessable.</li>
+<li>In such a case, the sender must, after potential consultation, resubmit the entire message with a new <code>messageId</code>, split into a new set of chunks.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="../chapter-6-functional-specs/">&lt; Previous: Chapter 6: Functional Specifications</a></div></th>
+<th style="text-align: right;"><div align="right"></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

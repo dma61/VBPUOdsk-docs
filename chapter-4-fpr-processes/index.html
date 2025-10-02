@@ -1,0 +1,1211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://dma61.github.io/VBPUOdsk-docs/chapter-4-fpr-processes/">
+      
+      
+        <link rel="prev" href="../chapter-3-spr-processes/">
+      
+      
+        <link rel="next" href="../chapter-5-data-standard-setup/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Chapter 4: FPR Processes; Feedback for FPR and SPR - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-processes-information-flows-flexible-premium-scheme-fpr-feedback-message-spr-and-fpr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 4: FPR Processes; Feedback for FPR and SPR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: SPR Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes; Feedback for FPR and SPR
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: FPR Processes; Feedback for FPR and SPR
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-model-1-simpler-direct-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Model 1: Simpler, Direct Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-model-2-more-extensive-layered-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Model 2: More Extensive, Layered Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-information-flows-fpr-model-1-1a-and-1b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Information Flows FPR - Model 1 (1a and 1b)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Information Flows FPR - Model 1 (1a and 1b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-message-5-order-instruction-00541" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Message 5. Order Instruction (00541)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-message-6-order-confirmation-00542" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 Message 6. Order Confirmation (00542)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-information-flows-fpr-model-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Information Flows FPR - Model 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Information Flows FPR - Model 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-message-7-balance-adjustments-00551" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 Message 7. Balance Adjustments (00551)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-messages-for-reconciliation-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 Messages for reconciliation information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2 Messages for reconciliation information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4521-message-8-reconciliation-information-00552a" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.1 Message 8. Reconciliation Information (00552a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4522-message-9-puo-reconciliation-information-00552b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.2 Message 9. PUO Reconciliation Information (00552b)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-message-10-control-information-investment-pools-00553" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 Message 10. Control Information Investment Pools (00553)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-message-11-rebalancing-information-00554-rebalancing-cohort-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4 Message 11. Rebalancing Information (00554), Rebalancing cohort pools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-passing-on-values-per-investment-pool-and-per-cohort-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5 Passing on values per investment pool and per cohort pool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.5 Passing on values per investment pool and per cohort pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4551-message-12-value-information-cohort-pool-00555a" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5.1 Message 12. Value Information Cohort Pool (00555a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4552-message-13-value-information-investment-pool-00555b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5.2 Message 13. Value Information Investment Pool (00555b)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#456-message-14-payment-information-00556" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.6 Message 14. Payment Information (00556)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-use-of-spr-messages-in-fpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Use of SPR Messages in FPR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-feedback-message-resending-fpr-and-spr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Feedback Message &amp; Resending - (FPR and SPR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Feedback Message &amp; Resending - (FPR and SPR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-and-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-of-the-feedback-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of the Feedback Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-patterns-and-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction Patterns and Process Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-for-corrections-and-resending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol for Corrections and Resending
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Data Standard Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Functional Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 7: Technical Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-model-1-simpler-direct-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Model 1: Simpler, Direct Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-model-2-more-extensive-layered-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Model 2: More Extensive, Layered Order Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-information-flows-fpr-model-1-1a-and-1b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Information Flows FPR - Model 1 (1a and 1b)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Information Flows FPR - Model 1 (1a and 1b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-message-5-order-instruction-00541" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Message 5. Order Instruction (00541)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-message-6-order-confirmation-00542" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 Message 6. Order Confirmation (00542)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-information-flows-fpr-model-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Information Flows FPR - Model 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Information Flows FPR - Model 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-message-7-balance-adjustments-00551" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 Message 7. Balance Adjustments (00551)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-messages-for-reconciliation-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 Messages for reconciliation information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.2 Messages for reconciliation information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4521-message-8-reconciliation-information-00552a" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.1 Message 8. Reconciliation Information (00552a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4522-message-9-puo-reconciliation-information-00552b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2.2 Message 9. PUO Reconciliation Information (00552b)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-message-10-control-information-investment-pools-00553" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 Message 10. Control Information Investment Pools (00553)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-message-11-rebalancing-information-00554-rebalancing-cohort-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4 Message 11. Rebalancing Information (00554), Rebalancing cohort pools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-passing-on-values-per-investment-pool-and-per-cohort-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5 Passing on values per investment pool and per cohort pool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5.5 Passing on values per investment pool and per cohort pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4551-message-12-value-information-cohort-pool-00555a" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5.1 Message 12. Value Information Cohort Pool (00555a)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4552-message-13-value-information-investment-pool-00555b" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5.2 Message 13. Value Information Investment Pool (00555b)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#456-message-14-payment-information-00556" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.6 Message 14. Payment Information (00556)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-use-of-spr-messages-in-fpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Use of SPR Messages in FPR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-feedback-message-resending-fpr-and-spr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Feedback Message &amp; Resending - (FPR and SPR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Feedback Message &amp; Resending - (FPR and SPR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-and-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-of-the-feedback-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of the Feedback Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-patterns-and-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction Patterns and Process Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-for-corrections-and-resending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol for Corrections and Resending
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-processes-information-flows-flexible-premium-scheme-fpr-feedback-message-spr-and-fpr">Chapter 4: Processes &amp; Information Flows – Flexible Premium Scheme (FPR) &amp; Feedback message (SPR and FPR)</h1>
+<h2 id="41-introduction">4.1 Introduction</h2>
+<p>This chapter describes the information exchange for the Flexible Premium Scheme (FPR), distinguishing between a direct order model and a more extensive, layered order model.</p>
+<h2 id="42-model-1-simpler-direct-order-model">4.2 Model 1: Simpler, Direct Order Model</h2>
+<p><u>Figure 2, showing a schematic of the direct order model, can be found in the official Dutch manual.</u></p>
+<p>In this model, the pension administration organization translates mutations at the participant level into the necessary (netted) transactions in the investment funds of operational asset managers and has them executed via a trading platform. Such a setup can also be implemented jointly with the asset service provider/custodian, where the pension administration organization translates participant-level mutations into netted mutations, and the asset service provider/custodian handles the execution of transactions in investment funds via a trading platform (see Figure 6 - Model 1b in the original manual). When compiling the orders, aspects such as the minimum order size per investment product, the settlement cycle, and the associated financial flows are taken into account.</p>
+<p>In the direct order model, the pension administrator is generally supported by the fiduciary manager with regard to the design of the lifecycle(s) and their composition (selection and monitoring of underlying investments). Special attention should be paid to the process of changing the composition of the investments (replacement of investment funds). Such changes result in transition activities for the pension administrator and/or asset service provider/custodian. More specifically, if an investment product (which could be an investment fund, a virtual pool, or a mandate) is replaced, removed, or added, the pension administration organization will adjust and process this. If adjustments are made within an investment product, this is not relevant to the pension administration organization and only affects the provider of the product.</p>
+<p>In the direct order model, a <strong>cohort pool</strong> consists of a group of participants who have the same investment allocation based on the lifecycle principle (less investment and interest rate risk as the retirement date/end of the investment horizon approaches). A cohort pool can be used to distinguish between groups of participants. This can be based on time (age, period until retirement, etc.) but also on a characteristic such as active, deferred, disabled, etc. The number of pools is basically unlimited; as many pools are created as are needed to distinguish the right participant groups that require their own investment mix. The administration of the cohort pool is optional and can be managed by the pension administration organization, the investment administrator/asset service provider, or elsewhere. The allocation of weights (percentages) is often determined by the fiduciary manager. A cohort pool is an administrative grouping of a group of participants who, for example, have the same investment allocation based on the lifecycle principle.</p>
+<p><u>Figure 3, showing an example of cohort pools and lifecycles, can be found in the official Dutch manual.</u></p>
+<p>The example in Figure 3 illustrates how birth years and thus ages can influence the allocation of investments within lifecycles.</p>
+<p>When a participant ages by one year, an <strong>age-based rebalance</strong> is performed. Each participant is placed in the next cohort pool, and their investment mix is adjusted to that of the new cohort. In the example above (Figure 3), regardless of the chosen risk profile, the share of equities is reduced and the share of bonds is increased. This leads to concrete buy and sell orders to the product providers.</p>
+<p>Another form of rebalancing is <strong>target-weight rebalancing</strong>. This can be performed when the actual allocation of investments falls outside pre-established bandwidths due to market movements. This form of rebalancing also leads to buy and sell orders.</p>
+<p>A group (cohort) of participants can be composed in various ways. Generally, three aspects play a role:</p>
+<ul>
+<li>Age (or period to retirement, birth year/month).</li>
+<li>Status (e.g., accumulating vs. decumulating, active/deferred/disabled).</li>
+<li>Investment profile.</li>
+</ul>
+<p>Netting of investments takes place across the cohort pools according to the instructions for the investment transactions. In the direct order model, this happens "in the spaghetti" (see Figure 2) between the cohort pools and the investments. The risk-sharing reserve is considered a separate cohort pool that invests in investment products according to its own investment policy.</p>
+<h2 id="43-model-2-more-extensive-layered-order-model">4.3 Model 2: More Extensive, Layered Order Model</h2>
+<p>In the "More extensive, layered model," investments can also consist of non-daily tradable and/or non-platform-tradable (illiquid) funds or investment mandates. This model is already applied for larger Collective Individual DC (CIDC) schemes.</p>
+<p><u>Figure 4, showing a schematic of the layered order model, can be found in the official Dutch manual.</u></p>
+<p>In this model:
+*   Participants invest in <strong>cohort pools</strong> according to the chosen lifecycle. These cohort pools, in turn, invest in <strong>investment pools</strong>. The investment pools can consist of various underlying investments (liquid, illiquid, funds, and mandates). To make the allocation to participants robust and traceable, units are issued and unit values are calculated for the various (layered) pools. The participant's assets can thus be traced exactly to the pro-rata share of the underlying investments. The layer with cohort pools is optional; if this layer is absent, the pension administration organization must administer which participations in the various investment pools are held per participant.</p>
+<ul>
+<li>
+<p>The allocation of returns can be done by the <strong>pension administration organization</strong> or the <strong>administrator of the cohort and investment pools</strong>.</p>
+<ul>
+<li>The <strong>pension administration organization</strong> is responsible for explicitly allocating returns to personal pension assets, the risk-sharing reserve, etc., based on established rules.</li>
+<li>The <strong>administrator of the cohort and investment pools</strong> processes the allocation and administration of cohort pools as provided by the PUO. This role can be performed by the PUO, the investment administrator, or another specialized party. The participation values and the number of participations of the cohort pools form the basis for the PUO to explicitly allocate assets to participants.</li>
+</ul>
+</li>
+<li>
+<p>There can be a <strong>dual cohort administration</strong>. The first is with the PUO (participant &amp; cohort administration). The second is with "an administrator," which handles the relationship between the cohort pools and the investment pools. This second administration can be called a middle-office administration and is optional.</p>
+</li>
+<li>
+<p>The <strong>Fiduciary Manager</strong> supports the pension administrator in establishing the integrated investment policy and directs the operational asset managers.</p>
+</li>
+<li>
+<p>The <strong>Investment Administrator/Asset Service Provider</strong> (often a service from the custodian) handles the independent investment administration of the investment pools for the pension administrator.</p>
+</li>
+</ul>
+<p>In the process for "Model 2," a distinction is made between an accumulation phase and a payout phase. The payout phase executed by a pension administration organization is in-scope. In the payout phase, participants can choose between continuing to invest (with a variable pension benefit) or a fixed pension benefit.</p>
+<p>For an individual payout phase, the data exchange can be set up similarly to the accumulation phase. For a collective payout phase (all retirees in one cohort), aligning the interest rate sensitivity of the investments with the collective projected benefits is important. It is possible for the accumulation phase to occur in model 1 and the payout phase in model 2. For the payout phase (executed by a PUO), the fiduciary manager will set up a matching portfolio. The necessary data exchange will be structured in accordance with data exchange 1b from the SPR.</p>
+<h2 id="44-information-flows-fpr-model-1-1a-and-1b">4.4 Information Flows FPR - Model 1 (1a and 1b)</h2>
+<p>The information exchange for model 1 can be split into a variant 1a, where the pension administration organization invests directly, and a variant 1b, where the PUO invests via an order platform. Strictly speaking, from the PUO's perspective, there is no distinction between these variants, but for clarity, both are explained separately. This is schematically and simplified shown in Figures 5 and 6. For example, a PUO could trade ETFs on behalf of the pension fund via a broker if these are part of the agreed investment mix.</p>
+<p><u>Figure 5 - Model 1a, where the PUO invests directly with various market parties, can be found in the official Dutch manual.</u></p>
+<p>The data exchange, indicated as "scope" in Figure 5, takes place between the PUO on one side and the various types of market parties on the other.</p>
+<p><u>Figure 6 - Model 1b, where the PUO gives investment orders to an intermediary (order platform: custodian, fiduciary), can be found in the official Dutch manual.</u></p>
+<p>The data exchange ("scope") from Figure 6 occurs exclusively between the PUO and the order platform.
+The data exchange for FPR model 1 (a and b) proceeds via the following 2 messages.</p>
+<h3 id="441-message-5-order-instruction-00541">4.4.1 Message 5. Order Instruction (00541)</h3>
+<p><em>Information flow from Pension Administration Organization to Brokers/Transfer Agents/Order Desks (model 1a and 1b)</em></p>
+<p>This information flow from the PUO to Brokers/Transfer Agents/Order Desks contains the minimum set of data required to send an order to an order processing party. A switch can also be executed with this message.
+The PUO submits orders at the level of the investment fund. The provider of the fund executes the ordering in the underlying investments itself. This can include listed and illiquid investments, among others.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically section 6.4.6.</em></p>
+<h3 id="442-message-6-order-confirmation-00542">4.4.2 Message 6. Order Confirmation (00542)</h3>
+<p><em>Information flow from Brokers/Transfer Agents/Order Desks to Pension Administration Organization (model 1a and 1b)</em></p>
+<p>The confirmation data of the order is returned from the order processing party to the pension administration organization.</p>
+<h2 id="45-information-flows-fpr-model-2">4.5 Information Flows FPR - Model 2</h2>
+<p>The information exchange for model 2 (more extensive, layered order model) can be schematically simplified as follows.</p>
+<p><u>Figure 7, showing a schematic of the layered order investment process, can be found in the official Dutch manual.</u></p>
+<p>The scope outlined in Figure 7 leads to the exchange of various information flows. The standardized data exchanges that fall within the scope are indicated by red arrows in the process flow figures below. The data needed for these different information flows/processes is described in the following paragraphs. Note: The time indications in the figures below are indicative and can be filled in differently by each pension administrator. This document only covers the information flows.</p>
+<p>The information flow of model 2 has several steps – see the (step) numbers below in two process flow diagrams (Figures 8 and 9).</p>
+<p><u>Figure 8 (Process flow &amp; data exchange FPR 1) and Figure 9 (Process flow &amp; data exchange FPR 2) can be found in the official Dutch manual.</u></p>
+<p><strong>Explanation of Figure 8: Process flow &amp; data exchange FPR (1) - standard</strong>
+The process shown assumes one administrator for both cohort pools and investment pools. This administrator links the received aggregated data about participants (via cohort pools) to the investments (via investment pools).
+In step 5 to 10, the PUO provides the mutations in the number of participations per cohort to the cohort pool administrator. This administrator determines the preliminary participation value based on the reconciled administration of the investment pools (step 8). By combining the supplied mutations with the preliminary participation value and rebalancing rules, the necessary transactions in investment pools can be calculated. These transactions are combined for all cohorts, resulting in one instruction in euros per investment pool to the fiduciary manager, who executes the transactions (step 11). These transactions flow via SWIFT to the investment administrator/asset service provider (step 15). The investment pool administrator calculates the final unit values for the investment pools (step 16), which forms the basis for calculating the participation value for cohort pools (step 17). These are shared with the PUO (step 18) so that the value for individual participants can be determined.</p>
+<p>Several variations on this process are possible, depending on how the roles of cohort pool administrator and investment pool administrator are assigned (e.g., to the PUO or the investment administrator/asset service provider). These variations may require additional information exchanges.</p>
+<p><strong>Explanation of Figure 9: Process flow &amp; data exchange FPR (2)</strong>
+This process also assumes an administrator of cohort and investment pools. If the PUO fulfills the role of cohort pool administrator, several steps will shift to the PUO.</p>
+<h3 id="451-message-7-balance-adjustments-00551">4.5.1 Message 7. Balance Adjustments (00551)</h3>
+<p><em>Information flow from PUO to the administrator of cohort and investment pools in the FPR (5 -&gt;10 in the diagram) on T-4:</em></p>
+<p>The first (expected monthly) information flow from the PUO to the administrator of cohort and investment pools concerns netted mutations (purchase, sale, and switches) at the total level per cohort pool. With this, the administrator can calculate the inflow or outflow for investment pools and instruct the fiduciary manager accordingly. The specific fields used are detailed in the message specifications.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically section 6.4.8.</em></p>
+<h3 id="452-messages-for-reconciliation-information">4.5.2 Messages for reconciliation information</h3>
+<p><em>Information flow between the administrator, Fiduciary manager, and investment administrator (6 -&gt; 7 -&gt; 8 in the diagram) on T-4:</em></p>
+<p>The administrator of cohort and investment pools monthly receives the positions from the leading administration of the investment administrator for the investment pools. This can be supplemented with data from the fiduciary manager's (shadow) administration. These positions, containing for example the market value (<code>marketValueAmount</code>) and number of units (<code>numberOfUnits</code>) per investment pool, are reconciled with the administrator's own administration.</p>
+<h4 id="4521-message-8-reconciliation-information-00552a">4.5.2.1 Message 8. Reconciliation Information (00552a)</h4>
+<p>This message is for the reconciliation between the administrator, fiduciary manager, and investment administrator.
+<em>For the functional elaboration, see chapter 6, section 6.4.9.</em></p>
+<h4 id="4522-message-9-puo-reconciliation-information-00552b">4.5.2.2 Message 9. PUO Reconciliation Information (00552b)</h4>
+<p>This message contains the necessary information for the situation where the PUO also fulfills the role of cohort pool administrator. In this case, an additional information exchange from the investment pool administrator to the PUO about the preliminary unit values (<code>preliminaryUnitValueAmount</code>) of the investment pools is needed.
+<em>For the functional elaboration, see chapter 6, section 6.4.10.</em></p>
+<h3 id="453-message-10-control-information-investment-pools-00553">4.5.3 Message 10. Control Information Investment Pools (00553)</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (10 -&gt; 11 in the diagram) on T-4:</em></p>
+<p>The administrator of cohort and investment pools calculates the participation values and combines these with the given mutations to estimate the cash effects on the investment pools. The administrator sends these cash effects (with substantiation) to the fiduciary.
+<em>For the functional elaboration, see chapter 6, section 6.4.11.</em></p>
+<h3 id="454-message-11-rebalancing-information-00554-rebalancing-cohort-pools">4.5.4 Message 11. Rebalancing Information (00554), Rebalancing cohort pools</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (20 -&gt; 21 in the diagram) on T+3:</em></p>
+<p>The administrator rebalances the relevant age groups based on the unit values of the investment pools at time T to be invested according to the standard policy for all cohorts. The administrator sends all month-end transactions in the cohort and investment pools to the fiduciary manager.
+<em>For the functional elaboration, see chapter 6, section 6.4.12.</em></p>
+<h3 id="455-passing-on-values-per-investment-pool-and-per-cohort-pool">4.5.5 Passing on values per investment pool and per cohort pool</h3>
+<p><em>Information flow between various parties (15 -&gt; 16 -&gt; 17 -&gt; 18 in the diagram) on T+3:</em></p>
+<p>The administrator calculates the unit value per unit in the investment pool and the participation value per participation in the cohort pool. The administrator passes the (participation) values of the cohort pools to the PUO and the fiduciary. If the PUO acts as the cohort pool administrator, it will receive the unit values of the investment pools and calculate the participation values itself.</p>
+<h4 id="4551-message-12-value-information-cohort-pool-00555a">4.5.5.1 Message 12. Value Information Cohort Pool (00555a)</h4>
+<p>The fiduciary receives this from the PUO (when the PUO administers cohort pools).
+<em>For the functional elaboration, see chapter 6, section 6.4.13.</em></p>
+<h4 id="4552-message-13-value-information-investment-pool-00555b">4.5.5.2 Message 13. Value Information Investment Pool (00555b)</h4>
+<p>The administrator of cohort and investment pools (also) passes on the (unit) values, the administrative price, of investment pools.
+<em>For the functional elaboration, see chapter 6, section 6.4.14.</em></p>
+<h3 id="456-message-14-payment-information-00556">4.5.6 Message 14. Payment Information (00556)</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (22 -&gt; 23 in the diagram), beginning of the month, on T+5:</em></p>
+<p>The administrator sends the payment instruction for withdrawals to the fiduciary manager.
+<em>For the functional elaboration, see chapter 6, section 6.4.15.</em></p>
+<h2 id="46-use-of-spr-messages-in-fpr">4.6 Use of SPR Messages in FPR</h2>
+<p>Within a Flexible Premium Arrangement (FPR), in addition to the individual <em>unitized</em> cash flows, there are also collective premium flows.<br />
+These are cash flows that do not belong to a single specific participant, such as risk premiums, contributions to reserves, or withdrawals from a collective benefit pool.  </p>
+<p>The standard FPR messages (5 through 14) are purely aimed at the <em>unitized</em> world and do not support these collective flows.<br />
+To address this, it has been agreed that parties will revert to the proven SPR messages 1, 2, 3, and/or 4 for the exchange of this information.<br />
+This method applies to both the direct (Model 1) and the layered (Model 2) FPR order model.</p>
+<h2 id="47-feedback-message-resending-fpr-and-spr">4.7 Feedback Message &amp; Resending - (FPR and SPR)</h2>
+<h3 id="purpose-and-function">Purpose and Function</h3>
+<p>When exchanging messages, it is essential for the sender to know if a message has been correctly received and processed. The feedback message is designed to provide this certainty in the following situations:</p>
+<ul>
+<li><strong>For asynchronous processing:</strong> To provide the final status (both success and failure) of a message after background processing is complete.</li>
+<li><strong>For synchronous processing:</strong> To provide immediate, detailed error information when a message cannot be accepted.</li>
+</ul>
+<p>A feedback message is therefore mandatory to specify errors. In case of successful processing, it is only sent as part of an asynchronous process. For successful synchronous processing, an HTTP 200 OK status code is sufficient.</p>
+<h3 id="structure-of-the-feedback-message">Structure of the Feedback Message</h3>
+<p>The feedback message has a compact, fixed structure optimized for communicating status information. The image below (also available on GitHub in the message overview and in the MessageStructureView of the message) shows the hierarchical structure and the main entities.</p>
+<p><img alt="Feedback Message Structure" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_message.svg" /></p>
+<p>The core of the message is formed by the following components:</p>
+<ul>
+<li><strong>commonTechnical:</strong> Contains the technical identification of the feedback message itself, such as a new, unique <code>messageId</code>.</li>
+<li><strong>commonFunctional:</strong> Contains the functional metadata, including:<ul>
+<li><code>statusType</code>: The status of the original message: Accepted (8) or Rejected (0).</li>
+<li><code>originalMessageId</code>: A mandatory reference to the <code>messageId</code> of the message to which this feedback pertains.</li>
+<li><code>originalMessageType</code>: An optional field indicating the type of the original message, to simplify routing at the receiver.</li>
+</ul>
+</li>
+<li><strong>error:</strong> An optional block that, in case of rejection, contains an <code>errorCode</code> and an <code>errorCodeExplanation</code>.</li>
+<li><strong>party.pensionProvider:</strong> Identifies the pension provider to whom the original message related.</li>
+</ul>
+<p>For a detailed specification of all attributes and code lists, see sections 6.5 and 6.4.16.</p>
+<h3 id="interaction-patterns-and-process-flow">Interaction Patterns and Process Flow</h3>
+<p>The technical handling of the feedback is defined in the OpenAPI Specification (OAS) and follows six fixed scenarios. These describe both synchronous and asynchronous processing, including the handling of errors and "panic" situations where the feedback loop itself fails.</p>
+<p>A visual overview of these scenarios can be found on GitHub:</p>
+<p><img alt="Feedback Sequence Diagram" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_sequencediagram.svg" /></p>
+<p>The scenarios are explained functionally below:</p>
+<ol>
+<li><strong>Synchronous validation - Success:</strong> Immediate 200 OK.</li>
+<li><strong>Synchronous validation - Error:</strong> Immediate 400 Bad Request with a feedback message in the body.</li>
+<li><strong>Asynchronous validation - Success:</strong> First a 202 Accepted, later followed by a callback with an "Accepted" feedback message.</li>
+<li><strong>Asynchronous validation - Error:</strong> First a 202 Accepted, later followed by a callback with a "Rejected" feedback message.</li>
+<li><strong>Panic scenario (after Error):</strong> The callback with a "Rejected" feedback is not accepted by the recipient (400 Bad Request).</li>
+<li><strong>Panic scenario (after Success):</strong> The callback with an "Accepted" feedback is not accepted by the recipient (400 Bad Request).</li>
+</ol>
+<p>In panic scenarios (5 and 6), manual coordination via another channel is necessary.</p>
+<h3 id="protocol-for-corrections-and-resending">Protocol for Corrections and Resending</h3>
+<p>The feedback mechanism dictates the protocol for correcting messages. This protocol is based on the fundamental principle:</p>
+<p><strong>"Once accepted messages are not unilaterally corrected."</strong></p>
+<p>The received feedback message is the primary form of communication that determines how a correction should be handled.</p>
+<p><strong>Scenario 1: Correction after an Error Message (Feedback "Rejected")</strong>
+If the receiving party has sent a feedback message with the status "Rejected," this serves as the official request for correction.</p>
+<ul>
+<li>The receiving party expects a new, corrected message.</li>
+<li>The sending party may and must send a corrected message without further, separate coordination.</li>
+</ul>
+<p><strong>Scenario 2: Correction after Acceptance of a message</strong>
+This scenario occurs when a message has been successfully accepted (via a 200 OK), and the sending party subsequently discovers an error. Since there is no official trigger for a correction, unilaterally sending a new version of the message (a correction message) is not permitted.</p>
+<p>In such situations, the sending party must contact the receiving party to discuss the situation. The outcome of this consultation determines the follow-up action. Possible solutions are:</p>
+<ul>
+<li>Ad hoc agreement for resubmission.</li>
+<li>Correction in the next regular delivery.</li>
+<li>Following an agreed-upon incident procedure.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="../chapter-3-spr-processes/">&lt; Previous: Chapter 3: SPR Processes</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="../chapter-5-data-standard-setup/">Next: Chapter 5: Data Standard Setup &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
