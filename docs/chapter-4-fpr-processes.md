@@ -1,4 +1,4 @@
-# Chapter 4: Processes & Information Flows – Flexible Premium Scheme (FPR) & Feedback (SPR and FPR)
+# Chapter 4: Processes & Information Flows – Flexible Premium Scheme (FPR) & Feedback message (SPR and FPR)
 
 ## 4.1 Introduction
 This chapter describes the information exchange for the Flexible Premium Scheme (FPR), distinguishing between a direct order model and a more extensive, layered order model.
