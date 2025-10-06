@@ -69,6 +69,7 @@ _For the functional elaboration into a message, see chapter 6, specifically Mess
 
 ### 3.2.3 Message 3. Pension Projection (1c, projected benefits)
 On a periodic (expected to be monthly) basis (`projectionDate` (Projection date)), the fiduciary manager receives from a pension administrator (`puvCode` (Pensionfund ID)), per scheme (`refKey` (Pension scheme ID i)) and per (age) cohort (`refKey` (Cohort ID i,j)), the projected benefits (`amount` (Cohort expected pension payment i,j,k)) based on the accumulated assets for future periods (`expectedPensionPaymentDate` (Expected pension payment date i,k)).
+The date of the expected payment is, by default, the first day of the respective month. For determining the expectedPensionPaymentDate, the preferred approach is to use monthly periods. When this is not feasible, the mid-date of the annual period (t + 6 months) is used instead, also with the day set to the first of the month.
 
 For example, for the 25-29 age cohort, this mainly concerns the projected retirement pension in 39 years (assuming the statutory retirement age). This information is important for the fiduciary manager to set up the protection portfolio and generate the intended protection returns. The desired protection per age cohort is decisive for the interest rate sensitivity to be hedged. A projection based on the entire population is no longer sufficient because the interest rate risk is no longer shared by the entire participant population.
 
