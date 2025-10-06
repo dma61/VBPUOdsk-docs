@@ -198,7 +198,7 @@ _The sum of contributions and withdrawals on all cohorts._*
 | `withdrawalAmount` | Sum of withdrawals.                           | decimal   |        |           |
 | `withdrawalDate`   | Date by which funds for withdrawal are available. | date      |        |           |
 | `netAmount`        | Net sum of contributions and withdrawals.     | decimal   |        |           |
-| `netDate`          | Date on which the net cash flow is determined. | date      |        |           |
+| `netDate`          | Date on which the net cash flow is actually paid. | date      |        |           |
 
 _*Note: The amount and date fields in `financialTransaction.cashflow` are optional. At least one pair must be used._
 
