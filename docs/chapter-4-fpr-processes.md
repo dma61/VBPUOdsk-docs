@@ -221,6 +221,8 @@ In such situations, the sending party must contact the receiving party to discus
 *   Correction in the next regular delivery.
 *   Following an agreed-upon incident procedure.
 
+[See for additonal explanation issue #83 ](https://github.com/dma61/VBPUOdsk/issues/83#issuecomment-2701711063)
+
 ---
 | <div align="left">[< Previous: Chapter 3: SPR Processes](chapter-3-spr-processes.md)</div> | <div align="right">[Next: Chapter 5: Data Standard Setup >](chapter-5-data-standard-setup.md)</div> |
 |:---|---:|
