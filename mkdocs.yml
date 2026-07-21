@@ -19,6 +19,15 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Full manual (PDF)"
+      add_print_site_banner: false
+      add_table_of_contents: true
+      toc_title: "Table of contents"
+      toc_depth: 3
 markdown_extensions:
   - attr_list
 extra:
