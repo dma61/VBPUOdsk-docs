@@ -19,6 +19,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+markdown_extensions:
+  - attr_list
 extra:
   version:
     provider: mike
