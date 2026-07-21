@@ -1,0 +1,2063 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/2027/chapter-6-4-messages/">
+      
+      
+        <link rel="prev" href="../chapter-6-functional-specs/">
+      
+      
+        <link rel="next" href="../chapter-6-5-cross-reference/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 6.4: Messages - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#64-messages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6.4: Messages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#64-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-base-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 Base Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-6417-message-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 – 6.4.17 Message Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4.2 – 6.4.17 Message Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#642-message-structure-1-assets-0001a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 Message structure 1. Assets (0001a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-message-structure-2-cashflow-0001b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.3 Message structure 2. Cashflow (0001b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-message-structure-3-pension-projection-0001c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.4 Message structure 3. Pension Projection (0001c)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-message-structure-4-return-information-00002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.5 Message structure 4. Return Information (00002)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#646-message-structure-5-trade-order-00541" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.6 Message structure 5. Trade Order (00541)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#647-message-structure-6-order-confirmation-00542" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.7 Message structure 6. Order Confirmation (00542)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#648-6410-messages-7-8-9-discontinued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.8 – 6.4.10 Messages 7, 8, 9 (Discontinued)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6411-message-structure-10-control-information-investment-pools-00553" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.11 Message structure 10. Control Information Investment Pools (00553)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6412-6413-messages-11-12-discontinued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.12 – 6.4.13 Messages 11, 12 (Discontinued)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6414-message-structure-13-value-information-investment-pool-00555b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.14 Message structure 13. Value Information Investment Pool (00555b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6415-message-structure-14-payment-information-00556" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.15 Message structure 14. Payment Information (00556)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6416-message-structure-15-corporate-actions-00557" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.16 Message structure 15. Corporate Actions (00557)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6417-message-structure-feedback-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.17 Message structure Feedback Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-5-cross-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.5: Cross-reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-4-transport-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.4: Transport / OpenAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-5-message-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.5: Message Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-6-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.6: Chunking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-appendices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-1-glossary-vbpuo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.1: Glossary VB-PUO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-2-glossary-data-exchange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.2: Glossary Data Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-3-standard-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.3: Standard Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-4-translation-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#64-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-base-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 Base Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-6417-message-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 – 6.4.17 Message Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4.2 – 6.4.17 Message Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#642-message-structure-1-assets-0001a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 Message structure 1. Assets (0001a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-message-structure-2-cashflow-0001b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.3 Message structure 2. Cashflow (0001b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-message-structure-3-pension-projection-0001c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.4 Message structure 3. Pension Projection (0001c)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-message-structure-4-return-information-00002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.5 Message structure 4. Return Information (00002)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#646-message-structure-5-trade-order-00541" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.6 Message structure 5. Trade Order (00541)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#647-message-structure-6-order-confirmation-00542" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.7 Message structure 6. Order Confirmation (00542)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#648-6410-messages-7-8-9-discontinued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.8 – 6.4.10 Messages 7, 8, 9 (Discontinued)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6411-message-structure-10-control-information-investment-pools-00553" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.11 Message structure 10. Control Information Investment Pools (00553)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6412-6413-messages-11-12-discontinued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.12 – 6.4.13 Messages 11, 12 (Discontinued)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6414-message-structure-13-value-information-investment-pool-00555b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.14 Message structure 13. Value Information Investment Pool (00555b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6415-message-structure-14-payment-information-00556" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.15 Message structure 14. Payment Information (00556)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6416-message-structure-15-corporate-actions-00557" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.16 Message structure 15. Corporate Actions (00557)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6417-message-structure-feedback-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.17 Message structure Feedback Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 6.4: Messages</h1>
+
+<h2 id="64-messages">6.4 Messages</h2>
+<blockquote>
+<p><strong>Note:</strong> The tables and detailed message structures below are in Dutch. Technical field names (entity.entitytype, attributes) are identical in both languages.</p>
+<p><strong>NL → EN Legend for table headers and terms:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dutch</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Berichten</td>
+<td>Messages</td>
+</tr>
+<tr>
+<td>Berichtnaam</td>
+<td>Message name</td>
+</tr>
+<tr>
+<td>Berichtsoort</td>
+<td>Message type</td>
+</tr>
+<tr>
+<td>Soort</td>
+<td>Type</td>
+</tr>
+<tr>
+<td>Omschrijving</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Basisbericht</td>
+<td>Base message</td>
+</tr>
+<tr>
+<td>Berichtstructuur</td>
+<td>Message structure</td>
+</tr>
+<tr>
+<td>Kardinaliteit</td>
+<td>Cardinality</td>
+</tr>
+<tr>
+<td>V (Verplicht)</td>
+<td>R (Required)</td>
+</tr>
+<tr>
+<td>O (Optioneel)</td>
+<td>O (Optional)</td>
+</tr>
+<tr>
+<td>Maximumaantal iteraties</td>
+<td>Maximum number of iterations</td>
+</tr>
+<tr>
+<td>Vervallen</td>
+<td>Discontinued</td>
+</tr>
+<tr>
+<td>Van → Naar</td>
+<td>From → To</td>
+</tr>
+<tr>
+<td>Zie ook</td>
+<td>See also</td>
+</tr>
+<tr>
+<td>Pensioenuitvoeringsorganisaties (PUO)</td>
+<td>Pension Administration Organizations (PUO)</td>
+</tr>
+<tr>
+<td>Fiduciair managers (FM)</td>
+<td>Fiduciary Managers (FM)</td>
+</tr>
+<tr>
+<td>Beleggingsadministrateurs (BA)</td>
+<td>Investment Administrators (BA)</td>
+</tr>
+<tr>
+<td>Vermogen</td>
+<td>Assets</td>
+</tr>
+<tr>
+<td>Cashflow</td>
+<td>Cash flow</td>
+</tr>
+<tr>
+<td>Pensioenprojectie</td>
+<td>Pension Projection</td>
+</tr>
+<tr>
+<td>Rendementsinformatie</td>
+<td>Return Information</td>
+</tr>
+<tr>
+<td>Orderopdracht</td>
+<td>Trade Order</td>
+</tr>
+<tr>
+<td>Betaalinformatie</td>
+<td>Payment Information</td>
+</tr>
+<tr>
+<td>Stuurinformatiebeleggingspools</td>
+<td>Control Information Investment Pools</td>
+</tr>
+<tr>
+<td>Waarde-informatie beleggingspool</td>
+<td>Value Information Investment Pool</td>
+</tr>
+<tr>
+<td>Mutatiesaldi</td>
+<td>Balance Adjustments</td>
+</tr>
+<tr>
+<td>Reconciliatie-informatie</td>
+<td>Reconciliation Information</td>
+</tr>
+<tr>
+<td>Rebalancinginformatie</td>
+<td>Rebalancing Details</td>
+</tr>
+<tr>
+<td>Waarde-informatie cohortenpool</td>
+<td>Value Information Cohort Pool</td>
+</tr>
+<tr>
+<td>Corporate Actions</td>
+<td>Corporate Actions</td>
+</tr>
+<tr>
+<td>Feedbackbericht</td>
+<td>Feedback Message</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>The base message is further elaborated into specific messages. From release 2027, 10 content messages and the Feedback Message are active; 5 messages from the FPR layered order model have been discontinued (see marking in Table 12).</p>
+<p>Table 12 below provides an overview of these messages and between which roles they are exchanged:</p>
+<table>
+<thead>
+<tr>
+<th>Berichtnaam</th>
+<th>PUO</th>
+<th>FM</th>
+<th>BA</th>
+<th>LDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Vermogen (0001a)</td>
+<td>van</td>
+<td>naar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Cashflow (0001b)</td>
+<td>van</td>
+<td>naar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Pensioenprojectie (0001c)</td>
+<td>van</td>
+<td>naar</td>
+<td></td>
+<td>naar</td>
+</tr>
+<tr>
+<td>4. Rendementsinformatie (00002)</td>
+<td>naar</td>
+<td></td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>5. Orderopdracht (00541)</td>
+<td>van</td>
+<td></td>
+<td>naar</td>
+<td></td>
+</tr>
+<tr>
+<td>6. Orderconfirmation (00542)</td>
+<td>naar</td>
+<td></td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>10. Stuurinformatiebeleggingspools (00553)</td>
+<td></td>
+<td>naar</td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>13. Waarde-informatie beleggingspool (00555b)</td>
+<td>naar</td>
+<td></td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>14. Betaalinformatie (00556)</td>
+<td>van</td>
+<td>naar</td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>15. Corporate Actions (00557)</td>
+<td>naar</td>
+<td>van</td>
+<td>van</td>
+<td></td>
+</tr>
+<tr>
+<td>Feedback Message</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The Feedback Message can be used for both FPR and SPR and is always a response to a received message; one of the other messages.</p>
+<p><strong>Tabel 12 – Overzicht berichten tussen zenders en ontvangers</strong></p>
+<p><strong>Legenda</strong></p>
+<ul>
+<li>
+<p>Pensioenuitvoeringsorganisaties (PUO) — hieronder vallen ook Zelf Administrerende Fondsen (ZAF)</p>
+</li>
+<li>
+<p>Fiduciair managers (FM)</p>
+</li>
+<li>
+<p>Beleggingsadministrateurs / asset serviceprovider (BA)</p>
+</li>
+<li>
+<p>Liability-Driven Investment-managers (LDI)</p>
+</li>
+</ul>
+<p><strong>Toelichting: Administrateur cohorten- en beleggingspools (ACB) — vervallen</strong></p>
+<p>De rol ACB is als zelfstandige actor vervallen uit dit overzicht. In de praktijk wordt deze rol ingevuld door de BA of soms de PUO. Omdat de ACB-rol per juli 2026 niet meer als afzonderlijke partij voorkwam, is de kolom uit de matrix verwijderd. Mocht de ACB-rol in de toekomst opnieuw als expliciete partij optreden, dan biedt het berichtenschema via de aanwezige berichten nog steeds de mogelijkheid om daar invulling aan te geven. Zie GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/131">#131</a>.</p>
+<p><strong>Let op:</strong> Elke ontvangende partij/rol krijgt zijn <strong>informatie rechtstreeks</strong> van de verzendende partij. Ook de verzending naar niet in Tabel 12 genoemde partijen/rollen is rechtstreeks. Ontvangen informatie wordt niet doorgestuurd aan andere partijen.</p>
+<p>In onderstaande tabel de berichtsoorten en de betekenis. Berichten die vanaf release 2027 zijn vervallen, zijn doorgehaald weergegeven. Tussen haakjes de verwijzing naar het eindrapport van de werkgroep[^7]: "Eindrapport onderzoek standaard VB PUO (september 2023.pdf".</p>
+<p>PMT = pensionMessageType in AFD 2.0 (aangegeven zijn de omschrijvingen van de berichttypes).</p>
+<p>TAG = de in de API[^8] gebruikte aanduiding voor het bericht.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 14%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Soort</th>
+<th>Berichtsoort</th>
+<th>PMT/<br />
+TAG</th>
+<th>Omschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>SPR</th>
+<td><p>1. Vermogen (0001a)</p>
+<p>(4.2.1.1)</p></td>
+<td>Vermogen/<br />
+Capital</td>
+<td><p><strong>Van 🡪 Naar</strong></p>
+<p>Van PUO naar FM en BA/asset serviceprovider.</p>
+<p>Op periodieke (naar verwachting maandelijkse) basis ontvangt de FM over een pensioenuitvoerder per regeling het totale pensioenvermogen bij aanvang van de periode.</p>
+<p>Naast de informatie op totaalniveau kan de FM ook per cohort het pensioenvermogen ontvangen. Zo kan bijvoorbeeld voor het leeftijdscohort 25-29 jaar het totaal van de persoonlijke pensioenvermogens bij aanvang worden ontvangen.</p>
+<p>Met de cohortinformatie kan de FM desgewenst een totaalberekening maken en de aansluiting bij de geleverde informatie op totaal/collectief niveau toetsen aan het beleid van het fonds. Dit is nuttig voor een robuuste overdracht en audittrail afhankelijk van afspraken die partijen maken. Conform het beleid van de pensioenuitvoerder kan bij (grote) afwijkingen herbalancering wenselijk zijn. Deze informatie kan behalve aan de FM desgewenst ook worden verstrekt aan de BA/asset serviceprovider om deze ook in staat te stellen toetsings- en rapportage-activiteiten uit te voeren met behulp van de leidende beleggingsadministratie.</p></td>
+</tr>
+<tr>
+<th>SPR</th>
+<td><p>2. Cashflow (0001b)</p>
+<p>(4.2.1.3)</p></td>
+<td>Cashflow/<br />
+Cashflow</td>
+<td><p>Instroom en uitstroom</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Van PUO naar FM en BA/asset serviceprovider.</p>
+<p>Op periodieke (naar verwachting maandelijkse) basis ontvangt de FM over een pensioenuitvoerder per regeling de instroom in de periode en de uitstroom. Naast op totaalniveau kan ook per cohort instroom en uitstroom aangeleverd worden.</p>
+<p>De in- en uitstroom bevat naast premies, waardeoverdrachten en uitkeringen ook de verschuivingen over cohorten als daar sprake van is. Een cohort kan ook een geboortejaar zijn. Ook het 'cohort' solidariteitsreserve, het 'cohort' compensatiedepot en mogelijk andere reserves zullen hierbij betrokken worden.</p>
+<p>Met de cohortinformatie kan de FM desgewenst een totaalberekening maken en de aansluiting bij de geleverde informatie op totaal/collectief niveau toetsen aan het beleid van het fonds. Dit is nuttig voor een robuuste overdracht en audittrail afhankelijk van afspraken die partijen maken. Deze informatie kan behalve aan de FM desgewenst ook worden verstrekt aan de BA/asset serviceprovider om ook deze in staat te stellen toetsings- en rapportage-activiteiten uit te voeren met behulp van de leidende beleggingsadministratie.</p></td>
+</tr>
+<tr>
+<th>SPR</th>
+<td><p>3. Pensioenprojectie (0001c)</p>
+<p>(4.2.1.3)</p></td>
+<td>Pensioenprojectie/<br />
+PensionProjection</td>
+<td><p>Geprojecteerde uitkeringen</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Van PUO naar FM en BA/asset serviceprovider.</p>
+<p>Op periodieke (verwachting is maandelijkse) basis ontvangt de FM van een pensioenuitvoerder per regeling en per cohort de geprojecteerde uitkeringen op basis van de opgebouwde vermogens naar toekomstige periodes.</p>
+<p>Tevens bevat de gegevensuitwisseling de af te dekken kasstromen per regeling per toekomstige periode. Dit is gelijk aan de som van de gewogen geprojecteerde uitkeringen per cohort. De wegingsfactor is gelijk aan het percentage bescherming per cohort. Op deze manier ontstaat een profiel van de af te dekken kasstromen. Deze uitwisseling vermijdt misverstanden ten aanzien van af te dekken kasstromen en kan desgewenst een toets in het proces introduceren.</p></td>
+</tr>
+<tr>
+<th>SPR</th>
+<td><p>4. Rendementsinformatie (00002)</p>
+<p>(4.2.2.)</p></td>
+<td>Rendementsinformatie/<br />
+ReturnOnInvestment</td>
+<td><p>Informatiebehoefte PUO</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Informatiestroom van BA/asset serviceprovider naar de PUO.</p>
+<p>De PUO heeft voor het uitvoeren van de solidaire premieregeling periodiek (naar verwachting maandelijks) informatie nodig over het behaalde rendement.</p>
+<p>Periodiek ontvangt de PUO over de periode voor een pensioenuitvoerder per regeling en per portefeuille de waarde aan het begin van de periode, de waarde aan het einde van de periode en het rendement in portefeuille valuta en (eventueel) uitgedrukt als percentage. De PUO draagt zorg voor de toedeling van rendementen naar deelnemers op basis van portefeuillerendementen. Optioneel kunnen ook per cohort in de regeling pensioenvermogen, beschermingsrendement en overrendement worden gedeeld met de PUO. Of deze optionele elementen worden uitgewisseld hangt af van de overeengekomen rollen en verantwoordelijkheden tussen de samenwerkende partijen.</p>
+<p>Daarbij is het uitgangspunt dat de PUO de verantwoordelijkheid heeft om conform de door de pensioenuitvoerder vastgestelde toedelingsregels rendementen toe te delen naar de persoonlijke pensioenvermogens van deelnemers, de solidariteitsreserve, een eventueel compensatiedepot en mogelijk andere reserves.</p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>5. Orderopdracht (00541)</p>
+<p>(5.4.1.)</p></td>
+<td>Orderopdracht/<br />
+Trade</td>
+<td><p>Direct order (PUO belegt zelf)</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Informatiestroom van PUO naar Brokers/Transfer Agents/Order Desks.</p>
+<p>Dit is de minimale set aan gegevens die benodigd is om een order te kunnen sturen aan een order verwerkende partij. Tevens kan er een switch mee worden uitgevoerd.</p>
+<p>De PUO stuurt orders in op het hoogste niveau van het beleggingsfonds. De aanbieder van het fonds voert zelf de ordering uit in de onderliggende beleggingen. Dat kan onder andere genoteerde en illiquide beleggingen betreffen.</p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>6. Orderconfirmation (00542)</p>
+<p>(5.4.2.)</p></td>
+<td>Orderconfirmation</td>
+<td><p>Direct order (PUO belegt via een order platform)</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Van brokers/transfer agents/order desks naar PUO.</p>
+<p>Vanuit de order verwerkende partij komen de confirmationtgegevens van de order terug naar de PUO.</p></td>
+</tr>
+<tr>
+<th><del>FPR</del></th>
+<td><del><p>7. Mutatiesaldi (00551)</p>
+<p>(5.5.1)</p></del></td>
+<td><del>Mutatiesaldi/<br />
+BalanceAdjustments</del></td>
+<td><p><strong>Vervallen vanaf release 2027.</strong></p>
+<p><del>Informatiebehoefte administrateur cohortenpools en beleggingspools</del></p>
+<p><del><strong>Van 🡪 Naar</strong></del></p>
+<p><del>Van PUO naar administrateur van cohortenpools en beleggingspools.</del></p>
+<p><del>De eerste (naar verwachting maandelijkse) informatiestroom van de PUO naar de administrateur van cohortenpools en beleggingspools betreft gesaldeerde mutaties, zijnde aankoop, verkoop en switches op totaalniveau per cohortenpool welke worden doorgegeven aan de administrateur cohortenpools en beleggingspools. Deze administrateur kan hiermee de in- of uitstroom voor beleggingspools berekenen en daarmee de FM instrueren.</del></p></td>
+</tr>
+<tr>
+<th><del>FPR</del></th>
+<td><del><p>8. Reconciliatie-informatie (00552a)</p>
+<p>(5.5.2)</p></del></td>
+<td><del>Reconciliatie-informatie/<br />
+InvestmentDetails</del></td>
+<td><p><strong>Vervallen vanaf release 2027.</strong></p>
+<p><del>Reconciliatie administrateur van cohortenpools en beleggingspools, FM en BA.</del></p>
+<p><del><strong>Van 🡪 Naar</strong></del></p>
+<p><del>Informatiestroom tussen administrateur van cohortenpools en beleggingspools, FM en BA.</del></p>
+<p><del>De administrateur cohortenpools en beleggingspools ontvangt maandelijks de posities uit de leidende administratie van de BA van de beleggingspools, mogelijk aangevuld uit de (schaduw) administratie van de FM. Deze posities worden gereconcilieerd met de posities in de eigen administratie van de administrateur van cohortenpools en beleggingspools.</del></p></td>
+</tr>
+<tr>
+<th><del>FPR</del></th>
+<td><del><p>9. PUO-reconciliatie-informatie (00552b)</p>
+<p>(5.5.2)</p></del></td>
+<td><del>PUO-reconciliatie-informatie/<br />
+InvestmentDetailsPUO</del></td>
+<td><p><strong>Vervallen vanaf release 2027.</strong></p>
+<p><del>Additionele informatie als de PUO (ook) de rol van administrateur van cohortenpools vervuld.</del></p>
+<p><del><strong>Van 🡪 Naar</strong></del></p>
+<p><del>Administrateur beleggingspools naar de PUO.</del></p>
+<p><del>Indien de PUO de rol van administrateur cohortenpools vervult dan is een additionele informatie-uitwisseling nodig van de administrateur beleggingspools naar de PUO over de voorlopige unitwaarden van de beleggingspools. Deze is in de onderstaande tabel weergegeven. Door ook het aantal uitgegeven units per beleggingspool te delen wordt de PUO in staat gesteld om de aansluiting bij het aantal gehouden units in de beleggingspools door alle cohortenpools te reconciliëren.</del></p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>10. Stuurinformatie beleggingspools (00553)</p>
+<p>(5.5.3)</p></td>
+<td><p>Stuurinformatie</p>
+<p>Beleggingspools/<br />
+ControlInformationInvestmentPools</p></td>
+<td><p>Informatie aansturen beleggingspools</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Van PUO en/of BA naar FM (zie Figuur 8 en 9, stappen D en E).</p>
+<p>De PUO en/of de BA berekent de participatiewaarden van actieve leeftijdsgroepen en combineert deze waarden met de opgegeven mutaties om de casheffecten op de beleggingspools te schatten. De stuurinformatie op de beleggingspool (met onderbouwing) wordt verstuurd naar de FM in het volgende format.</p></td>
+</tr>
+<tr>
+<th><del>FPR</del></th>
+<td><del><p>11. Rebalancinginformatie (00554)</p>
+<p>(5.5.4)</p></del></td>
+<td><del>Rebalancinginformatie/<br />
+RebalancingDetails</del></td>
+<td><p><strong>Vervallen vanaf release 2027.</strong></p>
+<p><del>Rebalancing cohortenpools</del></p>
+<p><del><strong>Van 🡪 Naar</strong></del></p>
+<p><del>Informatiestroom tussen administrateur van cohortenpools en beleggingspools en FM.</del></p>
+<p><del>De administrateur van cohortenpools en beleggingspools herbalanceert de relevante leeftijdsgroepen om op basis van de unitwaarden van de beleggingspools van tijdstip T conform het normbeleid belegd te zijn voor alle cohorten.</del></p>
+<p><del>De administrateur van cohortenpools en beleggingspools verstuurt alle maandultimo transacties in de cohortenpools en beleggingspools in het afgesproken format naar de FM.</del></p></td>
+</tr>
+<tr>
+<th><del>FPR</del></th>
+<td><del><p>12. Waarde-informatie cohortenpool (00555a)</p>
+<p>(5.5.5)</p></del></td>
+<td><del>Waarde-informatie cohortenpool/<br />
+ValueAmountCohortPool</del></td>
+<td><p><strong>Vervallen vanaf release 2027.</strong></p>
+<p><del>Doorgeven waardes per beleggingspool en per cohortenpool</del></p>
+<p><del>(Fiduciair ontvangt van de PUO)</del></p>
+<p><del><strong>Van 🡪 Naar</strong></del></p>
+<p><del>Fiduciair ontvangt van de PUO (PUO administreert cohortenpools)</del></p>
+<p><del>De administrateur van cohortenpools en beleggingspools berekent de unitwaarde per unit in de beleggingspool en de participatiewaarde per participatie in de cohortenpool.</del></p>
+<p><del>Indien de PUO de rol van de administrateur cohortenpools vervult dan zal deze de unitwaarden van de beleggingspools ontvangen van de administrateur beleggingspools maar zelf zorgdragen voor de berekening van de participatiewaarden van de cohortenpools. De FM zal deze dan ook ontvangen van de PUO.</del></p>
+<p><del>De administrateur van cohortenpools en beleggingspools geeft daarnaast de gesommeerde (unit)waarden van beleggingspools door aan partijen.</del></p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>13. Waarde-informatie beleggingspool (00555b)</p>
+<p>(5.5.5)</p></td>
+<td>Waarde-informatie Beleggingspool/<br />
+ValueAmountInvestmentPool</td>
+<td><p>Doorgeven waardes per beleggingspool en per cohortenpool</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Informatiestroom tussen BA, PUO en FM (zie Figuur 8 en 9, stap J).</p>
+<p>De BA berekent de unitwaarde per unit in de beleggingspool en de participatiewaarde per participatie in de cohortenpool.</p>
+<p>De BA geeft de (participatie)waarden van de cohortenpools door aan de PUO en aan de FM.</p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>14. Betaalinformatie (00556)</p>
+<p>(5.5.6)</p></td>
+<td>Betaalinformatie/<br />
+PaymentDetailsCreditor</td>
+<td><p>Betaalinstructies onttrekkingen</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Informatiestroom van PUO of BA naar FM, begin van de maand (zie Figuur 8 en 9, stappen K en L).</p>
+<p>De PUO of de BA verstuurt de betaalinstructie voor onttrekkingen naar de FM.</p></td>
+</tr>
+<tr>
+<th>FPR</th>
+<td><p>15. Corporate Actions (00557)</p></td>
+<td>Corporate Actions/<br />
+CorporateActions</td>
+<td><p>Doorgeven corporate-action gebeurtenissen op beleggingsproducten</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>Informatiestroom van de vermogensbeheerketen naar de PUO.</p>
+<p>Bericht 15 wordt gebruikt voor het doorgeven van corporate-action gebeurtenissen op beleggingsproducten vanuit de vermogensbeheerketen aan de PUO. Het bericht is bedoeld voor situaties waarin dergelijke gebeurtenissen wel binnen de vermogensbeheeradministratie worden verwerkt, maar niet automatisch zichtbaar zijn binnen de administratie van de PUO.</p></td>
+</tr>
+<tr>
+<th>SPR/ FPR</th>
+<td>Feedback Message</td>
+<td>Feedback Message/<br />
+Feedback</td>
+<td><p>Terugkoppeling van fouten of bevestigen van verwerkbaarheid.</p>
+<p><strong>Van 🡪 Naar</strong></p>
+<p>De ontvanger van het inhoudelijke bericht, de berichten 1 tot en met 15, is de verzender van de feedback message.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="641-base-message">6.4.1 Base Message</h3>
+<p>The base structure for messages (transaction) shows the hierarchical relationships between different entities in the data model. The entities and entity types form a coherent hierarchy. By definition, it is necessary to establish a hierarchy in exchanged messages, and the transaction structure forms the basis for this. The structure indicates, among other things, which child entity belongs to which parent entity.</p>
+<p>In the "Kardinaliteit" (Cardinality) column, it is shown how many times that entity can occur at minimum and maximum. With R (required) or O (optional), it is indicated under Cardinality whether an entity.entitytype must or may occur. Within the base message, all entities have been left optional.</p>
+<p>From the table below, the following can be derived:</p>
+<p>1)  Per party.sender multiple party.contact are possible</p>
+<p>2)  Per party.pensionProvider</p>
+<pre><code>1)  maximally 1 financialInformation.reportingPeriod occurs and possibly
+
+2)  multiple pension.schema's
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>Entity.entitytype</strong></th>
+<th><strong>Kardinaliteit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commonTechnical.default</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>party.sender</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>party.contact</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>party.receiver</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>commonFunctional.default</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>party.pensionProvider</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>pension.scheme</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>financialInformation.reportingPeriod</td>
+<td>1..1, V</td>
+</tr>
+<tr>
+<td>financialTransaction.payment</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>party.creditor</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>financialTransaction.cashflow</td>
+<td>0..1, O</td>
+</tr>
+<tr>
+<td>pension.cohort</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>financialTransaction.payment</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>pension.cohortPool</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>investment.pool</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>investment.pool</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>investment.investmentDetails</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>investment.corporateAction</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>investment.portfolio</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>investment.investmentDetails</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>financialTransaction.trade</td>
+<td>1..*, V</td>
+</tr>
+<tr>
+<td>error.default</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>document.default</td>
+<td>0..*, O</td>
+</tr>
+<tr>
+<td>chunking.default</td>
+<td>0..1, O</td>
+</tr>
+</tbody>
+</table>
+<p>N.B. In the technical implementation, the number of repetitions (*) is limited. See the overview below:</p>
+<table>
+<colgroup>
+<col style="width: 70%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Entity.entitytype</strong></th>
+<th style="text-align: right;"><strong>Maximum iterations</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>commonTechnical.default</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>party.sender</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>party.contact</th>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<th>party.receiver</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>commonFunctional.default</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>party.pensionProvider</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>pension.scheme</th>
+<td style="text-align: right;">999</td>
+</tr>
+<tr>
+<th>financialInformation.reportingPeriod</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>party.creditor</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>financialTransaction.cashflow</th>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<th>financialTransaction.payment</th>
+<td style="text-align: right;">9999 or 99999[^1]</td>
+</tr>
+<tr>
+<th>pension.cohort</th>
+<td style="text-align: right;">99999</td>
+</tr>
+<tr>
+<th>pension.cohortPool</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>investment.pool</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>investment.portfolio</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>investment.investmentDetails</th>
+<td style="text-align: right;">999</td>
+</tr>
+<tr>
+<th>investment.corporateAction</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>financialTransaction.trade</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>error.default</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>document.default</th>
+<td style="text-align: right;">99</td>
+</tr>
+<tr>
+<th>chunking.default</th>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+
+<p>[^1]: The maximum number of financialTransaction.payment under pension.cohort is 9999 and under pension.scheme remains 99999.</p>
+<p><strong>APF circles: two common scenarios</strong></p>
+<p>For a General Pension Fund (APF) with multiple circles, there is one <code>pension.scheme</code> per circle under one <code>party.pensionProvider</code>. Two scenarios exist side by side in the market:</p>
+<p><strong>Scenario 1 — Circle has its own PUV code</strong>
+Each circle is identified with its own <code>puvCode</code> in <code>party.pensionProvider</code>. Buffer capital above circle level is pragmatically handled via a cohort construction, because no separate PUV code exists for this.</p>
+<p><strong>Scenario 2 — Circle does not have its own PUV code</strong>
+There is one PUV code at APF/provider level. The distinction between circles runs via references at <code>pension.scheme</code> level.</p>
+<p>Both scenarios are supported by the standard. Parties record the chosen approach in agreements between chain parties (TOM / SLA). See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/114">#114</a>.</p>
+<h3 id="642-6417-message-structures">6.4.2 – 6.4.17 Message Structures</h3>
+<p>The detailed message structure tables are hosted as interactive HTML tables. Each iframe below loads the Dutch-language table from the official docs-prepare site; the technical field names (entity.entitytype, attributes) are the same in both languages.</p>
+<h4 id="642-message-structure-1-assets-0001a">6.4.2 Message structure 1. Assets (0001a)</h4>
+<p>See also <a href="../chapter-3-spr-processes/#321-message-1-assets-1a">3.2.1</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-01-vermogen.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 1. Assets (0001a)">
+</iframe>
+</p>
+<h4 id="643-message-structure-2-cashflow-0001b">6.4.3 Message structure 2. Cashflow (0001b)</h4>
+<p>See also <a href="../chapter-3-spr-processes/#322-message-2-cashflow-1b-inflow-and-outflow">3.2.2</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-02-cashflow.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 2. Cashflow (0001b)">
+</iframe>
+</p>
+<h4 id="644-message-structure-3-pension-projection-0001c">6.4.4 Message structure 3. Pension Projection (0001c)</h4>
+<p>See also <a href="../chapter-3-spr-processes/#323-message-3-pension-projection-1c-projected-benefits">3.2.3</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-03-pensioenprojectie.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 3. Pension Projection (0001c)">
+</iframe>
+</p>
+<h4 id="645-message-structure-4-return-information-00002">6.4.5 Message structure 4. Return Information (00002)</h4>
+<p>See also <a href="../chapter-3-spr-processes/#324-message-4-return-information-2-information-need-of-the-puo">3.2.4</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-04-rendementsinformatie.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 4. Return Information (00002)">
+</iframe>
+</p>
+<h4 id="646-message-structure-5-trade-order-00541">6.4.6 Message structure 5. Trade Order (00541)</h4>
+<p>See also <a href="../chapter-4-fpr-processes/#42-model-1-simpler-direct-order-model">4.2</a> &amp; <a href="../chapter-4-fpr-processes/#441-message-5-trade-order-00541">4.4.1</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-05-orderopdracht.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 5. Trade Order (00541)">
+</iframe>
+</p>
+<h4 id="647-message-structure-6-order-confirmation-00542">6.4.7 Message structure 6. Order Confirmation (00542)</h4>
+<p>See also <a href="../chapter-4-fpr-processes/#42-model-1-simpler-direct-order-model">4.2</a> &amp; <a href="../chapter-4-fpr-processes/#442-message-6-order-confirmation-00542">4.4.2</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-06-orderconfirmation.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 6. Order Confirmation (00542)">
+</iframe>
+</p>
+<p>The following fields under <code>financialTransaction.trade</code> have been changed from required to optional: <code>tradeQuantity</code>, <code>tradePrice</code>, <code>counterparty</code>, <code>broker</code>, <code>interestAmount</code>, <code>commissionAmount</code>, <code>clearingBroker</code> and <code>clearingBrokerCashAccount</code>. <code>tradeAmount</code> remains required. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/105">#105</a>.</p>
+<h4 id="648-6410-messages-7-8-9-discontinued">6.4.8 – 6.4.10 Messages 7, 8, 9 (Discontinued)</h4>
+<p><strong>Discontinued from release 2027.</strong> Messages 7 (Balance Adjustments / 00551), 8 (Reconciliation Information / 00552a) and 9 (PUO Reconciliation Information / 00552b) are no longer active in the release 2027 message set. See GitHub issues <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/99">#99</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/119">#119</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/121">#121</a>.</p>
+<h4 id="6411-message-structure-10-control-information-investment-pools-00553">6.4.11 Message structure 10. Control Information Investment Pools (00553)</h4>
+<p>From release 2027, the <code>cohortPool</code> layer has been removed from this message; data lands directly at <code>investment.pool</code> level. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/124">#124</a>.</p>
+<p>Additionally, the following fields of entity <code>investment.pool</code> have been removed from message 00553: <code>dummyCashId</code>, <code>tradeQuantity</code>, <code>unitPrice</code> and <code>currencyExchangeRate</code>. The fields <code>buySellId</code>, <code>tradeValueAmount</code> and <code>currencyType</code> remain active. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/133">#133</a>.</p>
+<p>See also <a href="../chapter-4-fpr-processes/#43-model-2-extended-layered-order-model">4.3</a> &amp; <a href="../chapter-4-fpr-processes/#453-message-10-control-information-investment-pools-00553">4.5.3</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-10-stuurinformatiebeleggingspools.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 10. Control Information Investment Pools (00553)">
+</iframe>
+</p>
+<h4 id="6412-6413-messages-11-12-discontinued">6.4.12 – 6.4.13 Messages 11, 12 (Discontinued)</h4>
+<p><strong>Discontinued from release 2027.</strong> Messages 11 (Rebalancing Details / 00554) and 12 (Value Information Cohort Pool / 00555a) are no longer active in the release 2027 message set. See GitHub issues <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/99">#99</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/119">#119</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/121">#121</a>.</p>
+<h4 id="6414-message-structure-13-value-information-investment-pool-00555b">6.4.14 Message structure 13. Value Information Investment Pool (00555b)</h4>
+<p>See also <a href="../chapter-4-fpr-processes/#43-model-2-extended-layered-order-model">4.3</a> &amp; <a href="../chapter-4-fpr-processes/#4552-message-13-value-information-investment-pool-00555b">4.5.5.2</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-13-waarde-informatie-beleggingspool.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 13. Value Information Investment Pool (00555b)">
+</iframe>
+</p>
+<h4 id="6415-message-structure-14-payment-information-00556">6.4.15 Message structure 14. Payment Information (00556)</h4>
+<p>See also <a href="../chapter-4-fpr-processes/#43-model-2-extended-layered-order-model">4.3</a> &amp; <a href="../chapter-4-fpr-processes/#456-message-14-payment-information-00556">4.5.6</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-14-betaalinformatie.html"
+  width="100%"
+  height="400"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 14. Payment Information (00556)">
+</iframe>
+</p>
+<h4 id="6416-message-structure-15-corporate-actions-00557">6.4.16 Message structure 15. Corporate Actions (00557)</h4>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-15-corporate-actions.html"
+  width="100%"
+  height="380"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure 15. Corporate Actions (00557)">
+</iframe>
+</p>
+<h4 id="6417-message-structure-feedback-message">6.4.17 Message structure Feedback Message</h4>
+<p>See also <a href="../chapter-4-fpr-processes/#47-feedback-message">4.7</a>.</p>
+<p><iframe
+  src="https://stichting-sivi.github.io/VBPUOdsk-docs-prepare/assets/berichtstructuur-feedback-message.html"
+  width="100%"
+  height="300"
+  style="border: 1px solid #ddd; border-radius: 4px; display: block;"
+  title="Message structure Feedback Message">
+</iframe>
+</p>
+<p>Notes:</p>
+<ul>
+<li>The initial message is not sent along with the feedback message.</li>
+<li>In the feedback message, a reference is <strong>always</strong> made to the messageId (via <strong>originalMessageId</strong>) of the message to which the feedback message is a response, and <strong>may</strong> reference the messageType (via <strong>originalMessageType</strong>).</li>
+</ul>
+<p>[^7]: Eindrapport onderzoek standaard VB PUO (september 2023.pdf. zie: <a href="https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/">SIVI/Downloads</a></p>
+<p>[^8]: <a href="https://github.com/dma61/VBPUOdsk/tree/main/OAS%20(Open%20API%20Specificaties)%20IN%20ONTWIKKELING">Zie: OAS (Open API Specificaties)</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

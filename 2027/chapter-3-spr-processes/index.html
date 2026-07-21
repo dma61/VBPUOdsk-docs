@@ -1,0 +1,1141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/2027/chapter-3-spr-processes/">
+      
+      
+        <link rel="prev" href="../chapter-2-principles/">
+      
+      
+        <link rel="next" href="../chapter-4-fpr-processes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 3: SPR Processes - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-processes-information-flows-solidarity-premium-scheme" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3: SPR Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-spr-information-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 SPR Information Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 SPR Information Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-message-1-assets-1a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Message 1. Assets (1a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-message-2-cashflow-1b-inflow-and-outflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 Message 2. Cashflow (1b, inflow and outflow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-message-3-pension-projection-1c-projected-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 Message 3. Pension Projection (1c, projected benefits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-message-4-return-information-2-information-need-of-the-puo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 Message 4. Return Information (2, Information Need of the PUO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-4-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-5-cross-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.5: Cross-reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-4-transport-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.4: Transport / OpenAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-5-message-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.5: Message Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-6-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.6: Chunking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-appendices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-1-glossary-vbpuo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.1: Glossary VB-PUO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-2-glossary-data-exchange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.2: Glossary Data Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-3-standard-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.3: Standard Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-4-translation-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-spr-information-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 SPR Information Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 SPR Information Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-message-1-assets-1a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Message 1. Assets (1a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-message-2-cashflow-1b-inflow-and-outflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 Message 2. Cashflow (1b, inflow and outflow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-message-3-pension-projection-1c-projected-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 Message 3. Pension Projection (1c, projected benefits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-message-4-return-information-2-information-need-of-the-puo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 Message 4. Return Information (2, Information Need of the PUO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-processes-information-flows-solidarity-premium-scheme">3 Processes &amp; Information Flows – Solidarity Premium Scheme</h1>
+<h2 id="31-introduction">3.1 Introduction</h2>
+<p>This section describes the necessary information exchange between the involved parties to robustly implement the Solidarity Premium Scheme[^1].</p>
+<p>Figure 1 below schematically illustrates the information exchange between the involved parties. The Investment Administrator (BA) provides the Pension Administration Organization (PUO) with information independently of the Fiduciary Manager (FM) and can also fulfill a reviewing role. If this is not chosen and the fiduciary also maintains the leading investment administration, information flow 2 will run from the FM to the PUO.</p>
+<p><img src="../media/image2.png" style="width:6.49583in;height:3.47847in" alt="Scope information exchange SPR" /></p>
+<p><strong>Figure 1 - Scope information exchange SPR</strong></p>
+<p>Legend (information flows/messages):</p>
+<p>1a - Assets per cohort</p>
+<p>1b - Cash flow (contributions and withdrawals)</p>
+<p>1c - Pension projections / projected cash flows</p>
+<p>2 - Returns and assets</p>
+<p>Below, the roles of the various parties in the scheme are further explained:</p>
+<ul>
+<li>
+<p>The <strong>Pension Administration Organization</strong> (PUO) has the responsibility to allocate returns to the personal pension assets of participants (possibly via a collective payout phase), the solidarity reserve, any compensation deposit and possible other reserves, in accordance with the allocation rules set by the pension administrator.<br />
+  Based on these personal pension assets, benefits are determined and projected in accordance with the pension administrator's principles.<br />
+  The pension assets and projected benefits are delivered per cohort to the FM and/or the BA. The PUO processes premiums, benefits and changes in the participant base and handles participant communication.</p>
+</li>
+<li>
+<p>The <strong>Fiduciary Manager</strong> (FM) supports the pension administrator in establishing the integrated investment policy, ensures the execution of this investment policy and directs the operational asset managers. The FM will also maintain a (shadow) investment administration. For large pension administrators without an FM, the pension administrator itself is responsible for directing both internal and external asset managers.</p>
+</li>
+<li>
+<p>The operational <strong>asset managers</strong> manage parts of the portfolio and are directed by the FM. It is possible that (for certain parts) the FM and the operational asset manager belong to the same organization.</p>
+</li>
+<li>
+<p>The <strong>Investment Administrator</strong>/asset service provider (BA; usually additional services from the custodian) provides independent investment administration for the pension administrator. The BA calculates the total return on investments and (if needed) the return on various investment (sub)portfolios and delivers this to the PUO. As mentioned above, the FM can also maintain the leading investment administration. The investment administration is fed by the settlement of mutations in the portfolio, executed by the operational asset managers. This administration is reconciled with the FM if desired. The BA also often handles the preparation of regulatory reports or parts thereof.</p>
+</li>
+</ul>
+<h2 id="32-spr-information-flows">3.2 SPR Information Flows</h2>
+<p>The information flows for SPR products between the FM, the BA and the PUO are:</p>
+<ul>
+<li>
+<p>Information from the PUO about assets, inflow and outflow of cash, and projected cash flows to be hedged (optionally per cohort) to enable the FM and BA to fulfill their roles.</p>
+</li>
+<li>
+<p>Information from the BA or FM about returns that the pension administrator needs to arrive at a correct allocation to participants.</p>
+</li>
+</ul>
+<p>The information flow from the PUO to FM/BA (stream 1) is divided into three messages: 1a (assets), 1b (inflow and outflow) and 1c (projected benefits). Value and return information is sent to the PUO via Message 4. Return Information.</p>
+<p>These messages are further detailed below.</p>
+<h3 id="321-message-1-assets-1a">3.2.1 Message 1. Assets (1a)</h3>
+<p>On a periodic (expected monthly) basis, the FM receives for a pension administrator (identified by <code>puvCode</code>) per scheme (identified by <code>refKey</code>) the total pension assets (<code>startAmount</code>) at the beginning of the period (<code>startDate</code>).</p>
+<p>In addition to the information at the total level, the fiduciary can also receive per (age) cohort (identified by <code>refKey</code>) the pension assets (<code>startAmount</code>). For example, for the age cohort 25-29 years, the total of the personal pension assets at the start can be received.</p>
+<p>With the cohort information, the FM can, if desired, make a total calculation and check the alignment with the information provided at the total/collective level against the fund's policy. This is useful for a robust transfer and audit trail depending on the agreements parties make. In accordance with the pension administrator's policy, rebalancing may be desirable in case of (large) deviations. This information can, in addition to the FM, also be provided to the BA/asset service provider to enable them to perform review and reporting activities using the leading investment administration.</p>
+<p><strong>Allocation to Portfolios</strong></p>
+<p>In addition to the total assets, the PUO can also communicate in this message the desired allocation of these assets across different portfolios to the asset manager. This provides the asset manager with important control information to act in accordance with the standard portfolio used by the PUO.</p>
+<p>This allocation information can be provided at both the total level (under the pension scheme) and the cohort level. These are optional fields that can specify the exposure to, for example, a return or protection portfolio, both as an absolute amount (startExposureAmount) and as a percentage (startExposurePercentage). While the total level is particularly important for control, the information at the cohort level can be useful for reporting purposes.</p>
+<p>Functional elaboration into a message: see chapter 6, specifically <em>0</em> Message structure 1. Assets (0001a).</p>
+<p>The current message structure can be found on GitHub under "<a href="https://github.com/dma61/VBPUOdsk/wiki/Berichten-overzicht#bericht-1-vermogen-0001a">Wiki/Berichtenoverzicht</a>"</p>
+<p>For the date conventions regarding startDate, see the <a href="../chapter-6-functionele-specificaties/#entiteit-financialinformation-reportingperiod">explanation for financialInformation.reportingPeriod in §6.3</a>.</p>
+<h3 id="322-message-2-cashflow-1b-inflow-and-outflow">3.2.2 Message 2. Cashflow (1b, inflow and outflow)</h3>
+<p>On a periodic (expected monthly) basis, the FM receives for a pension administrator (<code>puvCode</code>) per scheme (<code>refKey</code>) the inflow (<code>contributionAmount</code>) during the period (on the <code>contributionDate</code>) and the outflow or as net cash flow (<code>netAmount</code>) during the period (on the <code>netDate</code>).</p>
+<p>In addition to the information at the total level, the FM can also receive per (age) cohort (<code>refKey</code>) the inflow (<code>contributionAmount</code>) and outflow (<code>withdrawalAmount</code>) or as net cash flow (<code>netAmount</code>) over the period (<code>startDate</code> to <code>endDate</code>).</p>
+<p>The inflow and outflow include not only premiums, value transfers and benefits, but also shifts between cohorts if applicable. A cohort can also be a birth year. An example is the personal pension assets of participants moving from the 25-29 age cohort to the 30-34 age cohort. The 'cohort' solidarity reserve, the 'cohort' compensation deposit and possibly other reserves will also be involved.</p>
+<p>With the cohort information, the FM can, if desired, make a total calculation and check the alignment with the information provided at the total/collective level against the fund's policy. This is useful for a robust transfer and audit trail depending on the agreements parties make. This information can, in addition to the FM, also be provided to the BA/asset service provider to also enable them to perform review and reporting activities using the leading investment administration.</p>
+<p><strong>Two alternative fill patterns in Message 2 — use one of them</strong></p>
+<p>Message 0001b supports two mutually exclusive fill patterns per <code>pension.scheme</code>:</p>
+<p><strong>SPR route</strong> — the cash flow is included directly under <code>pension.scheme</code> as <code>financialTransaction.cashflow</code> (optional, <code>0..1</code>). Cohort breakdown runs via <code>pension.cohort</code>, including <code>netDate</code> at the cohort level. When cohort breakdown is applied, the sum of the cohort amounts matches the amount at the scheme level: <code>scheme.netAmount = sum(cohort.netAmount)</code>. See <a href="../chapter-6-functionele-specificaties/#verbandscontroles-cashflowbericht-0001b">§6.3.1</a> for the integrity constraints.</p>
+<p><strong>FPR route</strong> — the cash flow is included per investment portfolio via <code>pension.scheme → investment.portfolio → financialTransaction.cashflow</code>. In this fill pattern, <code>netAmount</code> and <code>netDate</code> are mandatory at the portfolio level.</p>
+<p>The two patterns are mutually exclusive: the presence of <code>investment.portfolio</code> excludes direct <code>financialTransaction.cashflow</code> under <code>pension.scheme</code>, and the presence of <code>pension.cohort</code> excludes the use of <code>investment.portfolio</code>.</p>
+<p><strong>Applications of the Cashflow Message</strong></p>
+<p>The standard offers the flexibility to use this message for two different purposes, which can coexist in practice:</p>
+<ol>
+<li>
+<p><strong>Prospective Application (Forward-looking)</strong></p>
+<ul>
+<li>
+<p>Purpose: Liquidity management. In this application, an <strong>estimate</strong> of the expected net cash flow for the upcoming period is provided. The net amount (<code>netAmount</code>) serves as input for the actual monthly (de)allocation payment between the PUO and the asset manager.</p>
+</li>
+<li>
+<p>Characteristics<strong>:</strong> Typically a net amount at the scheme total level.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Retrospective Application (Backward-looking)</strong></p>
+<ul>
+<li>
+<p>Purpose: Analysis and accountability. Here, the <strong>actually realized</strong> cash flows from a closed period are reported. This information is separate from the monthly allocation payment.</p>
+</li>
+<li>
+<p>Characteristics: The cash flow can be provided as a net amount (<code>netAmount</code>) or broken down (<code>contributionAmount</code> / <code>withdrawalAmount</code>). This variant lends itself to providing details at the cohort level.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The FM is responsible for investing the inflow or freeing up funds to finance the outflow. Inflow and outflow can be provided separately or as a net cash flow. When provided separately, the inflow and outflow dates must also be filled in; when provided as a net amount, only the cash flow date is needed.</p>
+<p>The calculation method for the amount of the inflow or outflow depends on the preference of the pension administrator and the working method of the PUO. The FM does not need to be informed about the calculation methodology or about the period to which the data relates. After all, investments can never be made retroactively. For the audit trail, it may be desirable to record the period in the information exchange.</p>
+<p>Functional elaboration into a message: see chapter 6, specifically <em>6.4.3</em> Message structure 2. Cashflow (0001b).</p>
+<p>The current message structure can be found on GitHub under "<a href="https://github.com/dma61/VBPUOdsk/wiki/Berichten-overzicht#bericht-2-cashflow-0001b">Wiki/Berichtenoverzicht</a>"</p>
+<h3 id="323-message-3-pension-projection-1c-projected-benefits">3.2.3 Message 3. Pension Projection (1c, projected benefits)</h3>
+<p>On a periodic (expected monthly) basis (<code>projectionDate</code>), the FM receives from a pension administrator (<code>puvCode</code>) per scheme (<code>refKey</code>) and per (age) cohort (<code>refKey</code>) the projected benefits (<code>amount</code>) based on the accumulated assets for future periods (<code>expectedPensionPaymentDate</code>).</p>
+<p>For example, for the 25-29 age cohort, this mainly concerns the projected retirement pension in 39 years (assuming the statutory retirement age). In the information flow as of December 31, 2022, the first (benefit) cash flow for this cohort is then expected in 2061. This information is important for the FM to set up (the management of) the protection portfolio and generate the intended protection returns. The desired protection per age cohort (e.g. 25% for 25-29 years and 100% from 70 years) is decisive for the interest rate sensitivity to be hedged. It is no longer sufficient to base a projection of benefits only on the entire population in a pension scheme, because the interest rate risk is no longer shared by the complete participant population. If desired, the 'cohort' solidarity reserve, possibly the 'cohort' compensation deposit and other possible reserves can also be allocated protection returns. In that case, a (fictitious) cash flow profile must be drawn up for these cohorts. In addition to the individual projected benefits per cohort (including the reserves), a total projected benefit across the entire population can also be provided (<code>amount</code>). This equals the sum of the projected benefits across all cohorts per future period (<code>expectedPensionPaymentDate</code>).</p>
+<p>Finally, the data exchange contains the cash flows to be hedged per scheme (<code>hedgedExpectedPensionPaymentAmount</code>) per future period. This equals the sum of the weighted projected benefits per cohort. The weighting factor equals the protection percentage per cohort. For example: the protection of the 25-29 age cohort is 25% and the protection of the cohort from 70 years is 100%. The projected benefits of the 25-29 age cohort are multiplied by 25% and added to the full projected benefits of the cohort from 70 years multiplied by 100%. In this way, a profile of the cash flows to be hedged is created. This exchange avoids misunderstandings regarding cash flows to be hedged and can, if desired, introduce a check in the process.</p>
+<p>Functional elaboration into a message: see chapter 6, specifically <em>6.4.4</em> Message structure 3. Pension Projection (0001c)</p>
+<p>The current message structure can be found on GitHub under "<a href="https://github.com/dma61/VBPUOdsk/wiki/Berichten-overzicht#bericht-3-pensioenprojectie-0001c">Wiki/Berichtenoverzicht</a>"</p>
+<p>For the unambiguous application of projectionDate and expectedPensionPaymentDate, see the <a href="../chapter-6-functionele-specificaties/#entiteit-financialinformation-reportingperiod">explanation for financialInformation.reportingPeriod in §6.3</a>.</p>
+<p><strong>Handling Empty Cohorts</strong></p>
+<p>The standard allows two approaches for cohorts with a value of 0:</p>
+<ol>
+<li><strong>Include</strong> with an explicit value of <code>0</code> — makes the distinction clear between "value is 0" and "data is missing."</li>
+<li><strong>Omit</strong> — keeps messages compact.</li>
+</ol>
+<p>Parties must be able to process both variants. Agreements on this are documented between chain parties (TOM / SLA). For large messages, the <a href="../chapter-7-6-chunking/#761-fundamentele-uitgangspunten-van-chunking">chunking mechanism</a> can be helpful. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/100">#100</a>.</p>
+<h3 id="324-message-4-return-information-2-information-need-of-the-puo">3.2.4 Message 4. Return Information (2, Information Need of the PUO)</h3>
+<p><strong>Information flow from BA/asset service provider to the PUO (stream 2 from Figure 1) in the SPR.</strong></p>
+<p>The PUO needs periodic (expected monthly) information about the achieved return to administer the Solidarity Premium Scheme.</p>
+<p>Periodically, the PUO receives for the period (running from <code>startDate</code> to <code>endDate</code>) for a pension administrator (<code>puvCode</code>) per scheme (<code>refKey</code>) and per portfolio (<code>refKey</code>) the value at the beginning of the period (<code>startAmount</code>), the value at the end of the period (<code>endAmount</code>) and the return in portfolio currency and (optionally) expressed as a percentage (<code>returnPercentage</code>). The PUO is responsible for the allocation of returns to participants based on portfolio returns. Optionally, per cohort in the scheme (<code>refKey</code>), pension assets (<code>startAmount</code>), protection return (<code>protectionReturnAmount</code>) and excess return (<code>excessReturnAmount</code>) can also be shared with the PUO. Whether these optional elements are exchanged depends on the agreed roles and responsibilities between the cooperating parties. The starting point is that the PUO has the responsibility to allocate returns to the personal pension assets of participants, the solidarity reserve, any compensation deposit and possible other reserves, in accordance with the allocation rules set by the pension administrator.</p>
+<p>The BA/asset service provider provides the necessary information to the PUO and bases itself on the independent investment administration. In an alternative governance model, the FM can provide this information to the PUO.</p>
+<p>If the Solidarity Premium Scheme is structured with <strong>indirect (theoretical) protection return</strong>, information about the total return is in principle sufficient. The allocation of protection return is then not dependent on the realized return. The excess return to be allocated by the PUO can be calculated by the PUO based on the total return minus the allocated indirect (theoretical) protection return.</p>
+<p>When the Solidarity Premium Scheme bases the protection return to be allocated on the <strong>direct (actual) achieved return</strong>, the PUO must have a breakdown of the achieved return. The BA/asset service provider must then provide the return for sub-portfolios (and optionally per cohort), with at least a distinction between the protection portfolio and the excess return portfolio. Depending on the way actual protection return is allocated to individual participants, a further breakdown of the protection portfolio into sub-portfolios may be desirable.</p>
+<p>A (further) breakdown of portfolios may also be desirable for the purpose of communication about achieved returns to participants, reconciliation purposes and any legal obligations. This depends on the setup desired by the pension administrator.</p>
+<p>The information exchange for the solidarity scheme based on the direct (actual) achieved return can also be used for an exchange in a specific implementation variant of the Flexible Premium Scheme. This choice will mainly be made by parties that use a similar method of return allocation for the Flexible Premium Scheme as in the Solidarity Premium Scheme based on actual returns. For each cohort, an actual protection return and excess return are then delivered to the PUO as an amount and optionally as a percentage.</p>
+<p><strong>Return Information at Multiple Levels in a Single Message</strong></p>
+<p>Within a single Message 4, multiple types of return can be included: total return (total), protection return (matching) and excess return (return). The <code>refKey</code> identifies per block which type of return or which portfolio is concerned. It is not necessary to send a separate message per type. The standard does not establish a formal relationship between the three types; the assumption that matching + return = total is not enforced.</p>
+<p>See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/109">#109</a>.</p>
+<p>[^1]: Note: the SPR data model, which is essentially a decomposition model, can also be used for FPR data exchange. This is logical when the implementation of an FPR scheme is not unitized but is also based on return decomposition, see 4.6.</p>
+<p>Functional elaboration into a message: see chapter 6, specifically <em>6.4.5</em> Message structure 4. Return Information (00002)</p>
+<p>A graphical overview of the message structure can be found on GitHub under "<a href="https://github.com/dma61/VBPUOdsk/wiki/Berichten-overzicht#bericht-4-rendementsinformatie-00002">Wiki/Berichtenoverzicht</a>". The JSON schemas and this manual are, however, leading.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

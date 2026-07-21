@@ -1,0 +1,1527 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/2027/chapter-8-4-translation-table/">
+      
+      
+        <link rel="prev" href="../chapter-8-3-standard-components/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 8.4: Translation Table - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#84-translation-table-from-functional-attributes-to-afd-20-attributes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 8.4: Translation Table
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-4-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-5-cross-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.5: Cross-reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-4-transport-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.4: Transport / OpenAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-5-message-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.5: Message Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-6-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.6: Chunking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-appendices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-1-glossary-vbpuo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.1: Glossary VB-PUO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-2-glossary-data-exchange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.2: Glossary Data Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-3-standard-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.3: Standard Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#84-translation-table-from-functional-attributes-to-afd-20-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Translation Table from Functional Attributes to AFD 2.0 Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#84-translation-table-from-functional-attributes-to-afd-20-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Translation Table from Functional Attributes to AFD 2.0 Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 8.4: Translation Table</h1>
+
+<h2 id="84-translation-table-from-functional-attributes-to-afd-20-attributes">8.4 Translation Table from Functional Attributes to AFD 2.0 Attributes</h2>
+<blockquote>
+<p><strong>Note:</strong> The translation table below is in Dutch. It maps functional attribute names from the consultation report to the final AFD 2.0 data element names.</p>
+<p><strong>NL → EN Legend for table headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dutch</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attribuutnaam Functioneel</td>
+<td>Functional Attribute Name</td>
+</tr>
+<tr>
+<td>AFD 2.0 entity.entitytype</td>
+<td>AFD 2.0 entity.entitytype</td>
+</tr>
+<tr>
+<td>AFD 2.0 attribuutnaam</td>
+<td>AFD 2.0 attribute name</td>
+</tr>
+<tr>
+<td>Omschrijving</td>
+<td>Description</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>In the consultation report, different attribute names were used in various places than in the final AFD 2.0 model. Below is an overview of the functional attribute names and the final AFD 2.0 data element names.</p>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 13%" />
+<col style="width: 21%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Attribuutnaam Functioneel</strong></th>
+<th><strong>AFD 2.0 entity.entitytype</strong></th>
+<th><strong>AFD 2.0 attribuutnaam</strong></th>
+<th><strong>Omschrijving</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Transfer ID</th>
+<td>commonTechnical.default</td>
+<td>messageId</td>
+<td>Unieke berichtidentificatie</td>
+</tr>
+<tr>
+<th>Pensionfund ID</th>
+<td>party.pensionProvider</td>
+<td>puvCode</td>
+<td>ID van het pensioenuitvoerder (PUV-code) / Unique reference key assigned to an entity. (NL: Entiteitsreferentie is een unieke referentie sleutel die aan een entiteit wordt toegekend.)</td>
+</tr>
+<tr>
+<th>Pension scheme ID i</th>
+<td>pension.scheme</td>
+<td>refKey</td>
+<td>ID van de pensioenregeling / (Unique reference key assigned to an entity. (NL: Entiteitsreferentie is een unieke referentie sleutel die aan een entiteit wordt toegekend.))</td>
+</tr>
+<tr>
+<th>Capital i</th>
+<td>pension.scheme</td>
+<td>startAmount</td>
+<td>Totaal pensioenvermogen per startdatum</td>
+</tr>
+<tr>
+<th>Portfolio</th>
+<td>pension.scheme</td>
+<td>tradingPortfolioId</td>
+<td>Portefeuille ID van de custodian (bewaren en beheren van financiële activa)</td>
+</tr>
+<tr>
+<th>Capital date i / Start date PUO admin / Start date Investment Report</th>
+<td>financialInformation.reportingPeriod</td>
+<td>startDate</td>
+<td>Begindatum van de gegevensperiode waarop de aanlevering vanuit de PUO wordt gebaseerd of Peildatum</td>
+</tr>
+<tr>
+<th>End date PUO admin</th>
+<td>financialInformation.reportingPeriod</td>
+<td>endDate</td>
+<td>Einddatum van de gegevensperiode waarop de aanlevering vanuit de PUO wordt gebaseerd</td>
+</tr>
+<tr>
+<th>Mutations date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>mutationValuationDate</td>
+<td>Datum verwerking mutaties per leeftijdsgroep</td>
+</tr>
+<tr>
+<th>End date​ Investment Report</th>
+<td>financialInformation.reportingPeriod</td>
+<td>endDate</td>
+<td>Einddatum van de gegevensperiode waarover rendement wordt gerapporteerd</td>
+</tr>
+<tr>
+<th>Trade date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>tradeDate</td>
+<td>Gewenste handelsdatum</td>
+</tr>
+<tr>
+<th>Settlement date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>investmentOrderSettlementDate</td>
+<td>Datum waarop de volledige cyclus van de beleggingsorder afgewikkeld moet zijn</td>
+</tr>
+<tr>
+<th>Projection date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>projectionDate</td>
+<td>Datum van de projectie van pensioenuitkeringen</td>
+</tr>
+<tr>
+<th>instruction date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>instructionDate</td>
+<td>Instructiedatum (datum van de bestelling verzonden door de PUO)</td>
+</tr>
+<tr>
+<th>Estimation date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>unitValueEstimationDate</td>
+<td>Geeft de datum aan waarop de voorlopige unitwaarde (belegginspool) is bepaald</td>
+</tr>
+<tr>
+<th>Valuation date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>participationValuationDate</td>
+<td>Prijsdatum participatiewaarde (cohortpool)</td>
+</tr>
+<tr>
+<th>value date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>valueDate</td>
+<td>Currency date. (NL: Valutadatum)</td>
+</tr>
+<tr>
+<th>Date</th>
+<td>financialInformation.reportingPeriod</td>
+<td>positionDate</td>
+<td>De datum waarop de posities in de beleggingsadministratie zijn vastgesteld</td>
+</tr>
+<tr>
+<th>Value</th>
+<td>financialTransaction.payment</td>
+<td>amount</td>
+<td>Bedrag in valuta</td>
+</tr>
+<tr>
+<th>currency i</th>
+<td>financialTransaction.payment</td>
+<td>currencyType</td>
+<td>Valuta</td>
+</tr>
+<tr>
+<th>IBAN debet i</th>
+<td>financialTransaction.payment</td>
+<td>collectionAccountIban</td>
+<td>IBAN-nummer van debet rekening</td>
+</tr>
+<tr>
+<th>Description i</th>
+<td>financialTransaction.payment</td>
+<td>description</td>
+<td>Omschrijving van de transactie (betaling)</td>
+</tr>
+<tr>
+<th>IBAN credit i</th>
+<td>party.creditor</td>
+<td>collectionAccountIban</td>
+<td>IBAN-nummer van credit rekening per regeling</td>
+</tr>
+<tr>
+<th>Counterparty i</th>
+<td>party.creditor</td>
+<td>collectionAccountInNameOf</td>
+<td>Naam van de tegenpartij per regeling</td>
+</tr>
+<tr>
+<th>BIC i</th>
+<td>party.creditor</td>
+<td>collectionAccountBic</td>
+<td>Business Identifier Code (BIC) per regeling</td>
+</tr>
+<tr>
+<th>BIC-correspondent i</th>
+<td>party.creditor</td>
+<td>collectionAccountBicCorrespondent</td>
+<td>BIC-correspondent per regeling</td>
+</tr>
+<tr>
+<th>Contribution i</th>
+<td>financialTransaction.cashflow</td>
+<td>contributionAmount</td>
+<td>Som van inleg</td>
+</tr>
+<tr>
+<th>Contribution date i</th>
+<td>financialTransaction.cashflow</td>
+<td>contributionDate</td>
+<td>Datum van ontvangst van de inleg</td>
+</tr>
+<tr>
+<th>Withdrawal i</th>
+<td>financialTransaction.cashflow</td>
+<td>withdrawalAmount</td>
+<td>Som van de uitstroom</td>
+</tr>
+<tr>
+<th>Withdrawal date i</th>
+<td>financialTransaction.cashflow</td>
+<td>withdrawalDate</td>
+<td>Datum waarop (uiterlijk) de liquiditeiten ten behoeve van de onttrekking zijn vrijgemaakt</td>
+</tr>
+<tr>
+<th>Net contribution/withdrawal i</th>
+<td>financialTransaction.cashflow</td>
+<td>netAmount</td>
+<td>Som van inleg en onttrekkingen per regeling (net). Een negatief bedrag is een (netto) withdrawal. / Verschil tussen inleg en onttrekking. Een negatief bedrag is een (netto) onttrekking.)</td>
+</tr>
+<tr>
+<th>Net contribution/withdrawal<br />
+date i</th>
+<td>financialTransaction.cashflow</td>
+<td>netDate</td>
+<td>Datum waarop gesaldeerde instroom en uitstroom wordt gefaciliteerd / Datum waarop het saldo van inleg en onttrekking is bepaald</td>
+</tr>
+<tr>
+<th>Cohort ID i, k</th>
+<td>financialTransaction.payment</td>
+<td>refKey</td>
+<td>ID van de expected payment</td>
+</tr>
+<tr>
+<th>Expected pension payment Date i, k</th>
+<td>financialTransaction.payment</td>
+<td>expectedPensionPaymentDate</td>
+<td>Pensioenuitkeringsmoment</td>
+</tr>
+<tr>
+<th>Hedged expected pension payment i,k</th>
+<td>financialTransaction.payment</td>
+<td>hedgedExpectedPensionPaymentAmount</td>
+<td>Af te dekken kasstroom over alle cohorten</td>
+</tr>
+<tr>
+<th>Cohort expected pension payment i,j,k</th>
+<td>financialTransaction.payment</td>
+<td>amount</td>
+<td>Geprojecteerde uitkering over alle cohorten</td>
+</tr>
+<tr>
+<th>Cohort ID i, k</th>
+<td>pension.cohort</td>
+<td>refKey</td>
+<td>ID van het cohort</td>
+</tr>
+<tr>
+<th>Cohort Capital i,k</th>
+<td>pension.cohort</td>
+<td>startAmount</td>
+<td>Pensioenvermogen van het cohort per begindatum</td>
+</tr>
+<tr>
+<th>Net contribution/withdrawal I,k</th>
+<td>pension.cohort</td>
+<td>netAmount</td>
+<td>Som van inleg en onttrekkingen per cohort. Een negatief bedrag is een (netto) onttrekking.)</td>
+</tr>
+<tr>
+<th>Cohort contribution i,k</th>
+<td>pension.cohort</td>
+<td>contributionAmount</td>
+<td>Instroom te beleggen door de fiduciair manager</td>
+</tr>
+<tr>
+<th>Cohort withdrawal i,k</th>
+<td>pension.cohort</td>
+<td>withdrawalAmount</td>
+<td>Uitstroom te beleggen door de fiduciair manager</td>
+</tr>
+<tr>
+<th>Cohort return rate protection i,k</th>
+<td>pension.cohort</td>
+<td>protectionReturnPercentage</td>
+<td>Het behaalde beschermingsrendement in percentage over gegevensperiode per regeling en per cohort</td>
+</tr>
+<tr>
+<th>Cohort return rate excess i,k</th>
+<td>pension.cohort</td>
+<td>excessReturnPercentage</td>
+<td>Het behaalde overrendement in percentage over gegevensperiode per regeling en per cohort</td>
+</tr>
+<tr>
+<th>Cohort return protection i,k</th>
+<td>pension.cohort</td>
+<td>protectionReturnAmount</td>
+<td>Het behaalde beschermingsrendement in valuta van de regeling over gegevensperiode per regeling en per cohort</td>
+</tr>
+<tr>
+<th>Cohort return excess i,k</th>
+<td>pension.cohort</td>
+<td>excessReturnAmount</td>
+<td>Het behaalde overrendement in valuta van de regeling over gegevensperiode per regeling en per cohort</td>
+</tr>
+<tr>
+<th>Hedged expected pension payment i,k</th>
+<td>financialTransaction.payment</td>
+<td>hedgedExpectedPensionPaymentAmount</td>
+<td>Af te dekken kasstroom</td>
+</tr>
+<tr>
+<th>Cohort expected pension payment i,j,k</th>
+<td>financialTransaction.payment</td>
+<td>amount</td>
+<td>Geprojecteerde uitkering</td>
+</tr>
+<tr>
+<th>Cohort ID i, k</th>
+<td>pension.cohortPool</td>
+<td>cohortRef</td>
+<td>Geeft aan op welk cohort in de regeling de cohortpool-gegevens betrekking hebben</td>
+</tr>
+<tr>
+<th>Cohort Inflow i-k (1)</th>
+<td>pension.cohortPool</td>
+<td>inflowPremiumAmount</td>
+<td>Premie-inleg per cohortpool per regeling</td>
+</tr>
+<tr>
+<th>Cohort Inflow i-k (2)</th>
+<td>pension.cohortPool</td>
+<td>inflowRebalanceAmount</td>
+<td>Geldbedrag van rebalance transacties per cohortpool per regeling</td>
+</tr>
+<tr>
+<th>Cohort withdrawal i,k</th>
+<td>pension.cohortPool</td>
+<td>numberOfNewParticipations</td>
+<td>Nieuwe uit te geven participaties in cohortpool per regeling (instroom)</td>
+</tr>
+<tr>
+<th>Number of units, i,k</th>
+<td>pension.cohortPool</td>
+<td>numberOfParticipations</td>
+<td>Aantal uitstaande units (participaties) in de Cohortpool</td>
+</tr>
+<tr>
+<th>Cohort rebalance i,k</th>
+<td>pension.cohortPool</td>
+<td>numberOfRebalanceParticipations</td>
+<td>Rebalance participaties per cohortpool per regeling (bij overgang van een cohortpool naar een ander cohort)</td>
+</tr>
+<tr>
+<th>Cohort Capital i,k / Cohort value i, k</th>
+<td>pension.cohortPool</td>
+<td>participationsSummedValueAmount</td>
+<td>Waarde per cohortpool (som participatiewaarde) per participationValuationDate</td>
+</tr>
+<tr>
+<th>Pool ID i,j</th>
+<td>investment.pool</td>
+<td>refKey</td>
+<td>ID van de beleggingspool per regeling</td>
+</tr>
+<tr>
+<th>Market value portfolio</th>
+<td>investment.pool</td>
+<td>marketValueAmount</td>
+<td>Marktwaarde per portefeuille per regeling in currencyType</td>
+</tr>
+<tr>
+<th>Pool value i, k</th>
+<td>investment.pool</td>
+<td>unitsSummedValueAmount</td>
+<td>Waarde per beleggingspool(unitwaarde)</td>
+</tr>
+<tr>
+<th>Market value instrument</th>
+<td>investment.pool</td>
+<td>marketValueAmount</td>
+<td>Marktwaarde van de beleggingspool in currencyType van de pool</td>
+</tr>
+<tr>
+<th>Preliminary market value i, k</th>
+<td>investment.pool</td>
+<td>preliminaryMarketValueAmount</td>
+<td>Voorlopige Marktwaarde per portefeuille per regeling in currencyType van de pool</td>
+</tr>
+<tr>
+<th>Preliminary pool value i, k</th>
+<td>investment.pool</td>
+<td>preliminaryUnitValueAmount</td>
+<td>Dagelijks vastgestelde unitprijs/NAV in currencyType van de pool</td>
+</tr>
+<tr>
+<th>number of units investment pool i,k</th>
+<td>investment.pool</td>
+<td>numberOfUnits</td>
+<td>Aantal units uitgegeven voor de beleggingspool,</td>
+</tr>
+<tr>
+<th>currency i,j</th>
+<td>investment.pool</td>
+<td>currencyType</td>
+<td>Valuta van de pool</td>
+</tr>
+<tr>
+<th>Transaction description i,j, k /Description</th>
+<td>investment.pool</td>
+<td>description</td>
+<td>Beschrijving</td>
+</tr>
+<tr>
+<th>Dummy cash ID</th>
+<td>investment.pool</td>
+<td>dummyCashId</td>
+<td>ID voor dummy cash instrument per beleggingspool per regeling per cohort(pool)</td>
+</tr>
+<tr>
+<th>Sell buy ID i,j, k</th>
+<td>investment.pool</td>
+<td>buySellId</td>
+<td>Aan- verkoopindicator; ID voor aan-/verkoop per beleggingspool per regeling per cohort</td>
+</tr>
+<tr>
+<th>Amount i,j, k</th>
+<td>investment.pool</td>
+<td>tradeQuantity</td>
+<td>Aantal te verhandelen stukken (units) van de transactie</td>
+</tr>
+<tr>
+<th>Unit value i,j, k</th>
+<td>investment.pool</td>
+<td>unitPrice</td>
+<td>Unitwaarde (/prijs) per beleggingspool per regeling per cohort</td>
+</tr>
+<tr>
+<th>FX rate i,j, k</th>
+<td>investment.pool</td>
+<td>currencyExchangeRate</td>
+<td>FX rate per beleggingspool per regeling per cohort</td>
+</tr>
+<tr>
+<th>Value i,k</th>
+<td>investment.pool</td>
+<td>tradeValueAmount</td>
+<td>Waarde transactie per beleggingspool per regeling (gesommeerd over cohorten)</td>
+</tr>
+<tr>
+<th>portfolio ID i,n</th>
+<td>investment.portfolio</td>
+<td>refKey</td>
+<td>ID Beleggingsportefeuille / Unique reference key assigned to an entity. (NL: Entiteitsreferentie is een unieke referentie sleutel die aan een entiteit wordt toegekend.)</td>
+</tr>
+<tr>
+<th>Total Market Value start I,n</th>
+<td>investment.portfolio</td>
+<td>startAmount</td>
+<td>De waarde van de Total Market Value aan het begin van de gegevensperiode</td>
+</tr>
+<tr>
+<th>Net contribution/withdrawal I, n</th>
+<td>investment.portfolio</td>
+<td>netAmount</td>
+<td>Som van inleg en onttrekkingen per regeling (net). Een negatief bedrag is een (netto) withdrawal</td>
+</tr>
+<tr>
+<th>Total Market Value end I,n</th>
+<td>investment.portfolio</td>
+<td>endAmount</td>
+<td>De waarde van de Total Market Value aan het eind van de gegevensperiode. Per regeling en beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Return rate i,n​</th>
+<td>investment.portfolio</td>
+<td>returnPercentage</td>
+<td>Het behaalde rendement in percentage over gegevensperiode per regeling en per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Return i,n​</th>
+<td>investment.portfolio</td>
+<td>returnAmount</td>
+<td>Het behaalde rendement in valuta van de regeling over gegevensperiode per regeling en per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>investment.investmentDetails</td>
+<td>refKey</td>
+<td>Identifier (bijvoorbeeld ISIN of interne code)</td>
+</tr>
+<tr>
+<th>Fund Name i</th>
+<td>investment.investmentDetails</td>
+<td>description</td>
+<td>De naam van de belegging / de officiële naam van het fonds / van het instrument</td>
+</tr>
+<tr>
+<th>Local Price i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>currencyType</td>
+<td>Valuta van het instrument</td>
+</tr>
+<tr>
+<th>Total holdings i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>numberOfHoldings</td>
+<td>Aantal holdings per instrument per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Local Price i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>localPrice</td>
+<td>Prijs per instrument in originele valuta per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Local Value instrument i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>localValueAmount</td>
+<td>Totale marktwaarde in originele valuta per instrument per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Result i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>result</td>
+<td>Ongerealiseerd resultaat per instrument per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Accrued Interest i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>accruedInterest</td>
+<td>Opgelopen rente per instrument per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>Portfolio weight i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>poolPercentage</td>
+<td>Gewicht in de portefeuille per instrument per regeling per beleggingsportefeuille</td>
+</tr>
+<tr>
+<th>FX rate i,j, k</th>
+<td>investment.investmentDetails</td>
+<td>currencyExchangeRate</td>
+<td>FX rates per instrument per regeling per beleggingsportefeuille / koers per positionDate</td>
+</tr>
+<tr>
+<th>Trade date / Transaction date</th>
+<td>financialTransaction.trade</td>
+<td>tradeDate</td>
+<td>Gewenste handelsdatum</td>
+</tr>
+<tr>
+<th>Adj Trade i, j</th>
+<td>financialTransaction.trade</td>
+<td>adjustmentIndicator</td>
+<td>Aangepaste trade instructie</td>
+</tr>
+<tr>
+<th>Buy/Sell i,j</th>
+<td>financialTransaction.trade</td>
+<td>buySellId</td>
+<td>Aan- verkoop- switchindicator</td>
+</tr>
+<tr>
+<th>Amount</th>
+<td>financialTransaction.trade</td>
+<td>tradeAmount</td>
+<td>Bedrag van de aankoop in de valuta waarin de belegging luidt</td>
+</tr>
+<tr>
+<th>Quantity</th>
+<td>financialTransaction.trade</td>
+<td>tradeQuantity</td>
+<td>Aantal te verhandelen stukken (units) van de transactie</td>
+</tr>
+<tr>
+<th>Price i,j</th>
+<td>financialTransaction.trade</td>
+<td>tradePrice</td>
+<td>Aankoopprijs / koers</td>
+</tr>
+<tr>
+<th>Switch type</th>
+<td>financialTransaction.trade</td>
+<td>switchType</td>
+<td>Type switch; one-day of sequential</td>
+</tr>
+<tr>
+<th>Counterparty i,j</th>
+<td>financialTransaction.trade</td>
+<td>counterparty</td>
+<td>Transfer Agent; de partij die de aankoop/verkoop verricht</td>
+</tr>
+<tr>
+<th>Broker i,j</th>
+<td>financialTransaction.trade</td>
+<td>broker</td>
+<td>Effectenmakelaar die beleggingsorders uitvoert namens klanten op de markt</td>
+</tr>
+<tr>
+<th>Interest i,j</th>
+<td>financialTransaction.trade</td>
+<td>interestAmount</td>
+<td>Bedrag aan van toepassing zijnde rente</td>
+</tr>
+<tr>
+<th>Commission i, j</th>
+<td>financialTransaction.trade</td>
+<td>commissionAmount</td>
+<td>Vergoeding voor het uitvoeren van de transactie</td>
+</tr>
+<tr>
+<th>Clearing broker i,j</th>
+<td>financialTransaction.trade</td>
+<td>clearingBroker</td>
+<td>Effectenmakelaar verantwoordelijk administratieve en financiële afwikkeling van de transactie</td>
+</tr>
+<tr>
+<th>Cash account i,j</th>
+<td>financialTransaction.trade</td>
+<td>clearingBrokerCashAccount</td>
+<td>Geldrekening (IBAN) bij de clearingbroker op naam van de Pensioenuitvoerder</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
