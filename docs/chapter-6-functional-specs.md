@@ -115,7 +115,9 @@ _Sender of the message._
 | `refKey`                  | Unique reference key assigned to an entity.                    | string    | 70     |           |
 | `rsinNumber`              | Governmental identification number for legal entities (RSIN).  | string    | 9      |           |
 | `organizationName`        | Organization name of the sender.                               | string    | 60     |           |
-| `applicationSenderName`   | Name of the application that created the message.              | string    | 60     |           |
+| `applicationSenderName`   | Name of the application that created the message.*             | string    | 60     |           |
+
+*\* `applicationSenderName` is available in AFD 2.0 under both `party.sender` and `commonTechnical`. This is not apparent from the AFD 2.0 Online documentation (as of April 2024). For VB-PUO, the attribute has been placed under `party.sender`.*
 
 ### `party.contact`
 _A natural person who can be contacted within a legal entity for further information._
@@ -155,6 +157,8 @@ _Information on the Pension Provider level (Pension Fund, Insurer, PPI, APF)._
 | `rsinNumber`       | Governmental identification number for legal entities (RSIN). | integer   | 9      |           |
 | `organizationName` | Name of the pension provider.                                 | string    | 60     |           |
 
+For APFs (general pension funds) with multiple circles ("kringen"), there are two common scenarios for the use of PUV codes. See the explanation in the base message in [§6.4.1](chapter-6-4-messages.md).
+
 ### `pension.scheme`
 _Data on the pension scheme level._
 
@@ -182,6 +186,18 @@ _Reporting period information._
 | `positionDate`                  | Date on which the positions in the investment administration were established. | date      |        |           |
 | `valueDate`                     | Currency date.                                                      | date      |        |           |
 
+**Date conventions for startDate and projectionDate**
+
+To prevent inconsistent use of dates between chain parties, the standard applies the following convention:
+
+| Field | Message | Convention | Example |
+|-------|---------|-----------|---------|
+| startDate | Message 1 (Capital) | Last day of the preceding month | 31-01-2025 |
+| projectionDate | Message 3 (Pension projection) | Last day of the preceding month | 31-01-2025 |
+| firstExpectedPaymentDate | Message 3 (Pension projection) | First day of the current month | 01-02-2025 |
+
+This approach provides clarity and predictability in the chain. See GitHub issue [#94](https://github.com/Stichting-SIVI/VBPUOdsk/issues/94).
+
 ### `financialTransaction.payment`
 _Information about payments._
 
@@ -190,10 +206,12 @@ _Information about payments._
 | `refKey`                             | ID of the expected payment.                | string    | 70     |           |
 | `amount`                             | Amount in currency / projected benefit.    | decimal   |        |           |
 | `currencyType`                       | Currency code.                             | string    |        | ISOVAL    |
-| `collectionAccountIban`              | IBAN of the debit account.                 | string    | 10     |           |
+| `collectionAccountIban`              | IBAN of the debit account.                 | string    | 34     |           |
 | `description`                        | Description of the transaction (payment).  | string    | 60     |           |
 | `expectedPensionPaymentDate`         | Pension payment date.                      | date      |        |           |
 | `hedgedExpectedPensionPaymentAmount` | Cash flow to be hedged.                    | decimal   |        |           |
+
+Field length `collectionAccountIban` corrected from 10 to 34 (international IBAN maximum length per ISO 13616). See GitHub issue [#135](https://github.com/Stichting-SIVI/VBPUOdsk/issues/135).
 
 ### `party.creditor`
 _The party that has a claim._
@@ -201,10 +219,12 @@ _The party that has a claim._
 | Attribute Name                      | Definition                                | Data Type | Length | Code List |
 | :---------------------------------- | :---------------------------------------- | :-------- | :----- | :-------- |
 | `refKey`                            | Unique reference key assigned to an entity. | string    | 70     |           |
-| `collectionAccountIban`             | IBAN of the credit account per scheme.    | string    | 10     |           |
+| `collectionAccountIban`             | IBAN of the credit account per scheme.    | string    | 34     |           |
 | `collectionAccountInNameOf`         | Name of the counterparty per scheme.      | string    | 60     |           |
 | `collectionAccountBic`              | Business Identifier Code (BIC) per scheme. | string    | 10     |           |
 | `collectionAccountBicCorrespondent` | BIC correspondent per scheme.             | string    | 10     |           |
+
+Field length `collectionAccountIban` corrected from 10 to 34. See GitHub issue [#135](https://github.com/Stichting-SIVI/VBPUOdsk/issues/135).
 
 ### `financialTransaction.cashflow`
 _The sum of contributions and withdrawals on all cohorts._*
@@ -219,6 +239,12 @@ _The sum of contributions and withdrawals on all cohorts._*
 | `netDate`          | Date on which the net cash flow is actually paid. | date      |        |           |
 
 _*Note: The amount and date fields in `financialTransaction.cashflow` are optional. At least one pair must be used._
+
+**Field usage in `financialTransaction.cashflow`**
+
+In the SPR context, `financialTransaction.cashflow` is used directly under `pension.scheme`; the amount and date fields are optional. Parties coordinate which amount/date combinations they use; in the JSON schema all fields are optional. When using the entity, at least one combination must be filled.
+
+In the FPR context, the `financialTransaction.cashflow` entity is used under `investment.portfolio`, and `netAmount` and `netDate` are required.
 
 ### `pension.cohort`
 _Information on cohort (pension target audience) level._
@@ -272,24 +298,21 @@ _The pooled combination of investments (investment pools) for a cohort._
 | `numberOfRebalanceParticipations` | Rebalance participations per cohort pool.            | decimal   |        |           |
 | `participationsSummedValueAmount` | Value per cohort pool (sum of participation value).  | decimal   |        |           |
 
-### `investment.Pool`
+### `investment.pool`
 _Investment pool / investment portfolio._
 
-| Attribute Name                 | Definition                                   | Data Type | Length | Code List |
-| :----------------------------- | :------------------------------------------- | :-------- | :----- | :-------- |
-| `refKey`                       | ID of the investment pool per scheme.        | string    | 70     |           |
-| `description`                  | Description.                                 | string    | 60     |           |
-| `marketValueAmount`            | Market value.                                | decimal   |        |           |
-| `unitsSummedValueAmount`       | Value per investment pool (unit value).      | decimal   |        |           |
-| `preliminaryMarketValueAmount` | Preliminary market value of the portfolio.   | decimal   |        |           |
-| `preliminaryUnitValueAmount`   | Preliminary unit value.                      | decimal   |        |           |
-| `numberOfUnits`                | Number of units issued for the investment pool. | decimal   |      |           |
-| `currencyType`                 | Currency of the pool.                        | string    |        | ISOVAL    |
-| `dummyCashId`                  | ID for a dummy cash instrument.              | string    | 10     |           |
-| `buySellId`                    | Buy/Sell indicator.                          | string    |        | sell; buy |
-| `tradeQuantity`                | Number of units to be traded.                | decimal   |        |           |
-| `unitPrice`                    | Unit value/price.                            | decimal   |        |           |
-| `currencyExchangeRate`         | FX rate.                                     | integer   |        |           |
+| Attribute Name                 | Definition                                   | Data Type      | Length | Code List |
+| :----------------------------- | :------------------------------------------- | :------------- | :----- | :-------- |
+| `refKey`                       | ID of the investment pool per scheme.        | string         | 70     |           |
+| `description`                  | Description.                                 | string         | 60     |           |
+| `unitsSummedValueAmount`       | Value per investment pool (unit value).      | decimal        |        |           |
+| `preliminaryUnitValueAmount`   | Net asset value (NAV) per unit of the investment pool, as determined by the investment administrator. | decimal (1E-06) |   |           |
+| `numberOfUnits`                | Number of units issued for the investment pool. | decimal (1E-06) |    |           |
+| `currencyType`                 | Currency of the pool.                        | string         |        | ISOVAL    |
+| `buySellId`                    | Buy/Sell indicator.                          | string         |        | sell; buy |
+| `tradeValueAmount`             | Trade value per investment pool per scheme (summed across cohorts). | decimal |   |           |
+
+`marketValueAmount` has been removed from the standard as of release 2027; the net asset value is expressed exclusively via `preliminaryUnitValueAmount`. The field name `preliminary` is historically grown and will be cleaned up in a future release. See GitHub issue [#128](https://github.com/Stichting-SIVI/VBPUOdsk/issues/128).
 
 ### `investment.portfolio`
 _Investment portfolio._
@@ -389,6 +412,35 @@ _Metadata for splitting and merging large messages into sub-messages (chunking).
 | `totalNumberOfChunks` | Total number of chunks the message is split into. | integer |      |           |
 | `chunkFragmentPaths`  | Array of JMESPath references to the message fragments. | array |    |           |
 
+## 6.3.1 Consistency checks for the cashflow message (0001b)
+
+### Structural rule: SPR route and FPR route are mutually exclusive
+
+Per `pension.scheme`, exactly one cashflow pattern applies:
+
+- **SPR route** — the cashflow is included directly under `pension.scheme` as `financialTransaction.cashflow`, with optional breakdown via `pension.cohort`.
+- **FPR route** — the cashflow is included per investment portfolio via `pension.scheme → investment.portfolio → financialTransaction.cashflow`.
+
+Within a single `pension.scheme`, the following exclusion rules apply:
+
+- Presence of `investment.portfolio` → `financialTransaction.cashflow` is not filled directly under `pension.scheme`.
+- Presence of `pension.cohort` → `investment.portfolio` may not be used.
+
+This rule is a formal consistency check: a message that combines both routes or applies neither is invalid.
+
+### Sum checks for cohort breakdown (SPR route)
+
+When `pension.cohort` is used in the SPR route as a breakdown of the cashflow at scheme level, the detail amounts must reconcile with the total. This is a reconciliation check: verifying that the sum of the individual cohort amounts matches the previously reported amount at the cohort-scheme level — i.e., the parts add up to the whole.
+
+- `scheme.netAmount = sum(cohort.netAmount)`
+- `scheme.contributionAmount = sum(cohort.contributionAmount)`
+- `scheme.withdrawalAmount = sum(cohort.withdrawalAmount)`
+
+These sum checks apply to the SPR route and not automatically to the FPR route. In the FPR model, cashflows are recorded per investment portfolio without a hierarchy from scheme to cohort level; the sum relationship is not definable there. Apply these checks exclusively when totals and underlying breakdowns are simultaneously present.
+
+**Open item (AOS)**
+
+The formal processing of `M002-0001b-001` in SIVI AOS has not yet been finalized. The consistency checks have been functionally established; technical implementation will follow in a separate step.
 
 ## 6.4 Messages
 
