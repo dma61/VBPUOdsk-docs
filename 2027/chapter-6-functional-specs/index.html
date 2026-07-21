@@ -2273,6 +2273,16 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Age cohorts: standard setup</strong></p>
+<p>The standard setup uses yearly age cohorts. This means that two consecutive <code>startAge</code> values differ by 12 months in principle: <code>startAge</code> is a multiple of 12 (0, 12, 24, ...) and <code>endAge</code> = <code>startAge</code> + 11. Smaller steps (e.g. monthly) are not excluded, but the yearly division serves as the reference model. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/111">#111</a>.</p>
+<p><strong>Reserves and provisions: role of fields</strong></p>
+<p>For cohorts representing a reserve or provision (<code>reserveIndicator</code> = true), the following role assignment applies:</p>
+<ul>
+<li><strong><code>reserveType</code></strong> (code list AFDRES) is the substantive classification and the exclusive key for the investment policy. Reserves or provisions with a different investment policy require a different <code>reserveType</code> value. The code list has been extended in release 2027 with codes 9 through 15. Where investment policy is shared, consolidation is possible; an explicit code is only needed for separate investment policies. This applies to both SPR and FPR. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/134">#134</a>.</li>
+<li><strong><code>reserveDescription</code></strong> is purely descriptive. The description may clarify or elaborate, but does not determine classification, routing, or investment policy.</li>
+<li><strong><code>refKey</code></strong> uniquely identifies the cohort (see the general explanation of <code>refKey</code> above). Multiple cohorts with the same <code>reserveType</code> are permitted, provided they fall under the same investment policy.</li>
+</ul>
+<p>See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/111">#111</a>.</p>
 <h3 id="pensioncohortpool"><code>pension.cohortPool</code></h3>
 <p><em>The pooled combination of investments (investment pools) for a cohort.</em></p>
 <table>
