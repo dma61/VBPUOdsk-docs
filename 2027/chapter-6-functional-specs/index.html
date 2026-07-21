@@ -650,7 +650,7 @@
   <a href="#investmentpool" class="md-nav__link">
     <span class="md-ellipsis">
       
-        investment.Pool
+        investment.pool
       
     </span>
   </a>
@@ -728,6 +728,45 @@
     <span class="md-ellipsis">
       
         chunking.default
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#631-consistency-checks-for-the-cashflow-message-0001b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 Consistency checks for the cashflow message (0001b)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.1 Consistency checks for the cashflow message (0001b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structural-rule-spr-route-and-fpr-route-are-mutually-exclusive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural rule: SPR route and FPR route are mutually exclusive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-checks-for-cohort-breakdown-spr-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sum checks for cohort breakdown (SPR route)
       
     </span>
   </a>
@@ -1300,7 +1339,7 @@
   <a href="#investmentpool" class="md-nav__link">
     <span class="md-ellipsis">
       
-        investment.Pool
+        investment.pool
       
     </span>
   </a>
@@ -1378,6 +1417,45 @@
     <span class="md-ellipsis">
       
         chunking.default
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#631-consistency-checks-for-the-cashflow-message-0001b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 Consistency checks for the cashflow message (0001b)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.1 Consistency checks for the cashflow message (0001b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structural-rule-spr-route-and-fpr-route-are-mutually-exclusive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural rule: SPR route and FPR route are mutually exclusive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-checks-for-cohort-breakdown-spr-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sum checks for cohort breakdown (SPR route)
       
     </span>
   </a>
@@ -1705,13 +1783,14 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>applicationSenderName</code></td>
-<td style="text-align: left;">Name of the application that created the message.</td>
+<td style="text-align: left;">Name of the application that created the message.*</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">60</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
+<p><em>* <code>applicationSenderName</code> is available in AFD 2.0 under both <code>party.sender</code> and <code>commonTechnical</code>. This is not apparent from the AFD 2.0 Online documentation (as of April 2024). For VB-PUO, the attribute has been placed under <code>party.sender</code>.</em></p>
 <h3 id="partycontact"><code>party.contact</code></h3>
 <p><em>A natural person who can be contacted within a legal entity for further information.</em></p>
 <table>
@@ -1870,6 +1949,7 @@
 </tr>
 </tbody>
 </table>
+<p>For APFs (general pension funds) with multiple circles ("kringen"), there are two common scenarios for the use of PUV codes. See the explanation in the base message in <a href="../chapter-6-4-messages/">§6.4.1</a>.</p>
 <h3 id="pensionscheme"><code>pension.scheme</code></h3>
 <p><em>Data on the pension scheme level.</em></p>
 <table>
@@ -2005,6 +2085,39 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Date conventions for startDate and projectionDate</strong></p>
+<p>To prevent inconsistent use of dates between chain parties, the standard applies the following convention:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Message</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startDate</td>
+<td>Message 1 (Capital)</td>
+<td>Last day of the preceding month</td>
+<td>31-01-2025</td>
+</tr>
+<tr>
+<td>projectionDate</td>
+<td>Message 3 (Pension projection)</td>
+<td>Last day of the preceding month</td>
+<td>31-01-2025</td>
+</tr>
+<tr>
+<td>firstExpectedPaymentDate</td>
+<td>Message 3 (Pension projection)</td>
+<td>First day of the current month</td>
+<td>01-02-2025</td>
+</tr>
+</tbody>
+</table>
+<p>This approach provides clarity and predictability in the chain. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/94">#94</a>.</p>
 <h3 id="financialtransactionpayment"><code>financialTransaction.payment</code></h3>
 <p><em>Information about payments.</em></p>
 <table>
@@ -2043,7 +2156,7 @@
 <td style="text-align: left;"><code>collectionAccountIban</code></td>
 <td style="text-align: left;">IBAN of the debit account.</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">10</td>
+<td style="text-align: left;">34</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -2069,6 +2182,7 @@
 </tr>
 </tbody>
 </table>
+<p>Field length <code>collectionAccountIban</code> corrected from 10 to 34 (international IBAN maximum length per ISO 13616). See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/135">#135</a>.</p>
 <h3 id="partycreditor"><code>party.creditor</code></h3>
 <p><em>The party that has a claim.</em></p>
 <table>
@@ -2093,7 +2207,7 @@
 <td style="text-align: left;"><code>collectionAccountIban</code></td>
 <td style="text-align: left;">IBAN of the credit account per scheme.</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">10</td>
+<td style="text-align: left;">34</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -2119,6 +2233,7 @@
 </tr>
 </tbody>
 </table>
+<p>Field length <code>collectionAccountIban</code> corrected from 10 to 34. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/135">#135</a>.</p>
 <h3 id="financialtransactioncashflow"><code>financialTransaction.cashflow</code></h3>
 <p><em>The sum of contributions and withdrawals on all cohorts.</em>*</p>
 <table>
@@ -2177,6 +2292,9 @@
 </tbody>
 </table>
 <p><em>*Note: The amount and date fields in <code>financialTransaction.cashflow</code> are optional. At least one pair must be used.</em></p>
+<p><strong>Field usage in <code>financialTransaction.cashflow</code></strong></p>
+<p>In the SPR context, <code>financialTransaction.cashflow</code> is used directly under <code>pension.scheme</code>; the amount and date fields are optional. Parties coordinate which amount/date combinations they use; in the JSON schema all fields are optional. When using the entity, at least one combination must be filled.</p>
+<p>In the FPR context, the <code>financialTransaction.cashflow</code> entity is used under <code>investment.portfolio</code>, and <code>netAmount</code> and <code>netDate</code> are required.</p>
 <h3 id="pensioncohort"><code>pension.cohort</code></h3>
 <p><em>Information on cohort (pension target audience) level.</em></p>
 <table>
@@ -2399,7 +2517,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="investmentpool"><code>investment.Pool</code></h3>
+<h3 id="investmentpool"><code>investment.pool</code></h3>
 <p><em>Investment pool / investment portfolio.</em></p>
 <table>
 <thead>
@@ -2427,13 +2545,6 @@
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>marketValueAmount</code></td>
-<td style="text-align: left;">Market value.</td>
-<td style="text-align: left;">decimal</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td style="text-align: left;"><code>unitsSummedValueAmount</code></td>
 <td style="text-align: left;">Value per investment pool (unit value).</td>
 <td style="text-align: left;">decimal</td>
@@ -2441,23 +2552,16 @@
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>preliminaryMarketValueAmount</code></td>
-<td style="text-align: left;">Preliminary market value of the portfolio.</td>
-<td style="text-align: left;">decimal</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td style="text-align: left;"><code>preliminaryUnitValueAmount</code></td>
-<td style="text-align: left;">Preliminary unit value.</td>
-<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">Net asset value (NAV) per unit of the investment pool, as determined by the investment administrator.</td>
+<td style="text-align: left;">decimal (1E-06)</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>numberOfUnits</code></td>
 <td style="text-align: left;">Number of units issued for the investment pool.</td>
-<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">decimal (1E-06)</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
@@ -2469,13 +2573,6 @@
 <td style="text-align: left;">ISOVAL</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>dummyCashId</code></td>
-<td style="text-align: left;">ID for a dummy cash instrument.</td>
-<td style="text-align: left;">string</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td style="text-align: left;"><code>buySellId</code></td>
 <td style="text-align: left;">Buy/Sell indicator.</td>
 <td style="text-align: left;">string</td>
@@ -2483,28 +2580,15 @@
 <td style="text-align: left;">sell; buy</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>tradeQuantity</code></td>
-<td style="text-align: left;">Number of units to be traded.</td>
+<td style="text-align: left;"><code>tradeValueAmount</code></td>
+<td style="text-align: left;">Trade value per investment pool per scheme (summed across cohorts).</td>
 <td style="text-align: left;">decimal</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>unitPrice</code></td>
-<td style="text-align: left;">Unit value/price.</td>
-<td style="text-align: left;">decimal</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>currencyExchangeRate</code></td>
-<td style="text-align: left;">FX rate.</td>
-<td style="text-align: left;">integer</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
+<p><code>marketValueAmount</code> has been removed from the standard as of release 2027; the net asset value is expressed exclusively via <code>preliminaryUnitValueAmount</code>. The field name <code>preliminary</code> is historically grown and will be cleaned up in a future release. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/128">#128</a>.</p>
 <h3 id="investmentportfolio"><code>investment.portfolio</code></h3>
 <p><em>Investment portfolio.</em></p>
 <table>
@@ -2989,6 +3073,29 @@
 </tr>
 </tbody>
 </table>
+<h2 id="631-consistency-checks-for-the-cashflow-message-0001b">6.3.1 Consistency checks for the cashflow message (0001b)</h2>
+<h3 id="structural-rule-spr-route-and-fpr-route-are-mutually-exclusive">Structural rule: SPR route and FPR route are mutually exclusive</h3>
+<p>Per <code>pension.scheme</code>, exactly one cashflow pattern applies:</p>
+<ul>
+<li><strong>SPR route</strong> — the cashflow is included directly under <code>pension.scheme</code> as <code>financialTransaction.cashflow</code>, with optional breakdown via <code>pension.cohort</code>.</li>
+<li><strong>FPR route</strong> — the cashflow is included per investment portfolio via <code>pension.scheme → investment.portfolio → financialTransaction.cashflow</code>.</li>
+</ul>
+<p>Within a single <code>pension.scheme</code>, the following exclusion rules apply:</p>
+<ul>
+<li>Presence of <code>investment.portfolio</code> → <code>financialTransaction.cashflow</code> is not filled directly under <code>pension.scheme</code>.</li>
+<li>Presence of <code>pension.cohort</code> → <code>investment.portfolio</code> may not be used.</li>
+</ul>
+<p>This rule is a formal consistency check: a message that combines both routes or applies neither is invalid.</p>
+<h3 id="sum-checks-for-cohort-breakdown-spr-route">Sum checks for cohort breakdown (SPR route)</h3>
+<p>When <code>pension.cohort</code> is used in the SPR route as a breakdown of the cashflow at scheme level, the detail amounts must reconcile with the total. This is a reconciliation check: verifying that the sum of the individual cohort amounts matches the previously reported amount at the cohort-scheme level — i.e., the parts add up to the whole.</p>
+<ul>
+<li><code>scheme.netAmount = sum(cohort.netAmount)</code></li>
+<li><code>scheme.contributionAmount = sum(cohort.contributionAmount)</code></li>
+<li><code>scheme.withdrawalAmount = sum(cohort.withdrawalAmount)</code></li>
+</ul>
+<p>These sum checks apply to the SPR route and not automatically to the FPR route. In the FPR model, cashflows are recorded per investment portfolio without a hierarchy from scheme to cohort level; the sum relationship is not definable there. Apply these checks exclusively when totals and underlying breakdowns are simultaneously present.</p>
+<p><strong>Open item (AOS)</strong></p>
+<p>The formal processing of <code>M002-0001b-001</code> in SIVI AOS has not yet been finalized. The consistency checks have been functionally established; technical implementation will follow in a separate step.</p>
 <h2 id="64-messages">6.4 Messages</h2>
 <p>The data exchange described in this document is supported by a set of messages, supplemented by a feedback message. From release 2027, 10 content messages and the Feedback Message are active; 5 messages from the FPR layered order model have been discontinued (see §4.5).</p>
 <p>Below (in Figure 12) is an overview of the messages and the roles (sender/receiver) involved.</p>
