@@ -1,0 +1,3331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/2026/print_page/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Full manual (PDF) - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("/VBPUOdsk-docs/2026",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Full manual (PDF)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Chapter 1: Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Chapter 2: Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-spr-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Chapter 3: SPR Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-fpr-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-data-standard-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Chapter 5: Data Standard Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-functional-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Chapter 6: Functional Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-tech-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Chapter 7: Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Chapter 1: Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Chapter 2: Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-spr-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Chapter 3: SPR Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-fpr-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-data-standard-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Chapter 5: Data Standard Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-functional-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Chapter 6: Functional Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-tech-specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Chapter 7: Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-welcome-to-the-vb-puo-standard-documentation">Welcome to the VB-PUO Standard Documentation</h1>
+<p>This is an <strong>unofficial, machine-translated version</strong> of the documentation for the data exchange standard between Asset Management (Vermogensbeheer) and Pension Administration (Pensioenuitvoering).</p>
+<p><strong>Disclaimer:</strong> This translation is provided for convenience. In case of any discrepancies or conflicts between this English version and the original Dutch version, <strong>the Dutch version shall prevail.</strong> The official manual can be downloaded from <a href="https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/">sivi.org</a>.</p>
+<p>This site provides functional and technical details needed for implementation. Use the navigation at the left or on the right to explore the different chapters.</p>
+<h2 id="index-table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#chapter-1-introduction">Chapter 1: Introduction</a></li>
+<li><a href="#chapter-2-principles">Chapter 2: Principles</a></li>
+<li><a href="#chapter-3-spr-processes">Chapter 3: SPR Processes</a></li>
+<li><a href="#chapter-4-fpr-processes">Chapter 4: FPR Processes and Feedback (applies to FPR &amp; SPR)</a></li>
+<li><a href="#chapter-5-data-standard-setup">Chapter 5: Data Standard Setup</a></li>
+<li><a href="#chapter-6-functional-specs">Chapter 6: Functional Specifications</a></li>
+<li><a href="#chapter-7-tech-specs">Chapter 7: Technical Specifications</a></li>
+</ul>
+<h2 id="index-external-links">External Links</h2>
+<ul>
+<li><a href="https://github.com/dma61/VBPUOdsk">Technical Repository (JSON Schemas)</a></li>
+<li><a href="https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/">Official SIVI Project Page</a></li>
+</ul>
+<h2 id="index-feedback-or-issues-regarding-this-translation">Feedback or Issues Regarding This Translation</h2>
+<p>If you encounter any issues, errors, or ambiguities in this translated version, please report them at:<br />
+<a href="https://github.com/dma61/VBPUOdsk-docs/issues">https://github.com/dma61/VBPUOdsk-docs/issues</a></p>
+<p>When reporting an issue, please include:
+- The <strong>translated English text as-is</strong>
+- The <strong>new suggested translation text</strong>
+- A reference to the relevant <strong>section or paragraph number</strong></p>
+<p>This helps us ensure the highest possible quality of the translation and keep the documentation clear for all users.</p></section><section class="print-page" id="chapter-1-introduction" heading-number="2"><h1 id="chapter-1-introduction-chapter-1-introduction">Chapter 1: Introduction</h1>
+<p>In this introduction, we discuss the context, purpose, and target audience of this manual. We also present (in considerable detail) the setup of the manual.</p>
+<h2 id="chapter-1-introduction-11-context">1.1 Context</h2>
+<h3 id="chapter-1-introduction-final-report">Final Report</h3>
+<p>In early September 2023, the final report "Research Results: Standard for data exchange between pension administration &amp; asset management parties" was published.
+With the introduction/implementation of the Future Pensions Act (Wtp), a tighter alignment between fund assets and the collective administration of personal pension assets is necessary.</p>
+<h3 id="chapter-1-introduction-follow-up-governance">Follow-up &amp; Governance</h3>
+<p>SIVI is translating the final report into a data standard based on AFD 2.0. The standard is owned by the Pension Federation and managed by SIVI.</p>
+<h2 id="chapter-1-introduction-12-purpose">1.2 Purpose</h2>
+<p>This manual provides analysts and developers with a guide to implement the standard and gives stakeholders insight into its management.</p>
+<h2 id="chapter-1-introduction-13-target-audience">1.3 Target Audience</h2>
+<p>This manual is for consultants, analysts, and developers involved in implementing the data exchange standard.</p>
+<h2 id="chapter-1-introduction-14-setup">1.4 Setup</h2>
+<p>This section outlines the structure of the manual.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Chapter</th>
+<th style="text-align: left;">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;"><strong>Introduction</strong><br>In this introduction, we discuss the context, purpose, and target audience of this manual. We also present (in considerable detail) the setup of the manual.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;"><strong>Principles</strong><br>In this chapter, we discuss the most important principles for the development, setup, and governance of the standard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;"><strong>Processes &amp; information flows – Solidarity Premium Scheme</strong><br>The processes &amp; information flows are extensively described in the original report.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;"><strong>Processes &amp; information flows – Flexible Premium Scheme</strong><br>The processes &amp; information flows are extensively described in the original report.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;"><strong>Approach/setup data standard</strong><br>In this chapter, we explain how we arrive at the specifications of the messages and the relationship with SIVI AFS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;"><strong>Functional specifications</strong><br>This chapter contains the functional specifications, including the Data Dictionary and message structures.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7</strong></td>
+<td style="text-align: left;"><strong>Technical specifications</strong><br>The technical data specifications based on AFD 2.0 are explained in this chapter.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>8</strong></td>
+<td style="text-align: left;"><strong>Appendices</strong><br>In the appendices, you will find glossaries and other reference material.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-1-introduction-141-attribute-name-notation">1.4.1 Attribute Name Notation</h3>
+<p>In the descriptive texts of this manual, you will encounter a dual naming convention for data fields:
+<code>technicalName</code> (Functional Name)</p>
+<ul>
+<li><strong><code>technicalName</code></strong>: The definitive, technical attribute name according to the SIVI AFD 2.0 standard.</li>
+<li><strong>(Functional Name)</strong>: The original, functional name used during the design phase.</li>
+</ul>
+<h2 id="chapter-1-introduction-15-links">1.5 Links</h2>
+<p>Links in this document are colored blue.</p>
+<h2 id="chapter-1-introduction-16-source-of-image-on-title-page">1.6 Source of image on title page</h2>
+<p><a href="https://www.flaticon.com/free-icon/data-exchange_4995192">https://www.flaticon.com/free-icon/data-exchange_4995192</a></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#.">&lt; Previous: Home</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-2-principles">Next: Chapter 2: Principles &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-2-principles" heading-number="3"><h1 id="chapter-2-principles-chapter-2-principles">Chapter 2: Principles</h1>
+<p>This chapter discusses the most important principles for the development, setup, and governance of the standard.</p>
+<h2 id="chapter-2-principles-21-reason">2.1 Reason</h2>
+<p>With the introduction of the Wtp, information needs will change and the frequency of exchange will increase. For the solidarity premium scheme (SPR), an entirely new data stream is required for both accumulation and payout phases. For the flexible premium scheme (FPR), the information need will largely align with current 'defined contribution' schemes.</p>
+<blockquote>
+<h2 id="chapter-2-principles-preamble-standardization-vbpuo">PREAMBLE: STANDARDIZATION VBPUO</h2>
+<p>The purpose of standardization is seamless and efficient information exchange between all parties in the chain.<br />
+The VBPUO standard is based on the following principles:</p>
+<ul>
+<li>
+<p><strong>Pragmatism and flexibility</strong><br />
+  The standard is not a requirement for uniformity, but a framework for interoperability.<br />
+  Chain partners can retain their own internal processes and systems.<br />
+  The focus is on streamlining external communication.</p>
+</li>
+<li>
+<p><strong>Interoperability as the ultimate goal</strong><br />
+  The value of the standard becomes evident in practice. The test: an organization must be able to switch smoothly to another chain partner, without significant adjustments to the data interface.</p>
+</li>
+<li>
+<p><strong>Manageable degrees of freedom</strong><br />
+  Flexibility is not unlimited. For predictability and reliability, the allowed variations are explicitly defined and deliberately limited.</p>
+</li>
+<li>
+<p><strong>Supported by the chain</strong><br />
+  Adjustments and variations are not one-sided. Broad support is required to prevent fragmentation and to sustainably preserve the value of the standard.</p>
+</li>
+</ul>
+<p><em>Thus, the VBPUO standard remains a shared instrument for efficiency, predictability, and future-proof cooperation within the chain.</em></p>
+</blockquote>
+<h2 id="chapter-2-principles-22-out-of-scope">2.2 Out of Scope</h2>
+<p>The following aspects are out of scope:</p>
+<ul>
+<li><strong>Contractual agreements</strong> regarding the overall asset management process.</li>
+<li><strong>Existing processes</strong> that do not fundamentally change, such as reconciliation between the fiduciary manager and the investment administrator.</li>
+<li><strong>Information used by only one party</strong> in the chain.</li>
+<li><strong>Policy documents</strong> like strategic investment plans.</li>
+<li><strong>Information on costs</strong>: It is expected that existing processes for compiling the DNB annual statement J402 will continue to form the basis for this.</li>
+<li><strong>"Lookthrough" information</strong>: Ad hoc requests for details on underlying investments are not part of regular exchange.</li>
+<li><strong>Specifics for insurer-based premium-benefit agreements</strong>.</li>
+<li><strong>Periodicity of the exchange</strong>: This is flexible and agreed upon by the parties.</li>
+<li><strong>Task/Role division</strong>: The governance model is not prescribed by the standard.</li>
+</ul>
+<h2 id="chapter-2-principles-23-principles-of-data-exchange">2.3 Principles of Data Exchange</h2>
+<ul>
+<li>The data standard is usable for <strong>any governance model</strong>.</li>
+<li>An independent investment administrator receives the <strong>same information</strong> as the fiduciary manager to ensure independent reporting.</li>
+<li>The fiduciary manager receives the necessary information to invest collective assets according to the investment policy.</li>
+<li>The pension administration organization provides participants with insight into their pension assets.</li>
+<li>Parties receive their data <strong>directly from the sending party</strong>.</li>
+<li><strong>Once-accepted messages are not unilaterally corrected</strong>. If a sender discovers an error, coordination with the recipient is mandatory before sending a corrected message.</li>
+</ul>
+<h2 id="chapter-2-principles-24-clarification-of-principles">2.4 Clarification of Principles</h2>
+<ul>
+<li><strong>Data Model</strong>: Contains only the data necessary for the exchange.</li>
+<li><strong>Roles (not prescriptive)</strong>: The roles described are illustrative; parties can combine or separate functions.</li>
+<li><strong>Periodicity</strong>: The mentioned monthly frequency is an example, not a requirement.</li>
+<li><strong>Language</strong>: The report is in Dutch, but variable names in the standard are in English for international understanding.</li>
+</ul>
+<h2 id="chapter-2-principles-25-28-technology-governance-and-transport">2.5 - 2.8 Technology, Governance, and Transport</h2>
+<h3 id="chapter-2-principles-technology">Technology</h3>
+<p>The technical implementation uses <strong>RESTful Web services</strong> and <strong>JSON</strong>, conforming to <strong>AFD 2.0</strong>. Message processing is asynchronous. Security is handled via <strong>mutual-TLS</strong> and digital signatures.</p>
+<h3 id="chapter-2-principles-handling-large-messages-chunking">Handling Large Messages (Chunking)</h3>
+<p>For messages over ~4 MB, a "chunking" mechanism is provided to split them into smaller, valid JSON parts, which are reassembled by the recipient.</p>
+<h3 id="chapter-2-principles-transport">Transport</h3>
+<p>The standard supports a <strong>RESTful API/webservice</strong>. Other solutions are considered bilateral and are not supported.</p>
+<h3 id="chapter-2-principles-governance-and-releases">Governance and Releases</h3>
+<p>The standard is owned by the Pension Federation and managed by SIVI. It follows an annual release cycle (prerelease in June, final in September), with continuous development on GitHub. The two preceding annual releases remain supported.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-1-introduction">&lt; Previous: Chapter 1: Introduction</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-3-spr-processes">Next: Chapter 3: SPR Processes &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-3-spr-processes" heading-number="4"><h1 id="chapter-3-spr-processes-chapter-3-processes-information-flows-solidarity-premium-scheme-spr">Chapter 3: Processes &amp; Information Flows – Solidarity Premium Scheme (SPR)</h1>
+<h2 id="chapter-3-spr-processes-31-introduction">3.1 Introduction</h2>
+<p>This section describes the necessary information exchange between the involved parties to robustly implement the solidarity premium scheme.</p>
+<p>Figure 1, which can be found in the official Dutch manual available for download at <a href="https://www.sivi.org/pensioen/standaard-data-uitwisseling-vermogensbeheer-en-pensioenuitvoering/">sivi.org</a>, schematically illustrates the information exchange between the involved parties. The investment administrator provides the pension administration organization with information independently of the fiduciary manager and can also perform a reviewing role. If this is not chosen and the fiduciary also conducts the leading investment administration, information flow 2 will run from the fiduciary manager to the pension administration organization.</p>
+<p><strong>Legend (information flows/messages):</strong></p>
+<ul>
+<li>1a - Assets per cohort</li>
+<li>1b - Cash flow (contributions and withdrawals)</li>
+<li>1c - Pension projections / projected cash flows</li>
+<li>2 - Returns and assets</li>
+</ul>
+<p>The roles of the various parties in the scheme are further explained below:</p>
+<ul>
+<li>The <strong>Pension Administration Organization (PUO)</strong> is responsible for allocating returns to participants' personal pension assets (possibly via a collective payout phase), the solidarity reserve, any compensation deposit, and other possible reserves, in accordance with the allocation rules set by the pension administrator. Based on these personal pension assets, benefits are determined and projected in line with the pension administrator's principles. The pension assets and projected benefits are delivered per cohort to the fiduciary manager and/or the investment administrator. <strong>Cohort information is provided on an annual basis by default (year cohorts); monthly cohorts are optional and may be agreed upon between parties.</strong> The PUO processes premiums, benefits, and changes in the participant base and handles participant communication.</li>
+<li>The <strong>Fiduciary Manager</strong> supports the pension administrator in establishing the integrated investment policy, ensures its execution, and directs the operational asset managers. The fiduciary manager will also maintain a (shadow) investment administration. For large pension administrators without a fiduciary manager, the pension administrator itself is responsible for directing both internal and external asset managers.</li>
+<li>The <strong>Operational Asset Managers</strong> manage parts of the portfolio and are directed by the fiduciary manager. It is possible that (for certain parts) the fiduciary manager and the operational asset manager belong to the same organization.</li>
+<li>The <strong>Investment Administrator/Asset Service Provider</strong> (usually an additional service from the custodian) provides independent investment administration for the pension administrator. The investment administrator calculates the total return on investments and (if necessary) the return on various investment (sub)portfolios, delivering this to the PUO. As mentioned above, the fiduciary manager can also conduct the leading investment administration. The investment administration is fed by the settlement of mutations in the portfolio, executed by the operational asset managers. This administration is reconciled with the fiduciary manager if desired. The investment administrator is also often responsible for preparing regulatory reports or parts thereof.</li>
+</ul>
+<h2 id="chapter-3-spr-processes-32-spr-information-flows">3.2 SPR Information Flows</h2>
+<p>The information flows for SPR products between the fiduciary manager, the investment administrator, and the pension administration organization are:</p>
+<ul>
+<li>Information from the PUO about assets, cash inflow and outflow, and projected cash flows to be hedged (optionally per cohort) to enable the fiduciary manager and investment administrator to fulfill their roles.</li>
+<li>Information from the investment administrator or fiduciary manager about returns that the pension administrator needs to correctly allocate to participants.</li>
+</ul>
+<p>The information flow from the PUO to the fiduciary/investment administrator (stream 1) is divided into three messages: 1a (assets), 1b (inflow and outflow), and 1c (projected benefits). Value and return information is sent to the PUO via message 4 (Return Information).</p>
+<p>These messages are further detailed below.</p>
+<h3 id="chapter-3-spr-processes-321-message-1-assets-1a">3.2.1 Message 1. Assets (1a)</h3>
+<p><em>Note: For readability, this manual temporarily uses a dual naming convention for attributes. See section 1.4.1 for an explanation of the notation.</em></p>
+<p>On a periodic (expected to be monthly) basis, the fiduciary manager receives for a pension administrator (identified by <code>puvCode</code> (Pensionfund ID)), per scheme (identified by <code>refKey</code> (Pension scheme ID i)), the total pension assets (<code>startAmount</code> (Capital i)) at the beginning of the period (<code>startDate</code> (Capital date i)).</p>
+<p>In addition to the total level information, the fiduciary can also receive the pension assets (<code>startAmount</code> (Cohort capital i,k)) per (age) cohort (identified by <code>refKey</code> (Cohort ID i,k)). For example, for the 25-29 age cohort, the total of the personal pension assets at the start can be received.</p>
+<p>With the cohort information, the fiduciary manager can, if desired, make a total calculation and check the alignment with the information provided at the total/collective level against the fund's policy. This is useful for a robust transfer and audit trail, depending on the agreements made between parties. In case of (large) deviations, rebalancing may be desirable according to the pension administrator's policy. This information can also be provided to the investment administrator/asset service provider to enable them to perform review and reporting activities using the leading investment administration.</p>
+<p><strong>Allocation to Portfolios</strong>
+In addition to the total assets, the Pension Administration Organization (PUO) can also communicate the desired allocation of these assets across different portfolios to the asset manager in this message. This provides the asset manager with important control information to act in accordance with the standard portfolio used by the PUO. This allocation information can be provided at both the total level (under the pension scheme) and the cohort level. These are optional fields that can specify the exposure to, for example, a return or protection portfolio, both as an absolute amount (<code>startExposureAmount</code>) and as a percentage (<code>startExposurePercentage</code>). While the total level is particularly important for control, the cohort-level information can be useful for reporting purposes. (20251003 extra info: https://github.com/dma61/VBPUOdsk/issues/74#issuecomment-2789380387)</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically Message Structure 1. Assets (0001a). The current message structure can be found on GitHub under "Wiki/Berichtenoverzicht".</em></p>
+<h3 id="chapter-3-spr-processes-322-message-2-cashflow-1b-inflow-and-outflow">3.2.2 Message 2. Cashflow (1b, inflow and outflow)</h3>
+<p>On a periodic (expected to be monthly) basis, the fiduciary manager receives for a pension administrator (<code>puvCode</code> (Pensionfund ID)), per scheme (<code>refKey</code> (Pension scheme ID i)), the inflow (<code>contributionAmount</code> (Contribution i)) during the period (on the <code>contributionDate</code> (Contribution date i)) and the outflow or net cash flow (<code>netAmount</code> (Net contribution/withdrawal i)) during the period (on the <code>netDate</code> (Net contribution/withdrawal date i)).</p>
+<p>In addition to the total level information, the fiduciary can also receive the inflow (<code>contributionAmount</code> (Cohort contribution i,k)) and outflow (<code>withdrawalAmount</code> (Cohort withdrawal i,k)) or the net cash flow (<code>netAmount</code> (Net contribution/withdrawal i,k)) per (age) cohort (<code>refKey</code> (Cohort ID i,k)) over the period (<code>Start date PUO admin</code> to <code>End date PUO admin</code>).</p>
+<p>The inflow and outflow include not only premiums, value transfers, and benefits, but also shifts between cohorts if applicable. A cohort can also be a birth year. An example is the personal pension assets of participants moving from the 25-29 age cohort to the 30-34 age cohort. The 'cohort' solidarity reserve, the 'cohort' compensation deposit, and possibly other reserves will also be involved.</p>
+<p><strong>Applications of the Cashflow Message</strong>
+The standard offers the flexibility to use this message for two different purposes, which can coexist in practice:</p>
+<ol>
+<li>
+<p><strong>Prospective Application (Forward-looking):</strong></p>
+<ul>
+<li><strong>Purpose:</strong> Liquidity management. An estimate of the expected net cash flow for the upcoming period is provided. The net amount (<code>netAmount</code>) serves as input for the actual monthly (de)allocation payment between the PUO and the asset manager.</li>
+<li><strong>Characteristics:</strong> Typically a net amount at the total scheme level.</li>
+</ul>
+</li>
+<li>
+<p><strong>Retrospective Application (Backward-looking):</strong></p>
+<ul>
+<li><strong>Purpose:</strong> Analysis and accountability. The actual realized cash flows from a closed period are reported. This information is separate from the monthly allocation payment.</li>
+<li><strong>Characteristics:</strong> The cash flow can be provided as a net amount (<code>netAmount</code>) or split (<code>contributionAmount</code> / <code>withdrawalAmount</code>). This variant is suitable for providing details at the cohort level.</li>
+</ul>
+</li>
+</ol>
+<p>The fiduciary manager is responsible for investing the inflow or freeing up funds to finance the outflow. The calculation method for the inflow or outflow amount depends on the preference of the pension administrator and the working method of the PUO. Investments can never be made retroactively. For the audit trail, it may be desirable to record the period in the information exchange.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically Message Structure 2. Cashflow (0001b).</em></p>
+<h3 id="chapter-3-spr-processes-323-message-3-pension-projection-1c-projected-benefits">3.2.3 Message 3. Pension Projection (1c, projected benefits)</h3>
+<p>On a periodic (expected to be monthly) basis (<code>projectionDate</code> (Projection date)), the fiduciary manager receives from a pension administrator (<code>puvCode</code> (Pensionfund ID)), per scheme (<code>refKey</code> (Pension scheme ID i)) and per (age) cohort (<code>refKey</code> (Cohort ID i,j)), the projected benefits (<code>amount</code> (Cohort expected pension payment i,j,k)) based on the accumulated assets for future periods (<code>expectedPensionPaymentDate</code> (Expected pension payment date i,k)).
+The date of the expected payment is, by default, the first day of the respective month. For determining the expectedPensionPaymentDate, the preferred approach is to use monthly periods. When this is not feasible, the mid-date of the annual period (t + 6 months) is used instead, also with the day set to the first of the month.</p>
+<p>For example, for the 25-29 age cohort, this mainly concerns the projected retirement pension in 39 years (assuming the statutory retirement age). This information is important for the fiduciary manager to set up the protection portfolio and generate the intended protection returns. The desired protection per age cohort is decisive for the interest rate sensitivity to be hedged. A projection based on the entire population is no longer sufficient because the interest rate risk is no longer shared by the entire participant population.</p>
+<p>Finally, the data exchange includes the cash flows to be hedged per scheme (<code>hedgedExpectedPensionPaymentAmount</code> (Hedged expected pension payment i,k)) per future period. This is equal to the sum of the weighted projected benefits per cohort. The weighting factor is the protection percentage per cohort. This creates a profile of the cash flows to be hedged and avoids misunderstandings.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically Message Structure 3. Pension Projection (0001c).</em></p>
+<h3 id="chapter-3-spr-processes-324-message-4-return-information-2-information-need-of-the-puo">3.2.4 Message 4. Return Information (2, Information need of the PUO)</h3>
+<p>This is the information flow from the investment administrator/asset service provider to the PUO (stream 2 from Figure 1) in the SPR.</p>
+<p>Periodically, the PUO receives for a period (from <code>startDate</code> to <code>endDate</code>) for a pension administrator (<code>puvCode</code>), per scheme (<code>refKey</code>), and per portfolio (<code>refKey</code>), the start value (<code>startAmount</code>), end value (<code>endAmount</code>), and the return (<code>returnPercentage</code>). The PUO is responsible for allocating these returns to participants. Optionally, assets and returns per cohort can also be shared with the PUO, depending on the agreed roles and responsibilities.</p>
+<p>The investment administrator/asset service provider provides the necessary information based on the independent investment administration. In an alternative governance model, the fiduciary manager can provide this information.</p>
+<p>If the SPR is designed with <strong>indirect (theoretical) protection returns</strong>, information on the total return is generally sufficient. The PUO can calculate the excess return to be allocated based on the total return minus the allocated theoretical protection return.</p>
+<p>If the SPR bases the protection return on the <strong>direct (actual) achieved return</strong>, the PUO must have a breakdown of the achieved return. The investment administrator must then provide the return for sub-portfolios, at least distinguishing between the protection portfolio and the excess return portfolio.</p>
+<p>_For the functional elaboration into a message, see chapter 6, specifically Message Structure 4. Return Information (00002). A graphical overview of the message structure can be found on GitHub, but the JSON schemas and this manual are leading.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-2-principles">&lt; Previous: Chapter 2: Principles</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-4-fpr-processes">Next: Chapter 4: FPR Processes &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-4-fpr-processes" heading-number="5"><h1 id="chapter-4-fpr-processes-chapter-4-processes-information-flows-flexible-premium-scheme-fpr-feedback-message-spr-and-fpr">Chapter 4: Processes &amp; Information Flows – Flexible Premium Scheme (FPR) &amp; Feedback message (SPR and FPR)</h1>
+<h2 id="chapter-4-fpr-processes-41-introduction">4.1 Introduction</h2>
+<p>This chapter describes the information exchange for the Flexible Premium Scheme (FPR), distinguishing between a direct order model and a more extensive, layered order model.</p>
+<h2 id="chapter-4-fpr-processes-42-model-1-simpler-direct-order-model">4.2 Model 1: Simpler, Direct Order Model</h2>
+<p><u>Figure 2, showing a schematic of the direct order model, can be found in the official Dutch manual.</u></p>
+<p>In this model, the pension administration organization translates mutations at the participant level into the necessary (netted) transactions in the investment funds of operational asset managers and has them executed via a trading platform. Such a setup can also be implemented jointly with the asset service provider/custodian, where the pension administration organization translates participant-level mutations into netted mutations, and the asset service provider/custodian handles the execution of transactions in investment funds via a trading platform (see Figure 6 - Model 1b in the original manual). When compiling the orders, aspects such as the minimum order size per investment product, the settlement cycle, and the associated financial flows are taken into account.</p>
+<p>In the direct order model, the pension administrator is generally supported by the fiduciary manager with regard to the design of the lifecycle(s) and their composition (selection and monitoring of underlying investments). Special attention should be paid to the process of changing the composition of the investments (replacement of investment funds). Such changes result in transition activities for the pension administrator and/or asset service provider/custodian. More specifically, if an investment product (which could be an investment fund, a virtual pool, or a mandate) is replaced, removed, or added, the pension administration organization will adjust and process this. If adjustments are made within an investment product, this is not relevant to the pension administration organization and only affects the provider of the product.</p>
+<p>In the direct order model, a <strong>cohort pool</strong> consists of a group of participants who have the same investment allocation based on the lifecycle principle (less investment and interest rate risk as the retirement date/end of the investment horizon approaches). A cohort pool can be used to distinguish between groups of participants. This can be based on time (age, period until retirement, etc.) but also on a characteristic such as active, deferred, disabled, etc. The number of pools is basically unlimited; as many pools are created as are needed to distinguish the right participant groups that require their own investment mix. The administration of the cohort pool is optional and can be managed by the pension administration organization, the investment administrator/asset service provider, or elsewhere. The allocation of weights (percentages) is often determined by the fiduciary manager. A cohort pool is an administrative grouping of a group of participants who, for example, have the same investment allocation based on the lifecycle principle.</p>
+<p><u>Figure 3, showing an example of cohort pools and lifecycles, can be found in the official Dutch manual.</u></p>
+<p>The example in Figure 3 illustrates how birth years and thus ages can influence the allocation of investments within lifecycles.</p>
+<p>When a participant ages by one year, an <strong>age-based rebalance</strong> is performed. Each participant is placed in the next cohort pool, and their investment mix is adjusted to that of the new cohort. In the example above (Figure 3), regardless of the chosen risk profile, the share of equities is reduced and the share of bonds is increased. This leads to concrete buy and sell orders to the product providers.</p>
+<p>Another form of rebalancing is <strong>target-weight rebalancing</strong>. This can be performed when the actual allocation of investments falls outside pre-established bandwidths due to market movements. This form of rebalancing also leads to buy and sell orders.</p>
+<p>A group (cohort) of participants can be composed in various ways. Generally, three aspects play a role:</p>
+<ul>
+<li>Age (or period to retirement, birth year/month).</li>
+<li>Status (e.g., accumulating vs. decumulating, active/deferred/disabled).</li>
+<li>Investment profile.</li>
+</ul>
+<p>Netting of investments takes place across the cohort pools according to the instructions for the investment transactions. In the direct order model, this happens "in the spaghetti" (see Figure 2) between the cohort pools and the investments. The risk-sharing reserve is considered a separate cohort pool that invests in investment products according to its own investment policy.</p>
+<h2 id="chapter-4-fpr-processes-43-model-2-more-extensive-layered-order-model">4.3 Model 2: More Extensive, Layered Order Model</h2>
+<p>In the "More extensive, layered model," investments can also consist of non-daily tradable and/or non-platform-tradable (illiquid) funds or investment mandates. This model is already applied for larger Collective Individual DC (CIDC) schemes.</p>
+<p><u>Figure 4, showing a schematic of the layered order model, can be found in the official Dutch manual.</u></p>
+<p>In this model:
+*   Participants invest in <strong>cohort pools</strong> according to the chosen lifecycle. These cohort pools, in turn, invest in <strong>investment pools</strong>. The investment pools can consist of various underlying investments (liquid, illiquid, funds, and mandates). To make the allocation to participants robust and traceable, units are issued and unit values are calculated for the various (layered) pools. The participant's assets can thus be traced exactly to the pro-rata share of the underlying investments. The layer with cohort pools is optional; if this layer is absent, the pension administration organization must administer which participations in the various investment pools are held per participant.</p>
+<ul>
+<li>
+<p>The allocation of returns can be done by the <strong>pension administration organization</strong> or the <strong>administrator of the cohort and investment pools</strong>.</p>
+<ul>
+<li>The <strong>pension administration organization</strong> is responsible for explicitly allocating returns to personal pension assets, the risk-sharing reserve, etc., based on established rules.</li>
+<li>The <strong>administrator of the cohort and investment pools</strong> processes the allocation and administration of cohort pools as provided by the PUO. This role can be performed by the PUO, the investment administrator, or another specialized party. The participation values and the number of participations of the cohort pools form the basis for the PUO to explicitly allocate assets to participants.</li>
+</ul>
+</li>
+<li>
+<p>There can be a <strong>dual cohort administration</strong>. The first is with the PUO (participant &amp; cohort administration). The second is with "an administrator," which handles the relationship between the cohort pools and the investment pools. This second administration can be called a middle-office administration and is optional.</p>
+</li>
+<li>
+<p>The <strong>Fiduciary Manager</strong> supports the pension administrator in establishing the integrated investment policy and directs the operational asset managers.</p>
+</li>
+<li>
+<p>The <strong>Investment Administrator/Asset Service Provider</strong> (often a service from the custodian) handles the independent investment administration of the investment pools for the pension administrator.</p>
+</li>
+</ul>
+<p>In the process for "Model 2," a distinction is made between an accumulation phase and a payout phase. The payout phase executed by a pension administration organization is in-scope. In the payout phase, participants can choose between continuing to invest (with a variable pension benefit) or a fixed pension benefit.</p>
+<p>For an individual payout phase, the data exchange can be set up similarly to the accumulation phase. For a collective payout phase (all retirees in one cohort), aligning the interest rate sensitivity of the investments with the collective projected benefits is important. It is possible for the accumulation phase to occur in model 1 and the payout phase in model 2. For the payout phase (executed by a PUO), the fiduciary manager will set up a matching portfolio. The necessary data exchange will be structured in accordance with data exchange 1b from the SPR.</p>
+<h2 id="chapter-4-fpr-processes-44-information-flows-fpr-model-1-1a-and-1b">4.4 Information Flows FPR - Model 1 (1a and 1b)</h2>
+<p>The information exchange for model 1 can be split into a variant 1a, where the pension administration organization invests directly, and a variant 1b, where the PUO invests via an order platform. Strictly speaking, from the PUO's perspective, there is no distinction between these variants, but for clarity, both are explained separately. This is schematically and simplified shown in Figures 5 and 6. For example, a PUO could trade ETFs on behalf of the pension fund via a broker if these are part of the agreed investment mix.</p>
+<p><u>Figure 5 - Model 1a, where the PUO invests directly with various market parties, can be found in the official Dutch manual.</u></p>
+<p>The data exchange, indicated as "scope" in Figure 5, takes place between the PUO on one side and the various types of market parties on the other.</p>
+<p><u>Figure 6 - Model 1b, where the PUO gives investment orders to an intermediary (order platform: custodian, fiduciary), can be found in the official Dutch manual.</u></p>
+<p>The data exchange ("scope") from Figure 6 occurs exclusively between the PUO and the order platform.
+The data exchange for FPR model 1 (a and b) proceeds via the following 2 messages.</p>
+<h3 id="chapter-4-fpr-processes-441-message-5-order-instruction-00541">4.4.1 Message 5. Order Instruction (00541)</h3>
+<p><em>Information flow from Pension Administration Organization to Brokers/Transfer Agents/Order Desks (model 1a and 1b)</em></p>
+<p>This information flow from the PUO to Brokers/Transfer Agents/Order Desks contains the minimum set of data required to send an order to an order processing party. A switch can also be executed with this message.
+The PUO submits orders at the level of the investment fund. The provider of the fund executes the ordering in the underlying investments itself. This can include listed and illiquid investments, among others.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically section 6.4.6.</em></p>
+<h3 id="chapter-4-fpr-processes-442-message-6-order-confirmation-00542">4.4.2 Message 6. Order Confirmation (00542)</h3>
+<p><em>Information flow from Brokers/Transfer Agents/Order Desks to Pension Administration Organization (model 1a and 1b)</em></p>
+<p>The confirmation data of the order is returned from the order processing party to the pension administration organization.</p>
+<h2 id="chapter-4-fpr-processes-45-information-flows-fpr-model-2">4.5 Information Flows FPR - Model 2</h2>
+<p>The information exchange for model 2 (more extensive, layered order model) can be schematically simplified as follows.</p>
+<p><u>Figure 7, showing a schematic of the layered order investment process, can be found in the official Dutch manual.</u></p>
+<p>The scope outlined in Figure 7 leads to the exchange of various information flows. The standardized data exchanges that fall within the scope are indicated by red arrows in the process flow figures below. The data needed for these different information flows/processes is described in the following paragraphs. Note: The time indications in the figures below are indicative and can be filled in differently by each pension administrator. This document only covers the information flows.</p>
+<p>The information flow of model 2 has several steps – see the (step) numbers below in two process flow diagrams (Figures 8 and 9).</p>
+<p><u>Figure 8 (Process flow &amp; data exchange FPR 1) and Figure 9 (Process flow &amp; data exchange FPR 2) can be found in the official Dutch manual.</u></p>
+<p><strong>Explanation of Figure 8: Process flow &amp; data exchange FPR (1) - standard</strong>
+The process shown assumes one administrator for both cohort pools and investment pools. This administrator links the received aggregated data about participants (via cohort pools) to the investments (via investment pools).
+In step 5 to 10, the PUO provides the mutations in the number of participations per cohort to the cohort pool administrator. This administrator determines the preliminary participation value based on the reconciled administration of the investment pools (step 8). By combining the supplied mutations with the preliminary participation value and rebalancing rules, the necessary transactions in investment pools can be calculated. These transactions are combined for all cohorts, resulting in one instruction in euros per investment pool to the fiduciary manager, who executes the transactions (step 11). These transactions flow via SWIFT to the investment administrator/asset service provider (step 15). The investment pool administrator calculates the final unit values for the investment pools (step 16), which forms the basis for calculating the participation value for cohort pools (step 17). These are shared with the PUO (step 18) so that the value for individual participants can be determined.</p>
+<p>Several variations on this process are possible, depending on how the roles of cohort pool administrator and investment pool administrator are assigned (e.g., to the PUO or the investment administrator/asset service provider). These variations may require additional information exchanges.</p>
+<p><strong>Explanation of Figure 9: Process flow &amp; data exchange FPR (2)</strong>
+This process also assumes an administrator of cohort and investment pools. If the PUO fulfills the role of cohort pool administrator, several steps will shift to the PUO.</p>
+<h3 id="chapter-4-fpr-processes-451-message-7-balance-adjustments-00551">4.5.1 Message 7. Balance Adjustments (00551)</h3>
+<p><em>Information flow from PUO to the administrator of cohort and investment pools in the FPR (5 -&gt;10 in the diagram) on T-4:</em></p>
+<p>The first (expected monthly) information flow from the PUO to the administrator of cohort and investment pools concerns netted mutations (purchase, sale, and switches) at the total level per cohort pool. With this, the administrator can calculate the inflow or outflow for investment pools and instruct the fiduciary manager accordingly. The specific fields used are detailed in the message specifications.</p>
+<p><em>For the functional elaboration into a message, see chapter 6, specifically section 6.4.8.</em></p>
+<h3 id="chapter-4-fpr-processes-452-messages-for-reconciliation-information">4.5.2 Messages for reconciliation information</h3>
+<p><em>Information flow between the administrator, Fiduciary manager, and investment administrator (6 -&gt; 7 -&gt; 8 in the diagram) on T-4:</em></p>
+<p>The administrator of cohort and investment pools monthly receives the positions from the leading administration of the investment administrator for the investment pools. This can be supplemented with data from the fiduciary manager's (shadow) administration. These positions, containing for example the market value (<code>marketValueAmount</code>) and number of units (<code>numberOfUnits</code>) per investment pool, are reconciled with the administrator's own administration.</p>
+<h4 id="chapter-4-fpr-processes-4521-message-8-reconciliation-information-00552a">4.5.2.1 Message 8. Reconciliation Information (00552a)</h4>
+<p>This message is for the reconciliation between the administrator, fiduciary manager, and investment administrator.
+<em>For the functional elaboration, see chapter 6, section 6.4.9.</em></p>
+<h4 id="chapter-4-fpr-processes-4522-message-9-puo-reconciliation-information-00552b">4.5.2.2 Message 9. PUO Reconciliation Information (00552b)</h4>
+<p>This message contains the necessary information for the situation where the PUO also fulfills the role of cohort pool administrator. In this case, an additional information exchange from the investment pool administrator to the PUO about the preliminary unit values (<code>preliminaryUnitValueAmount</code>) of the investment pools is needed.
+<em>For the functional elaboration, see chapter 6, section 6.4.10.</em></p>
+<h3 id="chapter-4-fpr-processes-453-message-10-control-information-investment-pools-00553">4.5.3 Message 10. Control Information Investment Pools (00553)</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (10 -&gt; 11 in the diagram) on T-4:</em></p>
+<p>The administrator of cohort and investment pools calculates the participation values and combines these with the given mutations to estimate the cash effects on the investment pools. The administrator sends these cash effects (with substantiation) to the fiduciary.
+<em>For the functional elaboration, see chapter 6, section 6.4.11.</em></p>
+<h3 id="chapter-4-fpr-processes-454-message-11-rebalancing-information-00554-rebalancing-cohort-pools">4.5.4 Message 11. Rebalancing Information (00554), Rebalancing cohort pools</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (20 -&gt; 21 in the diagram) on T+3:</em></p>
+<p>The administrator rebalances the relevant age groups based on the unit values of the investment pools at time T to be invested according to the standard policy for all cohorts. The administrator sends all month-end transactions in the cohort and investment pools to the fiduciary manager.
+<em>For the functional elaboration, see chapter 6, section 6.4.12.</em></p>
+<h3 id="chapter-4-fpr-processes-455-passing-on-values-per-investment-pool-and-per-cohort-pool">4.5.5 Passing on values per investment pool and per cohort pool</h3>
+<p><em>Information flow between various parties (15 -&gt; 16 -&gt; 17 -&gt; 18 in the diagram) on T+3:</em></p>
+<p>The administrator calculates the unit value per unit in the investment pool and the participation value per participation in the cohort pool. The administrator passes the (participation) values of the cohort pools to the PUO and the fiduciary. If the PUO acts as the cohort pool administrator, it will receive the unit values of the investment pools and calculate the participation values itself.</p>
+<h4 id="chapter-4-fpr-processes-4551-message-12-value-information-cohort-pool-00555a">4.5.5.1 Message 12. Value Information Cohort Pool (00555a)</h4>
+<p>The fiduciary receives this from the PUO (when the PUO administers cohort pools).
+<em>For the functional elaboration, see chapter 6, section 6.4.13.</em></p>
+<h4 id="chapter-4-fpr-processes-4552-message-13-value-information-investment-pool-00555b">4.5.5.2 Message 13. Value Information Investment Pool (00555b)</h4>
+<p>The administrator of cohort and investment pools (also) passes on the (unit) values, the administrative price, of investment pools.
+<em>For the functional elaboration, see chapter 6, section 6.4.14.</em></p>
+<h3 id="chapter-4-fpr-processes-456-message-14-payment-information-00556">4.5.6 Message 14. Payment Information (00556)</h3>
+<p><em>Information flow between Administrator and Fiduciary manager (22 -&gt; 23 in the diagram), beginning of the month, on T+5:</em></p>
+<p>The administrator sends the payment instruction for withdrawals to the fiduciary manager.
+<em>For the functional elaboration, see chapter 6, section 6.4.15.</em></p>
+<h2 id="chapter-4-fpr-processes-46-use-of-spr-messages-in-fpr">4.6 Use of SPR Messages in FPR</h2>
+<p>Within a Flexible Premium Arrangement (FPR), in addition to the individual <em>unitized</em> cash flows, there are also collective premium flows.<br />
+These are cash flows that do not belong to a single specific participant, such as risk premiums, contributions to reserves, or withdrawals from a collective benefit pool.  </p>
+<p>The standard FPR messages (5 through 14) are purely aimed at the <em>unitized</em> world and do not support these collective flows.<br />
+To address this, it has been agreed that parties will revert to the proven SPR messages 1, 2, 3, and/or 4 for the exchange of this information.<br />
+This method applies to both the direct (Model 1) and the layered (Model 2) FPR order model.</p>
+<h2 id="chapter-4-fpr-processes-47-feedback-message-resending-fpr-and-spr">4.7 Feedback Message &amp; Resending - (FPR and SPR)</h2>
+<h3 id="chapter-4-fpr-processes-purpose-and-function">Purpose and Function</h3>
+<p>When exchanging messages, it is essential for the sender to know if a message has been correctly received and processed. The feedback message is designed to provide this certainty in the following situations:</p>
+<ul>
+<li><strong>For asynchronous processing:</strong> To provide the final status (both success and failure) of a message after background processing is complete.</li>
+<li><strong>For synchronous processing:</strong> To provide immediate, detailed error information when a message cannot be accepted.</li>
+</ul>
+<p>A feedback message is therefore mandatory to specify errors. In case of successful processing, it is only sent as part of an asynchronous process. For successful synchronous processing, an HTTP 200 OK status code is sufficient.</p>
+<h3 id="chapter-4-fpr-processes-structure-of-the-feedback-message">Structure of the Feedback Message</h3>
+<p>The feedback message has a compact, fixed structure optimized for communicating status information. The image below (also available on GitHub in the message overview and in the MessageStructureView of the message) shows the hierarchical structure and the main entities.</p>
+<p><img alt="Feedback Message Structure" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_message.svg" /></p>
+<p>The core of the message is formed by the following components:</p>
+<ul>
+<li><strong>commonTechnical:</strong> Contains the technical identification of the feedback message itself, such as a new, unique <code>messageId</code>.</li>
+<li><strong>commonFunctional:</strong> Contains the functional metadata, including:<ul>
+<li><code>statusType</code>: The status of the original message: Accepted (8) or Rejected (0).</li>
+<li><code>originalMessageId</code>: A mandatory reference to the <code>messageId</code> of the message to which this feedback pertains.</li>
+<li><code>originalMessageType</code>: An optional field indicating the type of the original message, to simplify routing at the receiver.</li>
+</ul>
+</li>
+<li><strong>error:</strong> An optional block that, in case of rejection, contains an <code>errorCode</code> and an <code>errorCodeExplanation</code>.</li>
+<li><strong>party.pensionProvider:</strong> Identifies the pension provider to whom the original message related.</li>
+</ul>
+<p>For a detailed specification of all attributes and code lists, see sections 6.5 and 6.4.16.</p>
+<h3 id="chapter-4-fpr-processes-interaction-patterns-and-process-flow">Interaction Patterns and Process Flow</h3>
+<p>The technical handling of the feedback is defined in the OpenAPI Specification (OAS) and follows six fixed scenarios. These describe both synchronous and asynchronous processing, including the handling of errors and "panic" situations where the feedback loop itself fails.</p>
+<p>A visual overview of these scenarios can be found on GitHub:</p>
+<p><img alt="Feedback Sequence Diagram" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO_Feedback_Message/MessageStructureView/Feedback_sequencediagram.svg" /></p>
+<p>The scenarios are explained functionally below:</p>
+<ol>
+<li><strong>Synchronous validation - Success:</strong> Immediate 200 OK.</li>
+<li><strong>Synchronous validation - Error:</strong> Immediate 400 Bad Request with a feedback message in the body.</li>
+<li><strong>Asynchronous validation - Success:</strong> First a 202 Accepted, later followed by a callback with an "Accepted" feedback message.</li>
+<li><strong>Asynchronous validation - Error:</strong> First a 202 Accepted, later followed by a callback with a "Rejected" feedback message.</li>
+<li><strong>Panic scenario (after Error):</strong> The callback with a "Rejected" feedback is not accepted by the recipient (400 Bad Request).</li>
+<li><strong>Panic scenario (after Success):</strong> The callback with an "Accepted" feedback is not accepted by the recipient (400 Bad Request).</li>
+</ol>
+<p>In panic scenarios (5 and 6), manual coordination via another channel is necessary.</p>
+<h3 id="chapter-4-fpr-processes-protocol-for-corrections-and-resending">Protocol for Corrections and Resending</h3>
+<p>The feedback mechanism dictates the protocol for correcting messages. This protocol is based on the fundamental principle:</p>
+<p><strong>"Once accepted messages are not unilaterally corrected."</strong></p>
+<p>The received feedback message is the primary form of communication that determines how a correction should be handled.</p>
+<p><strong>Scenario 1: Correction after an Error Message (Feedback "Rejected")</strong>
+If the receiving party has sent a feedback message with the status "Rejected," this serves as the official request for correction.</p>
+<ul>
+<li>The receiving party expects a new, corrected message.</li>
+<li>The sending party may and must send a corrected message without further, separate coordination.</li>
+</ul>
+<p><strong>Scenario 2: Correction after Acceptance of a message</strong>
+This scenario occurs when a message has been successfully accepted (via a 200 OK), and the sending party subsequently discovers an error. Since there is no official trigger for a correction, unilaterally sending a new version of the message (a correction message) is not permitted.</p>
+<p>In such situations, the sending party must contact the receiving party to discuss the situation. The outcome of this consultation determines the follow-up action. Possible solutions are:</p>
+<ul>
+<li>Ad hoc agreement for resubmission.</li>
+<li>Correction in the next regular delivery.</li>
+<li>Following an agreed-upon incident procedure.</li>
+</ul>
+<p><a href="https://github.com/dma61/VBPUOdsk/issues/83#issuecomment-2701711063">See for additonal explanation issue #83 </a></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-3-spr-processes">&lt; Previous: Chapter 3: SPR Processes</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-5-data-standard-setup">Next: Chapter 5: Data Standard Setup &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-5-data-standard-setup" heading-number="6"><h1 id="chapter-5-data-standard-setup-chapter-5-approachsetup-of-the-data-standard">Chapter 5: Approach/Setup of the Data Standard</h1>
+<p>This chapter explains how the message specifications are derived. The steps to arrive at the functional specifications are:</p>
+<ol>
+<li><strong>Create descriptions of the processes and information flows.</strong></li>
+<li><strong>Create a list of entities and associated attributes.</strong></li>
+<li><strong>Determine the basic structure of the messages.</strong></li>
+<li><strong>Indicate which messages are needed.</strong></li>
+<li><strong>Create a cross-reference table</strong> between the basic structure and the messages.</li>
+</ol>
+<h2 id="chapter-5-data-standard-setup-51-55-the-process">5.1-5.5 The Process</h2>
+<p>The process starts with describing the business processes (as done in Chapters 3 and 4). From these descriptions, the required data elements (entities and attributes) are identified. These are then organized into a hierarchical base structure. Specific messages are defined as subsets of this base structure. A cross-reference table (see section 6.5) shows which attributes are used in which message.</p>
+<h2 id="chapter-5-data-standard-setup-56-relationship-with-sivi-afs">5.6 Relationship with SIVI AFS</h2>
+<p>This standard is built using components from the <strong>SIVI All Finance Standard (AFD 2.0)</strong>. AFD 2.0 is an English-language standard that provides building blocks (entities, attributes, code lists) for the financial sector. Where necessary, this standard proposes new elements to be added to AFD 2.0. The use of JSON is a core principle of AFD 2.0.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-4-fpr-processes">&lt; Previous: Chapter 4: FPR Processes</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-6-functional-specs">Next: Chapter 6: Functional Specifications &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-6-functional-specs" heading-number="7"><h1 id="chapter-6-functional-specs-chapter-6-functional-specifications">Chapter 6: Functional Specifications</h1>
+<p>This chapter contains the detailed functional specifications.</p>
+<p>This chapter contains the functional specifications:</p>
+<ul>
+<li>Data Dictionary</li>
+<li>Base Message</li>
+<li>Cross-reference: Base Message &amp; Messages</li>
+</ul>
+<h2 id="chapter-6-functional-specs-61-data-dictionary">6.1 Data Dictionary</h2>
+<p>An overview of all entities and their purpose. This section will link to detailed pages or files for each entity.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Entity.entitytype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">commonTechnical.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.sender</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.contact</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.receiver</td>
+</tr>
+<tr>
+<td style="text-align: left;">commonFunctional.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.pensionProvider</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.scheme</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialInformation.reportingPeriod</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.payment</td>
+</tr>
+<tr>
+<td style="text-align: left;">party.creditor</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.cashflow</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.expectedPayment</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.cohort</td>
+</tr>
+<tr>
+<td style="text-align: left;">pension.cohortPool</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.pool</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.portfolio</td>
+</tr>
+<tr>
+<td style="text-align: left;">investment.investmentDetails</td>
+</tr>
+<tr>
+<td style="text-align: left;">financialTransaction.trade</td>
+</tr>
+<tr>
+<td style="text-align: left;">error.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">document.default</td>
+</tr>
+<tr>
+<td style="text-align: left;">chunckMeta.default</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-6-functional-specs-62-entity-types">6.2 Entity Types</h2>
+<p>This section describes the various entities and the attributes within those entities.</p>
+<p>Below is an explanation of the entities. This information is derived from AFD 2.0, which can be consulted via <a href="https://www.sivi.org/standaarden/sivi-all-finance-standaard/afd-online-2-0/">this link</a>.</p>
+<p><strong>Note:</strong> The entity type is mandatory.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Entity.entitytype</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>commonTechnical.default</code></td>
+<td style="text-align: left;">This entity contains technical details about sending and storing messages. It forms the basis for the technical aspects within the messaging system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.sender</code></td>
+<td style="text-align: left;">The "party.sender" entity refers to the sender of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.contact</code></td>
+<td style="text-align: left;">The "party.contact" entity represents a contact person within a legal entity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.receiver</code></td>
+<td style="text-align: left;">This entity represents the recipient of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>commonFunctional.default</code></td>
+<td style="text-align: left;">This entity contains domain-specific information about the content of the message.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.pensionProvider</code></td>
+<td style="text-align: left;">This entity represents a pension provider (pension fund, insurer, or PPI).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.scheme</code></td>
+<td style="text-align: left;">This entity contains data at the level of the pension scheme or plan.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialInformation.reportingPeriod</code></td>
+<td style="text-align: left;">This entity relates to reporting periods, time intervals, and other generic dates.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.payment</code></td>
+<td style="text-align: left;">This entity/entity type combination contains data about a payment.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>party.creditor</code></td>
+<td style="text-align: left;">This entity represents the creditor; the recipient of the payments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.cashflow</code></td>
+<td style="text-align: left;">This entity deals with financial transactions related to pensions, specifically focusing on cash flows.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.expectedPayment</code></td>
+<td style="text-align: left;">This entity contains information about projected future cash flows/payments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.cohort</code></td>
+<td style="text-align: left;">This entity contains information about specific target groups (cohorts) within the pension scheme.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pension.cohortPool</code></td>
+<td style="text-align: left;">The pooled combination of investment pools for a cohort. Investments in a cohort pool are made for a group of participants with a similar investment allocation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.pool</code></td>
+<td style="text-align: left;">This entity (investment pool) represents collections of underlying investments (liquid, illiquid, funds, mandates).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.portfolio</code></td>
+<td style="text-align: left;">This entity relates to investment portfolios, which represent the total managed assets (or a sub-portfolio).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investment.investmentDetails</code></td>
+<td style="text-align: left;">This entity describes individual investments of a pension provider.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialTransaction.trade</code></td>
+<td style="text-align: left;">This entity relates to trading activities within the pension scheme.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>error.default</code></td>
+<td style="text-align: left;">In case of errors, this entity is used to generate error messages.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>document.default</code></td>
+<td style="text-align: left;">This entity is intended for adding any attachments to messages.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkMeta.default</code></td>
+<td style="text-align: left;">This entity contains metadata for splitting and merging large messages (chunking).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-6-functional-specs-63-attributes-in-entitiesentity-types">6.3 Attributes in Entities.Entity Types</h2>
+<p>The tables in this section detail the attributes per entity/entity type combination. Each entry includes the attribute's name, definition, data type, max length, and a link to any code list.</p>
+<p><em>Note: Attribute descriptions in the feedback message may differ from those in the 14 content messages.</em></p>
+<p>Data type descriptions are available in the SIVI All-Finance Standard manual.</p>
+<p><strong>Interpretation rules:</strong></p>
+<ul>
+<li><strong><code>string</code>:</strong> Max length is specified unless a code list applies (then 'length' is empty).</li>
+<li><strong><code>decimal</code>:</strong> Defaults to 2 decimal places. Deviations are specified in the data type column.</li>
+</ul>
+<p>Attribute names have been aligned with AFD 2.0 conventions and differ from the consultation document. See Appendix 8.4 for the translation table.</p>
+<h3 id="chapter-6-functional-specs-commontechnicaldefault"><code>commonTechnical.default</code></h3>
+<p><em>The commonTechnical entity covers all information about sending or storing the message. This is typically technical information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>messageId</code></td>
+<td style="text-align: left;">Unique message identification</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>creationDateTime</code></td>
+<td style="text-align: left;">Creation date and time</td>
+<td style="text-align: left;">timestamp</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>testMessage</code></td>
+<td style="text-align: left;">Test message indicator</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-partysender"><code>party.sender</code></h3>
+<p><em>Sender of the message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Organization name of the sender.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applicationSenderName</code></td>
+<td style="text-align: left;">Name of the application that created the message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-partycontact"><code>party.contact</code></h3>
+<p><em>A natural person who can be contacted within a legal entity for further information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>emailWork</code></td>
+<td style="text-align: left;">Work email address</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>workPhoneNumber</code></td>
+<td style="text-align: left;">Work phone number</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-partyreceiver"><code>party.receiver</code></h3>
+<p><em>Receiver of the message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Name of the recipient organization(s).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-commonfunctionaldefault"><code>commonFunctional.default</code></h3>
+<p><em>The commonFunctional entity covers all information about the content of the message. This is typically domain-specific information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>function</code></td>
+<td style="text-align: left;">Message function code.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNFUN</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>statusType</code></td>
+<td style="text-align: left;">Status of the original message processing (Accepted or Rejected).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNSTS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>afdDefinitionName</code></td>
+<td style="text-align: left;">Type of message, name of the message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>afdDefinitionVersion</code></td>
+<td style="text-align: left;">Version of the <code>afdDefinition</code> of the message. See section 7.5.1 for details.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>originalMessageId</code></td>
+<td style="text-align: left;">The original <code>messageId</code> of the message being replaced or being responded to.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>originalMessageType</code></td>
+<td style="text-align: left;">Message type of the original request to which this message is a response. E.g. <code>0001a</code>, <code>0001b</code>, etc.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-partypensionprovider"><code>party.pensionProvider</code></h3>
+<p><em>Information on the Pension Provider level (Pension Fund, Insurer, PPI, APF).</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>puvCode</code></td>
+<td style="text-align: left;">ID of the pension provider (PUV-code).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AFDIDP</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rsinNumber</code></td>
+<td style="text-align: left;">Governmental identification number for legal entities (RSIN).</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organizationName</code></td>
+<td style="text-align: left;">Name of the pension provider.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-pensionscheme"><code>pension.scheme</code></h3>
+<p><em>Data on the pension scheme level.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the pension scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pensionschemeName</code></td>
+<td style="text-align: left;">Name of the pension scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>StartAmount</code></td>
+<td style="text-align: left;">Total pension assets as of the start date.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradingPortfolioId</code></td>
+<td style="text-align: left;">Portfolio ID of the custodian.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-financialinformationreportingperiod"><code>financialInformation.reportingPeriod</code></h3>
+<p><em>Reporting period information.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>startDate</code></td>
+<td style="text-align: left;">Start date of the data period or reference date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endDate</code></td>
+<td style="text-align: left;">End date of the data period.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeDate</code></td>
+<td style="text-align: left;">Desired trade date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>investmentOrderSettlementDate</code></td>
+<td style="text-align: left;">Date by which the investment order cycle must be settled.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mutationValuationDate</code></td>
+<td style="text-align: left;">Date for processing mutations per age group.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>projectionDate</code></td>
+<td style="text-align: left;">Date of the pension benefit projection.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instructionDate</code></td>
+<td style="text-align: left;">Date of the instruction sent by the PUO.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitValueEstimationDate</code></td>
+<td style="text-align: left;">Date on which the preliminary unit value (investment pool) was determined.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationValuationDate</code></td>
+<td style="text-align: left;">Pricing date of the participation value (cohort pool).</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>positionDate</code></td>
+<td style="text-align: left;">Date on which the positions in the investment administration were established.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>valueDate</code></td>
+<td style="text-align: left;">Currency date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-financialtransactionpayment"><code>financialTransaction.payment</code></h3>
+<p><em>Information about payments.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the expected payment.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>amount</code></td>
+<td style="text-align: left;">Amount in currency / projected benefit.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency code.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountIban</code></td>
+<td style="text-align: left;">IBAN of the debit account.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description of the transaction (payment).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>expectedPensionPaymentDate</code></td>
+<td style="text-align: left;">Pension payment date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hedgedExpectedPensionPaymentAmount</code></td>
+<td style="text-align: left;">Cash flow to be hedged.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-partycreditor"><code>party.creditor</code></h3>
+<p><em>The party that has a claim.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountIban</code></td>
+<td style="text-align: left;">IBAN of the credit account per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountInNameOf</code></td>
+<td style="text-align: left;">Name of the counterparty per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountBic</code></td>
+<td style="text-align: left;">Business Identifier Code (BIC) per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>collectionAccountBicCorrespondent</code></td>
+<td style="text-align: left;">BIC correspondent per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-financialtransactioncashflow"><code>financialTransaction.cashflow</code></h3>
+<p><em>The sum of contributions and withdrawals on all cohorts.</em>*</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>contributionAmount</code></td>
+<td style="text-align: left;">Sum of contributions.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>contributionDate</code></td>
+<td style="text-align: left;">Date of receipt of the contribution.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalAmount</code></td>
+<td style="text-align: left;">Sum of withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalDate</code></td>
+<td style="text-align: left;">Date by which funds for withdrawal are available.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netDate</code></td>
+<td style="text-align: left;">Date on which the net cash flow is actually paid.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><em>*Note: The amount and date fields in <code>financialTransaction.cashflow</code> are optional. At least one pair must be used.</em></p>
+<h3 id="chapter-6-functional-specs-pensioncohort"><code>pension.cohort</code></h3>
+<p><em>Information on cohort (pension target audience) level.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description of the cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationStatus</code></td>
+<td style="text-align: left;">Status of the participants in a cohort.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNDNS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAge</code></td>
+<td style="text-align: left;">Start age in months.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endAge</code></td>
+<td style="text-align: left;">End age in months.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveIndicator</code></td>
+<td style="text-align: left;">Indicates if the cohort represents a reserve.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveType</code></td>
+<td style="text-align: left;">Type of reserve.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AFDRES</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserveDescription</code></td>
+<td style="text-align: left;">Description for "Other" reserve type.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAmount</code></td>
+<td style="text-align: left;">Pension assets of the cohort at the start date.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals per cohort.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>contributionAmount</code></td>
+<td style="text-align: left;">Inflow to be invested by the fiduciary manager.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>withdrawalAmount</code></td>
+<td style="text-align: left;">Outflow to be invested by the fiduciary manager.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protectionReturnPercentage</code></td>
+<td style="text-align: left;">Achieved protection return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>excessReturnPercentage</code></td>
+<td style="text-align: left;">Achieved excess return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protectionReturnAmount</code></td>
+<td style="text-align: left;">Achieved protection return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>excessReturnAmount</code></td>
+<td style="text-align: left;">Achieved excess return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-pensioncohortpool"><code>pension.cohortPool</code></h3>
+<p><em>The pooled combination of investments (investment pools) for a cohort.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the cohort pool.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cohortRef</code></td>
+<td style="text-align: left;">Reference to the cohort this pool belongs to.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the cohort data.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inflowPremiumAmount</code></td>
+<td style="text-align: left;">Premium contribution per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inflowRebalanceAmount</code></td>
+<td style="text-align: left;">Cash amount of rebalance transactions per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfNewParticipations</code></td>
+<td style="text-align: left;">New participations to be issued in the cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfParticipations</code></td>
+<td style="text-align: left;">Number of outstanding units (participations).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfRebalanceParticipations</code></td>
+<td style="text-align: left;">Rebalance participations per cohort pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participationsSummedValueAmount</code></td>
+<td style="text-align: left;">Value per cohort pool (sum of participation value).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-investmentpool"><code>investment.Pool</code></h3>
+<p><em>Investment pool / investment portfolio.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the investment pool per scheme.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>marketValueAmount</code></td>
+<td style="text-align: left;">Market value.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitsSummedValueAmount</code></td>
+<td style="text-align: left;">Value per investment pool (unit value).</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preliminaryMarketValueAmount</code></td>
+<td style="text-align: left;">Preliminary market value of the portfolio.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preliminaryUnitValueAmount</code></td>
+<td style="text-align: left;">Preliminary unit value.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfUnits</code></td>
+<td style="text-align: left;">Number of units issued for the investment pool.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the pool.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dummyCashId</code></td>
+<td style="text-align: left;">ID for a dummy cash instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>buySellId</code></td>
+<td style="text-align: left;">Buy/Sell indicator.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">sell; buy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeQuantity</code></td>
+<td style="text-align: left;">Number of units to be traded.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unitPrice</code></td>
+<td style="text-align: left;">Unit value/price.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyExchangeRate</code></td>
+<td style="text-align: left;">FX rate.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-investmentportfolio"><code>investment.portfolio</code></h3>
+<p><em>Investment portfolio.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">ID of the Investment Portfolio.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Description.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startAmount</code></td>
+<td style="text-align: left;">Total Market Value at the start of the period.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netAmount</code></td>
+<td style="text-align: left;">Net sum of contributions and withdrawals.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>endAmount</code></td>
+<td style="text-align: left;">Total Market Value at the end of the period.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>returnPercentage</code></td>
+<td style="text-align: left;">Achieved return as a percentage.</td>
+<td style="text-align: left;">Decimal (1E-12)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>returnAmount</code></td>
+<td style="text-align: left;">Achieved return in currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startExposureAmount</code></td>
+<td style="text-align: left;">Allocation of pension assets to this portfolio.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>startExposurePercentage</code></td>
+<td style="text-align: left;">Relative share of <code>startExposureAmount</code>.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-investmentinvestmentdetails"><code>investment.investmentDetails</code></h3>
+<p><em>An investment in either liquid or illiquid funds or pools thereof.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Identifier (e.g., ISIN or internal code).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>description</code></td>
+<td style="text-align: left;">Name of the investment/fund/instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyType</code></td>
+<td style="text-align: left;">Currency of the instrument.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ISOVAL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfUnits</code></td>
+<td style="text-align: left;">Number of purchased units per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>numberOfHoldings</code></td>
+<td style="text-align: left;">Number of holdings per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>localPrice</code></td>
+<td style="text-align: left;">Price per instrument in original currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>localValueAmount</code></td>
+<td style="text-align: left;">Total market value in original currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Result</code></td>
+<td style="text-align: left;">Unrealized result per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>accruedInterest</code></td>
+<td style="text-align: left;">Accrued interest per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poolPercentage</code></td>
+<td style="text-align: left;">Weight in the portfolio per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>currencyExchangeRate</code></td>
+<td style="text-align: left;">FX rate per instrument.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-financialtransactiontrade"><code>financialTransaction.trade</code></h3>
+<p><em>Trading/ordering; Buying and selling.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>tradeDate</code></td>
+<td style="text-align: left;">Desired trade date.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentIndicator</code></td>
+<td style="text-align: left;">Adjusted trade instruction.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>buySellId</code></td>
+<td style="text-align: left;">Buy/Sell/Switch indicator.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">sell, buy, switch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeAmount</code></td>
+<td style="text-align: left;">Amount of the purchase in the investment's currency.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeQuantity</code></td>
+<td style="text-align: left;">Number of units to be traded.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradePrice</code></td>
+<td style="text-align: left;">Purchase price/rate.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>switchType</code></td>
+<td style="text-align: left;">Type of switch; one-day or sequential.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">sequential, one-day</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>financialInformationRef</code></td>
+<td style="text-align: left;">On a switch, reference to the target identifier.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Counterparty</code></td>
+<td style="text-align: left;">Transfer Agent; the party executing the trade.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Broker</code></td>
+<td style="text-align: left;">Broker executing investment orders.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>interestAmount</code></td>
+<td style="text-align: left;">Amount of applicable interest.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>commissionAmount</code></td>
+<td style="text-align: left;">Fee for executing the transaction.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clearingBroker</code></td>
+<td style="text-align: left;">Broker responsible for settlement.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clearingBrokerCashAccount</code></td>
+<td style="text-align: left;">Cash account (IBAN) at the clearing broker.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-errordefault"><code>error.default</code></h3>
+<p><em>Error message.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorCode</code></td>
+<td style="text-align: left;">Error code type.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ADNFTM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>errorCodeExplanation</code></td>
+<td style="text-align: left;">Explanation of the error message.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">300</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><em>See also the information about <code>error.default</code> in the SIVI All-Finance Standard.</em></p>
+<h3 id="chapter-6-functional-specs-documentdefault"><code>document.default</code></h3>
+<p><em>Information about an attachment/document.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refKey</code></td>
+<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fileName</code></td>
+<td style="text-align: left;">Name of the file for the attachment.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fileExtension</code></td>
+<td style="text-align: left;">Extension of the file (e.g., pdf, csv, txt).</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">pdf;csv;txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-6-functional-specs-chunkmetadefault"><code>chunkMeta.default</code></h3>
+<p><em>"Chunking" (splitting large messages) into partial messages.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Attribute Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Length</th>
+<th style="text-align: left;">Code List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>currentChunkId</code></td>
+<td style="text-align: left;">Unique reference (id) of the current chunk.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkSequenceNumber</code></td>
+<td style="text-align: left;">Sequence number of the current chunk.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>totalNumberOfChunks</code></td>
+<td style="text-align: left;">Total number of chunks the message is split into.</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chunkFragmentPaths</code></td>
+<td style="text-align: left;">Array of JMESPath references to the message fragments.</td>
+<td style="text-align: left;">array</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-6-functional-specs-64-messages">6.4 Messages</h2>
+<p>The data exchange described in this document is supported by a set of 14 messages, supplemented by a feedback message. The messages are derived from the base message described below.</p>
+<p>Below (in Figure 12) is an overview of the messages and the roles (sender/receiver) involved.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Message Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">PUO</th>
+<th style="text-align: center;">FM</th>
+<th style="text-align: center;">BA</th>
+<th style="text-align: center;">ACB</th>
+<th style="text-align: center;">BR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. Vermogen (0001a)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2. Cashflow (0001b)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">3. Pensioenprojectie (0001c)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">4. Rendementsinformatie (00002)</td>
+<td style="text-align: left;">SPR</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">5. Orderopdracht (00541)</td>
+<td style="text-align: left;">FPR*</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+</tr>
+<tr>
+<td style="text-align: left;">6. Orderconfirmation (00542)</td>
+<td style="text-align: left;">FPR*</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+</tr>
+<tr>
+<td style="text-align: left;">7. Mutatiesaldi (00551)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">8. Reconciliatie-informatie (00552a)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">9. PUO-reconciliatie-informatie (00552b)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">10. Stuurinformatiebeleggingspools (00553)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11. Rebalancinginformatie (00554)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">12. Waarde-informatie cohortenpool (00555a)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">13. Waarde-informatie beleggingspool (00555b)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14. Betaalinformatie (00556)</td>
+<td style="text-align: left;">FPR**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Feedback Message***</td>
+<td style="text-align: left;">Both</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend for the roles:</strong></p>
+<ul>
+<li><strong>PUO:</strong> Pension Administration Organizations</li>
+<li><strong>FM:</strong> Fiduciary Managers</li>
+<li><strong>BA:</strong> Investment Administrators / Asset Service Provider</li>
+<li><strong>ACB:</strong> Administrators of Cohort and Investment Pools</li>
+<li><strong>BR:</strong> Brokers / Transfer Agents</li>
+</ul>
+<p><strong>Note:</strong> Each receiving party receives its information directly from the sending party.</p>
+<p><strong>Note:</strong> Each receiving party/role gets its information directly from the sending party. In addition to the parties/roles mentioned in Figure 12, messages can also be sent to other parties, such as Liability-Driven Investment managers (LDIs). The transmission to unmentioned parties/roles is also direct. Received information is not forwarded to other parties.</p>
+<p>The table below lists the message types and their meaning. In parentheses is the reference to the working group's final report: "Final Report Research Standard VB PUO (September 2023.pdf)".</p>
+<ul>
+<li><strong>PMT</strong> = <code>pensionMessageType</code> in AFD 2.0 (the descriptions of the message types are provided).</li>
+<li><strong>TAG</strong> = The identifier used for the message in the API.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Message Type</th>
+<th style="text-align: left;">PMT/TAG</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1a</strong> (4.2.1.1)</td>
+<td style="text-align: left;">Capital</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>On a periodic (expected monthly) basis, the fiduciary manager receives the total pension assets at the start of the period for a scheme. This can also be provided per cohort. With this information, the fiduciary manager can check alignment with the fund's policy and rebalance if necessary.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1b</strong> (4.2.1.3)</td>
+<td style="text-align: left;">Cashflow</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>Periodically, the fiduciary manager receives the inflow and outflow for a scheme. This can be provided at a total level and per cohort. The cash flow includes premiums, value transfers, benefits, and shifts between cohorts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>1c</strong> (4.2.1.3)</td>
+<td style="text-align: left;">PensionProjection</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager &amp; Investment Administrator.</strong><br>Periodically, the fiduciary manager receives the projected benefits per scheme and cohort based on the accrued assets. It also includes the cash flows to be hedged per scheme, calculated as the sum of weighted projected benefits per cohort.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR</strong></td>
+<td style="text-align: left;"><strong>2</strong> (4.2.2.)</td>
+<td style="text-align: left;">ReturnOnInvestment</td>
+<td style="text-align: left;"><strong>From Investment Administrator to PUO.</strong><br>The PUO periodically receives information about the achieved investment return, including start and end values and the return percentage per portfolio. This is necessary for the PUO to allocate returns to participants, the solidarity reserve, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>541</strong> (5.4.1.)</td>
+<td style="text-align: left;">Trade</td>
+<td style="text-align: left;"><strong>From PUO to Brokers/Transfer Agents/Order Desks.</strong><br>This message contains the minimum data set required to send an order or a switch to an order processing party. The PUO submits orders at the investment fund level.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>542</strong> (5.4.2.)</td>
+<td style="text-align: left;">Orderconfirmation</td>
+<td style="text-align: left;"><strong>From Brokers/Transfer Agents/Order Desks to PUO.</strong><br>The confirmation details of the order are returned from the order processing party to the PUO.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>551</strong> (5.5.1)</td>
+<td style="text-align: left;">BalanceAdjustments</td>
+<td style="text-align: left;"><strong>From PUO to Administrator of Cohort &amp; Investment Pools.</strong><br>This first monthly information flow concerns netted mutations (purchases, sales, switches) per cohort pool. The administrator uses this to calculate cash flows for the investment pools and instruct the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>552a</strong> (5.5.2)</td>
+<td style="text-align: left;">InvestmentDetails</td>
+<td style="text-align: left;"><strong>Between Administrator, Fiduciary Manager, and Investment Administrator.</strong><br>The administrator receives monthly positions from the investment administrator and reconciles them with their own administration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>552b</strong> (5.5.2)</td>
+<td style="text-align: left;">InvestmentDetailsPUO</td>
+<td style="text-align: left;"><strong>From Investment Pool Administrator to PUO.</strong><br>Additional information needed when the PUO also acts as the cohort pool administrator. This message provides the preliminary unit values of the investment pools to the PUO.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>553</strong> (5.5.3)</td>
+<td style="text-align: left;">ControlInformationInvestmentPools</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>The administrator calculates participation values and combines them with mutations to estimate the cash effects on the investment pools. These effects are then sent to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>554</strong> (5.5.4)</td>
+<td style="text-align: left;">RebalancingDetails</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>The administrator rebalances the relevant cohorts based on the unit values at time T and sends all month-end transactions to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>555a</strong> (5.5.5)</td>
+<td style="text-align: left;">ValueAmountCohortPool</td>
+<td style="text-align: left;"><strong>From PUO to Fiduciary Manager (when PUO administers cohort pools).</strong><br>The administrator (or PUO, if applicable) calculates and distributes the participation values of the cohort pools.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>555b</strong> (5.5.5)</td>
+<td style="text-align: left;">ValueAmountInvestmentPool</td>
+<td style="text-align: left;"><strong>Between Investment Administrator, Administrator, Fiduciary Manager, and PUO.</strong><br>The administrator calculates the unit value per unit in the investment pool and the participation value per participation in the cohort pool and distributes them to the PUO and fiduciary.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>FPR</strong></td>
+<td style="text-align: left;"><strong>556</strong> (5.5.6)</td>
+<td style="text-align: left;">PaymentDetailsCreditor</td>
+<td style="text-align: left;"><strong>From Administrator to Fiduciary Manager.</strong><br>At the beginning of the month, the administrator sends the payment instruction for withdrawals to the fiduciary manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPR/FPR</strong></td>
+<td style="text-align: left;">Feedback</td>
+<td style="text-align: left;">Feedback</td>
+<td style="text-align: left;"><strong>From the recipient of a content message (1-14) to the original sender.</strong><br>Provides feedback on errors or confirms the processability of a message.</td>
+</tr>
+</tbody>
+</table>
+<p>Unlike the Dutch manual, this documentation references the <code>MessageStructureView</code> folders on GitHub to illustrate the structure of each message. For example, the structure for <strong>Message 11</strong> can be viewed <a href="https://github.com/dma61/VBPUOdsk/tree/main/VBPUO-Bericht_11._Rebalancinginformatie_(00554)/MessageStructureView">here</a>.</p>
+<p>Below is a diagram depicting the structure of <strong>Message 11</strong>:</p>
+<p><img alt="Message 11 Structure" src="https://raw.githubusercontent.com/dma61/VBPUOdsk/refs/heads/main/VBPUO-Bericht_11._Rebalancinginformatie_(00554)/MessageStructureView/20250630_083428-00554.svg" /></p>
+<p>These diagrams clearly visualize the relationships between entities. For detailed text-based specifications, please refer to the original Dutch manual.</p>
+<h2 id="chapter-6-functional-specs-65-cross-reference-attributes-messages">6.5 Cross-Reference Attributes &amp; Messages</h2>
+<p>please refer to the original Dutch manual.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-5-data-standard-setup">&lt; Previous: Chapter 5: Data Standard Setup</a></div></th>
+<th style="text-align: right;"><div align="right"><a href="#chapter-7-tech-specs">Next: Chapter 7: Technical Specifications &gt;</a></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="chapter-7-tech-specs" heading-number="8"><h1 id="chapter-7-tech-specs-chapter-7-technical-specifications">Chapter 7: Technical Specifications</h1>
+<p>The technical data specifications are based on AFD 2.0 from SIVI AFS. This chapter provides an explanation.</p>
+<h2 id="chapter-7-tech-specs-71-messages-schemes">7.1 Messages &amp; Schemes</h2>
+<p>Each message can concern multiple schemes (<code>pension.scheme</code>). However, it always pertains to a single <code>party.pensionProvider</code>. The transmission is per message, and that message thus contains 1 <code>pension.provider</code> and 1 or more <code>pension.scheme</code>'s.</p>
+<h2 id="chapter-7-tech-specs-72-validations">7.2 Validations</h2>
+<p>The following validation rules can be implemented using the technical specifications:</p>
+<ul>
+<li>Check if the message structure is correct;</li>
+<li>Verify the data type (including numbers, strings);</li>
+<li>Check for minimum and maximum values;</li>
+<li>Validate the field length;</li>
+<li>Check for the presence of mandatory entities and attributes;</li>
+<li>Check the number of repetitions of entities;</li>
+<li>Ensure the use of allowed codes from code lists.</li>
+</ul>
+<p><em>N.B.: Relational checks (validation rules between different data elements) are still in development. See also the JSON schemas.</em></p>
+<h2 id="chapter-7-tech-specs-73-json">7.3 JSON</h2>
+<p>The SIVI AFS team follows the specifications below for AFD 2.0 in combination with JSON (derived from Forum Standaardisatie):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concern</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Full Name</strong></td>
+<td style="text-align: left;">JavaScript Object Notation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Version</strong></td>
+<td style="text-align: left;">RFC8259, December 2017</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Specification Document</strong></td>
+<td style="text-align: left;"><a href="https://datatracker.ietf.org/doc/html/rfc8259">JSON Specification Document</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Managing Organization</strong></td>
+<td style="text-align: left;">Internet Engineering Task Force (IETF)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Functional Scope</strong></td>
+<td style="text-align: left;">Object notation for exchanging data structures, for example, in web applications that retrieve data asynchronously from a web server.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Typing</strong></td>
+<td style="text-align: left;">Exchange of data structures</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Benefit</strong></td>
+<td style="text-align: left;">JSON (JavaScript Object Notation) is a subset of the JavaScript programming language. The simplicity of JSON has led to its great popularity, especially as a 'light' alternative to XML.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Operation</strong></td>
+<td style="text-align: left;">JSON is a format for storing and sending data, similar to XML. It is used for exchanging data structures, particularly in web applications. The standard is aimed at efficient programming and has a compact notation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tools</strong></td>
+<td style="text-align: left;">Various online JSON validators and tools are available, also for different programming platforms. More information about the standard can also be found in publications from ECMA International.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Guideline:</strong> If a non-mandatory attribute has no value, the attribute should be completely omitted from the JSON message. This is a recommended practice according to JSON conventions.</p>
+<h2 id="chapter-7-tech-specs-74-transport-openapi">7.4 Transport / OpenAPI</h2>
+<h3 id="chapter-7-tech-specs-741-openapi-model">7.4.1 OpenAPI Model</h3>
+<p>Since early 2024, work has been done on a standard for the transport of messages. A number of PUOs and asset managers, in collaboration with SIVI, have taken steps to develop an OpenAPI specification within the previously outlined technical contours.
+This effort aimed to support all parties that will implement the RESTful API and to promote its uniform application. The specification can be found on GitHub. The proposed OpenAPI specification helps parties to unambiguously exchange the 14 message structures, for both SPR and FPR. In addition to the 14 content-based messages, a feedback message has also been realized to respond to the content-based messages.</p>
+<p>The API acts as a digital gateway, through which the various PUO and asset management parties can receive data. Communication is initiated by the sending party (push-model); the sending party delivers the messages to the receiving party without the latter having to actively request them. The specification begins with general information, stating the name, description, and version of the API.</p>
+<p>The core of the API describes the specific services that are available. For each service, a clear path is defined where messages can be delivered. This includes, for example, supplying information or performing certain actions. Each path provides a description of what the service does and how it can be used.</p>
+<p>Please note that in practice, not every party will offer all services from the OAS. For instance, parties that only handle SPR can, in addition to the feedback message, offer the SPR messages 1, 2, 3, and 4.</p>
+<p>Furthermore, the specification contains reusable building blocks, such as messages and entities. This ensures that the API is consistent and easy to understand and use. The reuse of these messages and entities simplifies development and reduces the chance of errors.</p>
+<p>To ensure the completeness and integrity of the messages, a mechanism has been introduced that allows for checking for changes during transport. This is the <code>x-jws-signature</code> header, which contains a digital signature of the payload. This provides a reliable basis for parties to trust that received messages exactly match what was sent. The use of this mechanism is an option, not a requirement. Parties can make different choices.</p>
+<p><strong>Important:</strong> The standard only supports the OAS API; other forms of data exchange are not supported. This means that all communication between parties must proceed according to the specified OpenAPI specification, and alternative methods fall outside the scope of the standard.</p>
+<p><strong>API Security Measures:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Security Measure</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Authentication with API key</strong></td>
+<td style="text-align: left;">Each request must contain a valid API key in the <code>x-api-key</code> header.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OAuth 2.0 Client Credentials Flow</strong></td>
+<td style="text-align: left;">The API uses OAuth 2.0. Clients must obtain an access token using their client ID and secret. Specific scopes are used to control access to different API functions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Digital Signatures with x-jws-signature (option)</strong></td>
+<td style="text-align: left;">If used, each request contains a digital signature of the payload in the <code>x-jws-signature</code> header to verify message integrity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encrypted Communication via HTTPS</strong></td>
+<td style="text-align: left;">All communication is via HTTPS, ensuring data encryption during transmission.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-7-tech-specs-742-api-implementation-and-backup">7.4.2 API Implementation and Backup</h3>
+<p>The deployment and operational maintenance of the APIs are the responsibility of the party offering the API and fall outside the scope of this standard. Temporary outages of the API data transport facility may occur. The risk of this is lower with an approach where multiple replicas of the API run simultaneously (on different environments and/or locations). Ultimately, this is a cost-benefit analysis; guaranteeing 99.9% uptime is more expensive than a 98% uptime guarantee.</p>
+<p>The assumption is that any outage will always be short-lived. In exceptional cases, email can serve as a "backup" transport mechanism.</p>
+<h2 id="chapter-7-tech-specs-75-message-composition-versioning-and-publication">7.5 Message Composition, Versioning, and Publication</h2>
+<h3 id="chapter-7-tech-specs-751-explanation-of-using-afddefinitionversion">7.5.1 Explanation of using "afdDefinitionVersion"</h3>
+<p><code>afdDefinitionVersion</code> is filled with the version number (from the "Schema Name") of the VBPUO JSON schema. The VBPUO JSON schema is maintained by SIVI using "AFD Online Samenstellen (AOS)" with the following metadata:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">AOS Schema Metadata</th>
+<th style="text-align: left;">Values (example)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SIVI community</td>
+<td style="text-align: left;">AFD 2.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Message Type:</td>
+<td style="text-align: left;">Protocol PUO Asset Management</td>
+</tr>
+<tr>
+<td style="text-align: left;">Domain:</td>
+<td style="text-align: left;">General</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schema Name:</td>
+<td style="text-align: left;">VBPUO-###.##</td>
+</tr>
+</tbody>
+</table>
+<p>In the (AOS) VBPUO schema, the 14 VBPUO message structures are defined as "functions," for example, the function: "Bericht_9.<em>PUO-reconciliatie-informatie</em>(00552b)". For each "function," three JSON schemas are subsequently generated and published ("committed") to GitHub. These JSON schemas serve the following purposes:</p>
+<h4 id="chapter-7-tech-specs-table-2-json-schemas-from-aos-explained">Table 2: JSON Schemas (from AOS) Explained</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Detailed Description</th>
+<th style="text-align: left;">Example Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Message Structure</strong></td>
+<td style="text-align: left;">Defines the structure, mandatory elements, and field validations, with internal and external references to ensure data consistency and standardization.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a).json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Code Lists/Tables</strong></td>
+<td style="text-align: left;">Defines the code lists (e.g., pension provider and currency codes) used as references in the JSON schema for field validation.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a)-afdCodelists.json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Relational Checks</strong></td>
+<td style="text-align: left;">Defines the rules for relational checks within the JSON schema to ensure the validity and consistency of data relationships.</td>
+<td style="text-align: left;"><code>VBPUO-001.00-Bericht_1._Vermogen_(0001a)-validationRules.json</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chapter-7-tech-specs-7511-version-number-afddefinitionversion-in-a-github-release">7.5.1.1 Version Number / <code>afdDefinitionVersion</code> in a GitHub release</h3>
+<p>The version number of an AOS schema must be included in every message that is sent. This number can be found in the Message Structure as a constant under <code>afdDefinitionVersion</code>.</p>
+<p>The JSON Schemas can be found under this number at <a href="https://portal.sivi.org/organisationschemas">https://portal.sivi.org/organisationschemas</a>. The messages created with this schema – which are defined as functions within the VBPUO schema – are published on GitHub.</p>
+<h3 id="chapter-7-tech-specs-752-publication-on-github-version-number-and-tag">7.5.2 Publication on GitHub: Version Number and Tag</h3>
+<p>When releasing on GitHub, the release gets a Name and a Tag (e.g., "2024_Juli" with tag <code>v1.1.0</code>). All JSON schemas, example messages, and the OAS fall under that release/tag. The GitHub release name and tag number are not found in the payload of the messages.</p>
+<h2 id="chapter-7-tech-specs-76-processing-protocol-for-partial-messages-chunking">7.6 Processing Protocol for Partial Messages (Chunking)</h2>
+<p>This section describes the protocol for splitting (by the sender) and processing (by the receiver) of large messages. The use of partial messages (chunks) is an optional mechanism that is applied when the size of a message exceeds the agreed-upon limits.</p>
+<h3 id="chapter-7-tech-specs-761-fundamental-principles-of-chunking">7.6.1 Fundamental Principles of Chunking</h3>
+<p>Before we describe the splitting and merging process, the following fundamental rules apply to the chunking mechanism:</p>
+<ul>
+<li><strong>Validity per Chunk:</strong> Each chunk must be a standalone, fully JSON-schema-compliant message. This means that each chunk contains all mandatory "header" blocks, such as <code>commonTechnical</code> and <code>commonFunctional</code>.</li>
+<li><strong>Shared <code>messageId</code>:</strong> All chunks that are part of one logical message share the exact same <code>messageId</code> in the <code>commonTechnical</code> block. This is the unique identifier of the overarching, logical message.</li>
+<li><strong>Mandatory <code>chunkMeta</code> attributes:</strong> If the <code>chunkMeta.default</code> entity is present to indicate that chunking is being used, all attributes within this entity are mandatory. This is essential for a robust and deterministic reconstruction process on the receiver's side.</li>
+<li><strong>Integrity of the logical message:</strong> An error in a single chunk (e.g., a validation error or the non-arrival of the chunk) invalidates the entire logical message. The message must then be resubmitted in its entirety, with a new <code>messageId</code>.</li>
+</ul>
+<h3 id="chapter-7-tech-specs-762-splitting-a-large-message-senders-side">7.6.2 Splitting a Large Message (Sender's Side)</h3>
+<h4 id="chapter-7-tech-specs-1-determining-the-necessity">1. Determining the Necessity</h4>
+<p>Splitting is required when a message exceeds the agreed-upon maximum size (default: 4 MB). The sender is responsible for correctly partitioning the data.</p>
+<h4 id="chapter-7-tech-specs-2-the-splitting-process">2. The Splitting Process</h4>
+<p>The sender creates multiple chunks by distributing the data from large, repeating arrays (such as a list of cohorts). Each chunk is assigned a <code>chunkMeta</code> block with the appropriate metadata (<code>chunkSequenceNumber</code>, <code>totalNumberOfChunks</code>, etc.) and the <code>chunkFragmentPaths</code> that describe the content of that specific chunk.</p>
+<h4 id="chapter-7-tech-specs-3-use-of-jmespath-in-chunkfragmentpaths">3. Use of JMESPath in <code>chunkFragmentPaths</code></h4>
+<p>The <code>chunkFragmentPaths</code> field contains the essential instructions for the receiver to correctly reconstruct the original message. The JMESPath can specify a particular range (slice), for example <code>pension[0:100]</code>, which guarantees that the receiver can place the data back in the exact correct order, even if the chunks are received in a different sequence.</p>
+<h3 id="chapter-7-tech-specs-763-processing-received-chunks-receivers-side">7.6.3 Processing Received Chunks (Receiver's Side)</h3>
+<h4 id="chapter-7-tech-specs-1-the-reconstruction-process">1. The Reconstruction Process</h4>
+<p>The receiver uses the shared <code>messageId</code> to collect the chunks.
+*   <strong>Start with the First Chunk:</strong> The chunk with <code>chunkSequenceNumber: 1</code> serves as the base or 'template' for the reconstruction.
+*   <strong>Place Data Fragments:</strong> For all subsequent chunks, the data fragments are placed into the correct position within the template, guided by their respective <code>chunkFragmentPaths</code>.
+*   <strong>Determine Completeness:</strong> The message is considered complete when the number of received chunks equals the <code>totalNumberOfChunks</code>.</p>
+<h4 id="chapter-7-tech-specs-2-processing-strategies">2. Processing Strategies</h4>
+<p>Once conceptually complete, the receiver can choose one of the following strategies:
+*   <strong>Reconstruct-first (Batch approach):</strong> Build the entire message in memory and then validate it.
+*   <strong>Streaming processing (Direct processing):</strong> Save data fragments from each chunk directly and perform overarching validations later on the database.</p>
+<h4 id="chapter-7-tech-specs-3-error-handling-and-incompleteness">3. Error Handling and Incompleteness</h4>
+<p>The integrity of the complete logical message is crucial.</p>
+<ul>
+<li>If a single chunk fails (for example, due to a technical validation error, or if it is not received within a certain timeframe), the entire logical message is considered failed and unprocessable.</li>
+<li>In such a case, the sender must, after potential consultation, resubmit the entire message with a new <code>messageId</code>, split into a new set of chunks.</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div align="left"><a href="#chapter-6-functional-specs">&lt; Previous: Chapter 6: Functional Specifications</a></div></th>
+<th style="text-align: right;"><div align="right"></div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li></li>
+</ul></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #chapter-1-introduction > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #chapter-1-introduction h2:before { content: '2.' counter(counter-chapter-1-introduction-2) ' ' }
+                .print-site-enumerate-headings #chapter-1-introduction h2 {  counter-reset: counter-chapter-1-introduction-3 ;  counter-increment: counter-chapter-1-introduction-2 }
+            
+                .print-site-enumerate-headings #chapter-1-introduction h3:before { content: '2.' counter(counter-chapter-1-introduction-2) '.' counter(counter-chapter-1-introduction-3) ' ' }
+                .print-site-enumerate-headings #chapter-1-introduction h3 {  counter-increment: counter-chapter-1-introduction-3 }
+            
+.print-site-enumerate-headings #chapter-2-principles > h1:before { content: '3 ' }
+
+                .print-site-enumerate-headings #chapter-2-principles h2:before { content: '3.' counter(counter-chapter-2-principles-2) ' ' }
+                .print-site-enumerate-headings #chapter-2-principles h2 {  counter-reset: counter-chapter-2-principles-3 ;  counter-increment: counter-chapter-2-principles-2 }
+            
+                .print-site-enumerate-headings #chapter-2-principles h3:before { content: '3.' counter(counter-chapter-2-principles-2) '.' counter(counter-chapter-2-principles-3) ' ' }
+                .print-site-enumerate-headings #chapter-2-principles h3 {  counter-increment: counter-chapter-2-principles-3 }
+            
+.print-site-enumerate-headings #chapter-3-spr-processes > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #chapter-3-spr-processes h2:before { content: '4.' counter(counter-chapter-3-spr-processes-2) ' ' }
+                .print-site-enumerate-headings #chapter-3-spr-processes h2 {  counter-reset: counter-chapter-3-spr-processes-3 ;  counter-increment: counter-chapter-3-spr-processes-2 }
+            
+                .print-site-enumerate-headings #chapter-3-spr-processes h3:before { content: '4.' counter(counter-chapter-3-spr-processes-2) '.' counter(counter-chapter-3-spr-processes-3) ' ' }
+                .print-site-enumerate-headings #chapter-3-spr-processes h3 {  counter-increment: counter-chapter-3-spr-processes-3 }
+            
+.print-site-enumerate-headings #chapter-4-fpr-processes > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #chapter-4-fpr-processes h2:before { content: '5.' counter(counter-chapter-4-fpr-processes-2) ' ' }
+                .print-site-enumerate-headings #chapter-4-fpr-processes h2 {  counter-reset: counter-chapter-4-fpr-processes-3 ;  counter-increment: counter-chapter-4-fpr-processes-2 }
+            
+                .print-site-enumerate-headings #chapter-4-fpr-processes h3:before { content: '5.' counter(counter-chapter-4-fpr-processes-2) '.' counter(counter-chapter-4-fpr-processes-3) ' ' }
+                .print-site-enumerate-headings #chapter-4-fpr-processes h3 {  counter-increment: counter-chapter-4-fpr-processes-3 }
+            
+.print-site-enumerate-headings #chapter-5-data-standard-setup > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #chapter-5-data-standard-setup h2:before { content: '6.' counter(counter-chapter-5-data-standard-setup-2) ' ' }
+                .print-site-enumerate-headings #chapter-5-data-standard-setup h2 {  counter-reset: counter-chapter-5-data-standard-setup-3 ;  counter-increment: counter-chapter-5-data-standard-setup-2 }
+            
+                .print-site-enumerate-headings #chapter-5-data-standard-setup h3:before { content: '6.' counter(counter-chapter-5-data-standard-setup-2) '.' counter(counter-chapter-5-data-standard-setup-3) ' ' }
+                .print-site-enumerate-headings #chapter-5-data-standard-setup h3 {  counter-increment: counter-chapter-5-data-standard-setup-3 }
+            
+.print-site-enumerate-headings #chapter-6-functional-specs > h1:before { content: '7 ' }
+
+                .print-site-enumerate-headings #chapter-6-functional-specs h2:before { content: '7.' counter(counter-chapter-6-functional-specs-2) ' ' }
+                .print-site-enumerate-headings #chapter-6-functional-specs h2 {  counter-reset: counter-chapter-6-functional-specs-3 ;  counter-increment: counter-chapter-6-functional-specs-2 }
+            
+                .print-site-enumerate-headings #chapter-6-functional-specs h3:before { content: '7.' counter(counter-chapter-6-functional-specs-2) '.' counter(counter-chapter-6-functional-specs-3) ' ' }
+                .print-site-enumerate-headings #chapter-6-functional-specs h3 {  counter-increment: counter-chapter-6-functional-specs-3 }
+            
+.print-site-enumerate-headings #chapter-7-tech-specs > h1:before { content: '8 ' }
+
+                .print-site-enumerate-headings #chapter-7-tech-specs h2:before { content: '8.' counter(counter-chapter-7-tech-specs-2) ' ' }
+                .print-site-enumerate-headings #chapter-7-tech-specs h2 {  counter-reset: counter-chapter-7-tech-specs-3 ;  counter-increment: counter-chapter-7-tech-specs-2 }
+            
+                .print-site-enumerate-headings #chapter-7-tech-specs h3:before { content: '8.' counter(counter-chapter-7-tech-specs-2) '.' counter(counter-chapter-7-tech-specs-3) ' ' }
+                .print-site-enumerate-headings #chapter-7-tech-specs h3 {  counter-increment: counter-chapter-7-tech-specs-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/VBPUOdsk-docs/2026", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
