@@ -1,0 +1,1403 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/chapter-2-principles/">
+      
+      
+        <link rel="prev" href="../chapter-1-introduction/">
+      
+      
+        <link rel="next" href="../chapter-3-spr-processes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 2: Principles - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-principles" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 2: Principles
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-preamble-principles-of-vbpuo-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Preamble: Principles of VBPUO Standardization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Out of Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-principles-of-data-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Principles of Data Exchange
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-clarification-of-data-exchange-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Clarification of Data Exchange Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-participant-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Participant Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Technology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-transport-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Transport of Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-governance-management-and-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Governance, Management and Releases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Governance, Management and Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#291-roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9.1 Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#292-release-policy-and-version-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9.2 Release Policy and Version Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-schema-draft-2020-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Schema Draft 2020-12
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-4-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-5-cross-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.5: Cross-reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-tech-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-4-transport-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.4: Transport / OpenAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-5-message-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.5: Message Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-6-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.6: Chunking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-appendices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-1-glossary-vbpuo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.1: Glossary VB-PUO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-2-glossary-data-exchange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.2: Glossary Data Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-3-standard-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.3: Standard Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-4-translation-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-preamble-principles-of-vbpuo-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Preamble: Principles of VBPUO Standardization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Out of Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-principles-of-data-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Principles of Data Exchange
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-clarification-of-data-exchange-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Clarification of Data Exchange Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-participant-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Participant Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Technology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-transport-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Transport of Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-governance-management-and-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Governance, Management and Releases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Governance, Management and Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#291-roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9.1 Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#292-release-policy-and-version-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9.2 Release Policy and Version Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-schema-draft-2020-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Schema Draft 2020-12
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-principles">2 Principles</h1>
+<p><strong>In this chapter we discuss the key principles for the development, design and governance of the standard. This is primarily based on <a href="https://www.pensioenfederatie.nl/cms/streambin.aspx?documentid=18380">Results of research: Standard for data exchange pension administration &amp; asset management parties''</a>.</strong></p>
+<h2 id="21-preamble-principles-of-vbpuo-standardization">2.1 <em>Preamble: Principles of VBPUO Standardization</em></h2>
+<p><em>The purpose of standardization is seamless and efficient information exchange between all parties in the chain. The VBPUO standard rests on the following principles:</em></p>
+<ul>
+<li>
+<p><em>Pragmatism and flexibility<br />
+  The standard is not a requirement for uniformity, but a framework for interoperability. Chain partners retain their own internal processes and systems. The focus is on streamlining external communication.</em></p>
+</li>
+<li>
+<p><em>Interoperability as the ultimate goal<br />
+  The value of the standard becomes evident in practice. The test: an organization must be able to switch seamlessly to another chain partner, without significant adjustments to the data interface.</em></p>
+</li>
+<li>
+<p><em>Manageable degrees of freedom<br />
+  Flexibility is not unlimited. For predictability and reliability, the allowed variations are explicitly defined and deliberately limited.</em></p>
+</li>
+<li>
+<p><em>Supported by the chain<br />
+  Adjustments and variations do not arise unilaterally. They require broad support to prevent fragmentation and to sustainably preserve the value of the standard.</em></p>
+</li>
+</ul>
+<p><em>Thus, the VBPUO standard remains a shared instrument for efficiency, predictability, and future-proof cooperation in the chain.</em></p>
+<h2 id="22-background">2.2 Background</h2>
+<p>Pension Administration Organizations (PUOs) regularly need information from Fiduciary Managers (FMs) and/or Investment Administrators (BAs) to correctly administer participant records for pension schemes. Conversely, FMs (and asset managers) need information to invest the assets for various pension administrators within the framework of the agreed investment policy. The required data exchange between PUOs, FMs and BAs (and asset managers) is expected to be very similar in all cases.</p>
+<p>With the introduction of the Wtp, information needs will change and the frequency of desired information exchange will increase. The information needs for PUOs, FMs and BAs for servicing pension administrators are fundamentally very similar. Any differences in information exchange will primarily depend on the type of scheme being administered.</p>
+<p>In the accumulation phase of the Flexible Premium Scheme (FPR), the information need will largely correspond to that of current 'defined contribution' schemes, possibly supplemented with data on the risk-sharing reserve. Regarding the exchange of data during the collective payout phase, this will in many respects be comparable to the payout phase of the Solidarity Premium Scheme.</p>
+<p>For the Solidarity Premium Scheme (SPR), an entirely new data stream must be set up, for both the accumulation and payout phases. There must be tighter alignment between the fund assets managed by the FM and the collective administration of personal pension assets by the PUO.</p>
+<h2 id="23-out-of-scope">2.3 Out of Scope</h2>
+<p>Out of scope of the elaboration of information exchange are:</p>
+<ul>
+<li>
+<p>Contractual agreements regarding the overall process around asset management between parties. The standard provides for the necessary information exchange, the data needs, between PUOs and asset management parties at the various process moments. The standard provides for the data needs for both the Solidarity Premium Scheme (SPR) and the Flexible Premium Scheme (FPR). However, the exact implementation of the data exchange between parties is determined by contractual agreements between the cooperating pension administrator and its asset management partners.</p>
+</li>
+<li>
+<p>Processes that are already running and fundamentally do not change, such as the reconciliation of the investment administration between the FM and the BA/asset service provider.</p>
+</li>
+<li>
+<p>Information that does not need to be exchanged because it is only used by one party in the chain.</p>
+</li>
+<li>
+<p>Information regarding investment policy, protection and allocation rules and cohort composition. This information is shared by the pension administrator with involved parties through various policy documents, such as the strategic investment policy, the annual investment plan and investment guidelines.</p>
+</li>
+<li>
+<p>Information exchange between pension participant, pension administrator and/or PUO.</p>
+</li>
+</ul>
+<p>Allocation of returns to participants.</p>
+<ul>
+<li>
+<p>Information about costs:</p>
+</li>
+<li>
+<p>For the time being, there is no crystallized and unambiguous process in cooperation chains to arrive at cost allocation (and also the communication about costs). Experiences so far seem to indicate that this is difficult to standardize. Different parties make different trade-offs regarding processing, granularity, actual versus budgeted, provisioning, timeliness, division of responsibilities in providing different components, etc.</p>
+</li>
+<li>
+<p>It is expected that existing processes for compiling the DNB annual statement J402 will continue to form the basis for cost-related information exchange, for both the SPR and the FPR.</p>
+</li>
+<li>
+<p>Insight into/look-through to the actual investments, usually referred to as "Lookthrough" information. Ad hoc requests for additional information from BA/asset service provider or FM may be necessary but fall outside regular data exchange in the context of the exchange described in this manual.</p>
+</li>
+<li>
+<p>Any specific information exchange required for a premium-benefit agreement as offered by insurers.</p>
+</li>
+<li>
+<p>The periodicity of the exchange. Not every process within pension administration leads to necessary actions within asset management. However, the consequences of processes that do lead to asset management actions must be exchanged on a periodic basis. The periodicity of the exchange of the related messages can be flexibly arranged between parties.</p>
+</li>
+<li>
+<p>Coverage ratio. The calculation and reporting of the coverage ratio falls under the responsibility of the PUO or BA. The VBPUO standard does not provide a separate message for this. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/118">#118</a>.</p>
+</li>
+<li>
+<p>Task/Role division. The way parties cooperate, the division of roles or governance, is <u>not</u> part of the standard.</p>
+</li>
+</ul>
+<h2 id="24-principles-of-data-exchange">2.4 Principles of Data Exchange</h2>
+<p>To make the data exchange as practical as possible, the following principles apply:</p>
+<ul>
+<li>
+<p>The data standard is usable for any (governance) division between pension administration and asset management.</p>
+</li>
+<li>
+<p>If the asset service provider fulfills an independent role as leading BA and/or tests the execution of policy, it receives the same information as the FM in order to independently report to pension funds on the followed and realized investment policy in relation to the objectives.</p>
+</li>
+<li>
+<p>The FM role receives the necessary information to invest the collective assets in accordance with the framework of the investment policy, taking into account inflow and outflow (from premiums, benefits and value transfers) and projected benefits.</p>
+</li>
+<li>
+<p>The PUO provides the participant with insight into the development of assets designated for pension benefits (SPR) and/or capital designated for pension (FPR) including the allocation of returns and expected benefits.</p>
+</li>
+<li>
+<p>Parties receive the data intended for them directly from the sending party. An FM therefore does not need to forward information received from a PUO to another party selected by the pension fund, such as an asset service provider and/or a Liability-Driven Investment (LDI) manager.</p>
+</li>
+<li>
+<p><u>Once-accepted messages are not unilaterally corrected</u>. Messages that have been accepted by the receiving party may directly lead to irreversible operational processes, such as investment transactions or the allocation of returns to participants. If a sending party discovers an error in an already accepted message, coordination with the receiving party is mandatory before any correction message is sent. The specific procedures for this are further explained in section 4.6.</p>
+</li>
+</ul>
+<h2 id="25-clarification-of-data-exchange-principles">2.5 Clarification of Data Exchange Principles</h2>
+<p>During the substantive consultation round in May/June 2023, several issues recurred that did not lead to changes in the substantive part of the <a href="https://www.pensioenfederatie.nl/cms/streambin.aspx?documentid=18380">report</a> but did need to be clarified to prevent misunderstandings.</p>
+<ul>
+<li>
+<p><strong>Data Model</strong>: The data model contains only the data needed to send and/or receive the required information about investing pension assets and to share information about realized investment results.</p>
+</li>
+<li>
+<p><strong>Roles (not prescriptive)</strong>: To support the elaboration of the data model, data exchange between various parties in the chain is described. To support understanding of the data model, for both the SPR and the FPR, a role division in the chain has been outlined in which the governance model provides for certain function separations. In an alternative arrangement, roles can be performed by the same party; for example, the FM can also maintain the leading investment administration. It is not the intention of this manual to prescribe the form of cooperation between parties and thus the governance model.</p>
+</li>
+<li>
+<p><strong>Periodicity</strong>: For a number of processes, it has been indicated that these are expected to have monthly periodicity. This periodicity is not prescribed. The mentioned exchange moments and periods are examples that can be filled in differently in the agreements between parties.</p>
+</li>
+<li>
+<p><strong>Process description</strong>: For the FPR, it is possible to start from already existing processes (including indicative timelines and role division) for (collective) individual DC schemes. For the SPR, this is not yet the case.</p>
+</li>
+<li>
+<p><strong>Costs</strong>: The information exchange about costs falls outside the scope of this standard. For the time being, we assume that existing processes will be built upon, which also form the basis for, for example, the J402 DNB annual statement.</p>
+</li>
+<li>
+<p><strong>The term Asset Management</strong>: When this manual uses the term "asset management," it refers to the parties: FM, BA/asset service provider, custodian and Liability-Driven Investment manager. For "pension administration," this refers to the combination of the statutory pension administrator and the PUOs that administer on their behalf.</p>
+</li>
+<li>
+<p><strong>Language</strong>: This report has been prepared for the data exchange between PUOs and asset managers within the Dutch Wtp context. The report and the standard are delivered in the Dutch language. The names of the variables used in the standards are, however, in English so that the conceptual framework is also understandable for non-Dutch speakers who are familiar with asset management.</p>
+</li>
+</ul>
+<h2 id="26-participant-communication">2.6 Participant Communication</h2>
+<p>See chapter 6 in the previously mentioned <a href="https://www.pensioenfederatie.nl/cms/streambin.aspx?documentid=18380">final report</a> in the introduction.</p>
+<h2 id="27-technology">2.7 Technology</h2>
+<p>Regarding the use and technical implementation of the data standard, a number of principles have been formulated:</p>
+<ul>
+<li>
+<p>The data exchange is "sustainable," meaning not tied to technological trends (or hypes).</p>
+</li>
+<li>
+<p>The documentation is clear and transparent.</p>
+</li>
+<li>
+<p>The data set can be adjusted in consultation with the involved parties.</p>
+</li>
+<li>
+<p>Open technical standards are used as much as possible (e.g. REST, JSON, SOAP, ODATA, OAuth).</p>
+</li>
+</ul>
+<p>For the technical implementation of the message exchange, the following has been agreed:</p>
+<ul>
+<li>
+<p>Data exchange: RESTful Web services.</p>
+</li>
+<li>
+<p>Data format: JSON.</p>
+</li>
+<li>
+<p>For the data format, we conform within this standard to AFD 2.0. This has consequences for, among other things, the naming of attributes and entities.</p>
+</li>
+<li>
+<p>AFD 2.0 defines the data type of an attribute, <strong>but does not restrict the string length or the number of decimal places</strong>. Any restriction on the number of positions can be agreed upon between parties. See <a href="https://www.manula.com/manuals/sivi/sivi-all-finance-standard/1/en/topic/data-types-and-formats">https://www.manula.com/manuals/sivi/sivi-all-finance-standard/1/en/topic/data-types-and-formats</a></p>
+</li>
+<li>
+<p>Message processing is asynchronous. The message exchange conforms to REST synchronously. The frequency of information exchange is periodic (e.g. monthly) and processing by the recipient is in principle on a daily basis; synchronous (real-time) is not necessary.</p>
+</li>
+<li>
+<p>Message initiative lies with the sender of the information, who pushes the message to the recipient.</p>
+</li>
+<li>
+<p>Service window: recommendation is office hours. Parties can make their own bilateral agreements about this.</p>
+</li>
+<li>
+<p>Security aspects:</p>
+</li>
+<li>
+<p>During the transport of information, two-way authentication (mutual-TLS) is used.</p>
+</li>
+<li>
+<p>Authentication of the sender at the receiving server is required.</p>
+</li>
+<li>
+<p>The data must be guaranteed to arrive unmodified at the recipient (are non-repudiable). They are therefore digitally signed.</p>
+</li>
+</ul>
+<p>Agreements on the aspects below are elaborated and handled within the framework of the governance structure around the standard.</p>
+<ul>
+<li>
+<p>The complete technical data standard and the various messages based on it.</p>
+</li>
+<li>
+<p>Maximum size (quantities and/or file size) of the message. See below under "Handling Large Messages."</p>
+</li>
+<li>
+<p>Granularity of the message exchange.</p>
+</li>
+<li>
+<p>A lower granularity indicates that at a certain level fewer details are exchanged.</p>
+</li>
+<li>
+<p>Processing time of received messages.</p>
+</li>
+<li>
+<p>Message feedback: response messages (acknowledgment and correct or error message — substantive and technical — or warning). The rules for this must be described.</p>
+</li>
+<li>
+<p>Response time (server).</p>
+</li>
+</ul>
+<p><strong>Handling Large Messages (Sub-messages or Chunking)</strong></p>
+<p>Although the number of transactions per day may be relatively low, the size of individual messages (particularly Message 3 — Pension Projection) can be considerable. Messages larger than approximately 4 MB can in practice cause problems during transport and processing via modern cloud infrastructures.</p>
+<p>To address this, the standard offers a mechanism to split large messages into multiple, smaller sub-messages (chunks).</p>
+<ul>
+<li>
+<p>Mechanism: The splitting is done via an optional chunking.default block at the highest level of a message. This block contains metadata about the splitting, such as the sequence number and the total number of chunks.</p>
+</li>
+<li>
+<p>Applicability: This mechanism applies to all functional messages, but not to the feedback message.</p>
+</li>
+<li>
+<p>Validity: Each sub-message is a self-contained, valid JSON message.</p>
+</li>
+<li>
+<p>Processing: The recipient can only merge the sub-messages into the complete, logical message after receiving all parts. An error in one sub-message means the entire logical message is considered failed.</p>
+</li>
+<li>
+<p>Limits: The standard does not prescribe a maximum number of chunks. The maximum message size and the number of chunks are agreements between chain parties (TOM / SLA). See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/127">#127</a>.</p>
+</li>
+</ul>
+<p>The detailed specifications of this mechanism can be found in Chapter 6.</p>
+<h2 id="28-transport-of-data">2.8 Transport of Data</h2>
+<p>(Some) standardization of the transport of data, an interface, is of great importance. Standardization makes life much simpler for the sending and receiving parties and prevents all cooperating parties from having to reinvent the wheel bilaterally each time. The elaboration is limited to one solution, namely a RESTful API/webservice. The SIVI API framework provides support for this. Parties that cannot or do not want to work with the RESTful API/webservice solution can develop bilateral solutions themselves. No support is provided for this from the working groups around the standard.</p>
+<p>The webservice solution is preferred because the information flow can then be better managed (faster through the (internal) chain, better versioning, better verifiability). A portal solution involves manual work and is therefore undesirable.</p>
+<p>See also: <em>7.4</em> Transport / OpenAPI.</p>
+<h2 id="29-governance-management-and-releases">2.9 Governance, Management and Releases</h2>
+<h3 id="291-roles-and-responsibilities">2.9.1 Roles and Responsibilities</h3>
+<p>The use of the standard forms part of the individual agreements between pension administrators and asset management parties. Parties use the standard in accordance with the agreements that apply to the standard and are laid down in their contracts.</p>
+<p>The standard is owned by the Pensioenfederatie. Management is placed with SIVI, acting on behalf of the Steering Group DSO. Substantive further development takes place in consultation with the sector via an Advisory Group (KBG).</p>
+<p>The precise organization of management, the roles, the change procedure and the working method of the Advisory Group are laid down in the document "Organization Management Standard Asset Management Pension Administration." This document is the leading source for all governance-related agreements.</p>
+<h3 id="292-release-policy-and-version-management">2.9.2 Release Policy and Version Management</h3>
+<p>To make the further development of the standard predictable and manageable, the following release policy applies:</p>
+<ul>
+<li>
+<p>Annual Release Cycle: Each year, a pre-release appears at the end of June, which is converted into the definitive annual release at the end of September (e.g. "Release 2026").</p>
+</li>
+<li>
+<p>Continuous Development: Changes that are approved during the year are made available on GitHub as soon as they are finalized.</p>
+</li>
+<li>
+<p>Version Support: In addition to the current annual release, the two preceding annual releases remain available. For 2026 these are: Release 2026, Release "2024 November" and Release "Juli 2024."</p>
+</li>
+</ul>
+<h3 id="json-schema-draft-2020-12">JSON Schema Draft 2020-12</h3>
+<p>From release 2027, the VBPUO standard uses JSON Schema Draft 2020-12 for the JSON schemas published via GitHub.</p>
+<p>The transition to Draft 2020-12 primarily concerns:
+- modernization of the JSON Schema dialect;
+- harmonization with current tooling and IDE support;
+- adjustment of internal and external schema references.</p>
+<p>As a result of this technical migration, the functional message structures and business meaning of the messages remain unchanged.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

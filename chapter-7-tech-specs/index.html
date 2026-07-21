@@ -1,0 +1,1259 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Functional and technical documentation for the data exchange standard.">
+      
+      
+        <meta name="author" content="SIVI_r">
+      
+      
+        <link rel="canonical" href="https://stichting-sivi.github.io/VBPUOdsk-docs/chapter-7-tech-specs/">
+      
+      
+        <link rel="prev" href="../chapter-6-5-cross-reference/">
+      
+      
+        <link rel="next" href="../chapter-7-4-transport-openapi/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 7: Technical Specifications - VB-PUO Standard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7-technical-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-header__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VB-PUO Standard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 7: Technical Specifications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VB-PUO Standard Documentation" class="md-nav__button md-logo" aria-label="VB-PUO Standard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    VB-PUO Standard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3-spr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: SPR Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4-fpr-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: FPR Processes and Feedback (applies to FPR & SPR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5-data-standard-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Data Standard Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-functional-specs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: Functional Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-4-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.4: Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6-5-cross-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6.5: Cross-reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Technical Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-messages-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Messages &amp; Schemes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Validations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 JSON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-use-of-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1 Use of JSON Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-transition-to-json-schema-draft-2020-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2 Transition to JSON Schema Draft 2020-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.2 Transition to JSON Schema Draft 2020-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-compared-to-json-schema-draft-2019-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences Compared to JSON Schema Draft 2019-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Differences Compared to JSON Schema Draft 2019-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validationrules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidationRules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afdcodelists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AfdCodelists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-4-transport-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.4: Transport / OpenAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-5-message-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.5: Message Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7-6-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7.6: Chunking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-appendices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-1-glossary-vbpuo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.1: Glossary VB-PUO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-2-glossary-data-exchange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.2: Glossary Data Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-3-standard-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.3: Standard Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8-4-translation-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8.4: Translation Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-messages-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Messages &amp; Schemes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Validations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 JSON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-use-of-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1 Use of JSON Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-transition-to-json-schema-draft-2020-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2 Transition to JSON Schema Draft 2020-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.2 Transition to JSON Schema Draft 2020-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-compared-to-json-schema-draft-2019-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences Compared to JSON Schema Draft 2019-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Differences Compared to JSON Schema Draft 2019-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validationrules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValidationRules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afdcodelists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AfdCodelists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="7-technical-specifications">7 Technical Specifications</h1>
+<p><strong>The technical data specifications are made available based on AFD 2.0 from SIVI AFS. In this chapter the reader can take note of an explanation.</strong></p>
+<h2 id="71-messages-schemes">7.1 Messages &amp; Schemes</h2>
+<p>Each message can concern multiple schemes (pension.scheme). However, it always pertains to a single party.pensionProvider. The transmission is per message, and that message thus contains 1 pension.provider and 1 or more pension.scheme's.</p>
+<h2 id="72-validations">7.2 Validations</h2>
+<p>The following validation rules can be implemented using the technical specifications:</p>
+<ul>
+<li>
+<p>Check if the message structure is correct;</p>
+</li>
+<li>
+<p>Verify the data type (including numbers, strings);</p>
+</li>
+<li>
+<p>Check for minimum and maximum values;</p>
+</li>
+<li>
+<p>Validate the field length;</p>
+</li>
+<li>
+<p>Check for the presence of mandatory entities and mandatory attributes;</p>
+</li>
+<li>
+<p>Check the number of repetitions of entities;</p>
+</li>
+<li>
+<p>Ensure the use of allowed codes from code lists.</p>
+</li>
+</ul>
+<p>N.B.: Integrity constraints (validation rules between different data elements) are still in development. See also the JSON schemas.</p>
+<h2 id="73-json">7.3 JSON</h2>
+<ol>
+<li>The SIVI AFS team follows the specifications below for AFD 2.0 in combination with JSON (derived from <a href="https://www.forumstandaardisatie.nl/open-standaarden/json">Forum Standaardisatie</a>):</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Full Name</th>
+<td>JavaScript Object Notation</td>
+</tr>
+<tr>
+<th>Version</th>
+<td>RFC8259, December 2017</td>
+</tr>
+<tr>
+<th>Specification Document</th>
+<td><a href="https://tools.ietf.org/html/rfc8259">JSON Specification Document</a></td>
+</tr>
+<tr>
+<th>Managing Organization</th>
+<td><p>Internet Engineering Task Force</p>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7159">https://datatracker.ietf.org/doc/html/rfc7159</a></p></td>
+</tr>
+<tr>
+<th>Functional Scope</th>
+<td>Object notation for exchanging data structures. For example, in web applications that asynchronously retrieve data from the web server.</td>
+</tr>
+<tr>
+<th>Typing</th>
+<td>Exchange of data structures</td>
+</tr>
+<tr>
+<th>Benefit</th>
+<td>JSON (JavaScript Object Notation) is a subset of the JavaScript programming language. The simplicity of JSON has led to its great popularity, especially as a 'light' alternative to XML.</td>
+</tr>
+<tr>
+<th>Operation</th>
+<td><p>JavaScript Object Notation (JSON) is a format for storing and sending data, similar to XML. JavaScript is the programming language from which the basic syntax description was derived for use in JSON. JSON is used for exchanging data structures, particularly in web applications that asynchronously retrieve data from the web server. The standard is particularly aimed at efficient programming and has a compact notation, for example:</p>
+<p>{</p>
+<p>"name": Jan,</p>
+<p>"born": 1983</p>
+<p>}</p></td>
+</tr>
+<tr>
+<th>Tools</th>
+<td>Various online JSON validators and tools are available, also for different programming platforms. More information about the standard can also be found via <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">publications from ECMA International</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Guideline</strong>: If a non-mandatory attribute has no value, the attribute should be completely omitted from the JSON message. This is a recommended practice according to JSON conventions.</p>
+<h3 id="731-use-of-json-schema">7.3.1 Use of JSON Schema</h3>
+<p>For validation of the message structures, the standard uses JSON Schema.</p>
+<p>The JSON schemas are generated from AFD 2.0 / AOS and published via GitHub. These schemas support:
+- validation of message structures;
+- validation of mandatory fields;
+- validation of code lists;
+- validation of technical constraints.</p>
+<h3 id="732-transition-to-json-schema-draft-2020-12">7.3.2 Transition to JSON Schema Draft 2020-12</h3>
+<p>From release 2027, the VBPUO standard uses JSON Schema Draft 2020-12.</p>
+<p>This change has been discussed and documented via GitHub issue:</p>
+<p><a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/104">#104 JSON Schema Version</a></p>
+<p>The transition concerns a technical modernization of the JSON schemas. The functional meaning of the messages does not change as a result.</p>
+<h4 id="differences-compared-to-json-schema-draft-2019-09">Differences Compared to JSON Schema Draft 2019-09</h4>
+<h5 id="main-schema">Main Schema</h5>
+<ol>
+<li>The schema dialect has changed from:</li>
+</ol>
+<p><code>http://json-schema.org/draft/2019-09/schema#</code></p>
+<p>to:</p>
+<p><code>https://json-schema.org/draft/2020-12/schema</code></p>
+<ol>
+<li>
+<p>The container with definitions is no longer called <code>definitions</code> but <code>$defs</code>.</p>
+</li>
+<li>
+<p>Internal references have been adjusted from:</p>
+</li>
+</ol>
+<p><code>#/definitions/...</code></p>
+<p>to:</p>
+<p><code>#/$defs/...</code></p>
+<ol>
+<li>The external reference to the codelist now uses the 2020-12 path:</li>
+</ol>
+<p><code>https://www.sivi.org/afd-online-tool/json/2020-12/AFDIDP.json#/$defs/AFDIDP</code></p>
+<p>instead of:</p>
+<p><code>https://www.sivi.org/afd-online-tool/json/AFDIDP.json#/definitions/AFDIDP</code></p>
+<h5 id="validationrules">ValidationRules</h5>
+<ol>
+<li>
+<p>No 2020-12-specific model differences have been identified.</p>
+</li>
+<li>
+<p>The file remains a JSON structure with metadata and validation rules; no substantive changes have been identified as a result of the transition to Draft 2020-12.</p>
+</li>
+</ol>
+<h5 id="afdcodelists">AfdCodelists</h5>
+<ol>
+<li>The schema dialect has changed from:</li>
+</ol>
+<p><code>http://json-schema.org/draft-07/schema#</code></p>
+<p>to:</p>
+<p><code>https://json-schema.org/draft/2020-12/schema</code></p>
+<ol>
+<li>The container with definitions is no longer called <code>definitions</code> but <code>$defs</code>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "navigation.instant"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
