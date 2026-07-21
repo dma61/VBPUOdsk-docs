@@ -242,6 +242,20 @@ _Information on cohort (pension target audience) level._
 | `protectionReturnAmount`   | Achieved protection return in currency.         | decimal       |        |           |
 | `excessReturnAmount`       | Achieved excess return in currency.             | decimal       |        |           |
 
+**Age cohorts: standard setup**
+
+The standard setup uses yearly age cohorts. This means that two consecutive `startAge` values differ by 12 months in principle: `startAge` is a multiple of 12 (0, 12, 24, ...) and `endAge` = `startAge` + 11. Smaller steps (e.g. monthly) are not excluded, but the yearly division serves as the reference model. See GitHub issue [#111](https://github.com/Stichting-SIVI/VBPUOdsk/issues/111).
+
+**Reserves and provisions: role of fields**
+
+For cohorts representing a reserve or provision (`reserveIndicator` = true), the following role assignment applies:
+
+- **`reserveType`** (code list AFDRES) is the substantive classification and the exclusive key for the investment policy. Reserves or provisions with a different investment policy require a different `reserveType` value. The code list has been extended in release 2027 with codes 9 through 15. Where investment policy is shared, consolidation is possible; an explicit code is only needed for separate investment policies. This applies to both SPR and FPR. See GitHub issue [#134](https://github.com/Stichting-SIVI/VBPUOdsk/issues/134).
+- **`reserveDescription`** is purely descriptive. The description may clarify or elaborate, but does not determine classification, routing, or investment policy.
+- **`refKey`** uniquely identifies the cohort (see the general explanation of `refKey` above). Multiple cohorts with the same `reserveType` are permitted, provided they fall under the same investment policy.
+
+See GitHub issue [#111](https://github.com/Stichting-SIVI/VBPUOdsk/issues/111).
+
 ### `pension.cohortPool`
 _The pooled combination of investments (investment pools) for a cohort._
 
