@@ -19,6 +19,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+extra:
+  version:
+    provider: mike
+    alias: true
 nav:
   - 'Home': 'index.md'
   - 'Chapter 1: Introduction': 'chapter-1-introduction.md'
