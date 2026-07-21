@@ -169,7 +169,7 @@ The information flow of model 2 is shown below in two process flow diagrams that
 ![Figure 8 — Process flow FPR model 2: unitized variant](media/image8.svg)
 
 **Figure 8 — Process flow FPR model 2: unitized variant (accumulation and CVP via netting)**
-[Full scale view (SVG)](media/image8.svg){target="_blank"}
+[Full scale view (SVG)](media/image8.svg){: target="_blank" }
 
 **Explanation of Figure 8: unitized variant (accumulation and CVP via netting)**
 
@@ -191,7 +191,7 @@ The LDI manager executes on T the net buy/sell need on the LDI mandate (step H1)
 ![Figure 9 — Process flow FPR model 2: non-unitized variant](media/image9.svg)
 
 **Figure 9 — Process flow FPR model 2: non-unitized variant (CVP as EUR mandate)**
-[Full scale view (SVG)](media/image9.svg){target="_blank"}
+[Full scale view (SVG)](media/image9.svg){: target="_blank" }
 
 **Explanation of Figure 9: non-unitized variant (CVP as EUR mandate)**
 
