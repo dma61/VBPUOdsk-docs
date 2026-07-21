@@ -3,9 +3,8 @@ name: Publish Documentation to GitHub Pages
 on:
   push:
     branches:
-      - main  # Of 'master', afhankelijk van je default branch
+      - main
 
-# DEZE REGELS TOEVOEGEN:
 permissions:
   contents: write
 
@@ -15,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,7 +23,12 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material mike
 
-      - name: Deploy documentation
-        run: mkdocs gh-deploy --force --clean
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy 2027 (latest) with mike
+        run: mike deploy 2027 latest --update-aliases --alias-type redirect --push
