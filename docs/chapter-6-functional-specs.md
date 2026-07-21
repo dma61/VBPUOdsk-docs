@@ -32,7 +32,8 @@ An overview of all entities and their purpose. This section will link to detaile
 | financialTransaction.trade           |
 | error.default                        |
 | document.default                     |
-| chunckMeta.default                   |
+| investment.corporateAction           |
+| chunking.default                     |
 
 ## 6.2 Entity Types
 This section describes the various entities and the attributes within those entities.
@@ -60,10 +61,11 @@ Below is an explanation of the entities. This information is derived from AFD 2.
 | `investment.pool` | This entity (investment pool) represents collections of underlying investments (liquid, illiquid, funds, mandates). |
 | `investment.portfolio` | This entity relates to investment portfolios, which represent the total managed assets (or a sub-portfolio). |
 | `investment.investmentDetails` | This entity describes individual investments of a pension provider. |
+| `investment.corporateAction` | This entity contains data about corporate action events on investment products, such as cash dividend, stock dividend, rebate, unit and capital shifts and product changes. The message is intended for communicating such events from the asset management chain to the PUO. |
 | `financialTransaction.trade` | This entity relates to trading activities within the pension scheme. |
 | `error.default` | In case of errors, this entity is used to generate error messages. |
 | `document.default` | This entity is intended for adding any attachments to messages. |
-| `chunkMeta.default` | This entity contains metadata for splitting and merging large messages (chunking). |
+| `chunking.default` | This entity contains metadata for splitting and merging large messages into sub-messages (chunking). If present, it indicates that the message is part of a larger logical message. |
 
 ## 6.3 Attributes in Entities.Entity Types
 
@@ -80,6 +82,14 @@ Data type descriptions are available in the SIVI All-Finance Standard manual.
 
 Attribute names have been aligned with AFD 2.0 conventions and differ from the consultation document. See Appendix 8.4 for the translation table.
 
+**Use of `refKey`**
+
+In the tables below, nearly every entity has the attribute `refKey`. This attribute serves as the unique identifier of an entity. The purpose is that an entity can be reliably recognized and referenced within or between messages and files — much like an ISIN identifies an investment instrument without saying anything about the investment policy that applies to it.
+
+`refKey` may be technically or functionally recognizable, but no classification, investment policy, or business logic should be derived from it. The substantive classification belongs in the designated fields (e.g. `reserveType`).
+
+See GitHub issue [#111](https://github.com/Stichting-SIVI/VBPUOdsk/issues/111).
+
 ### `commonTechnical.default`
 _The commonTechnical entity covers all information about sending or storing the message. This is typically technical information._
 
@@ -88,6 +98,14 @@ _The commonTechnical entity covers all information about sending or storing the 
 | `messageId`        | Unique message identification  | string    | 70     |           |
 | `creationDateTime` | Creation date and time         | timestamp |        |           |
 | `testMessage`      | Test message indicator         | boolean   |        |           |
+
+**Uniqueness of `messageId`**
+
+The `messageId` is always unique across all messages, regardless of message type or period. Using `messageId` for grouping or bundling messages is not allowed. Any relationship between messages is derived from substantive characteristics, such as the period to which the message pertains.
+
+The only exception is chunking (§7.6): chunks of the same logical message share the same `messageId`.
+
+See GitHub issue [#108](https://github.com/Stichting-SIVI/VBPUOdsk/issues/108).
 
 ### `party.sender`
 _Sender of the message._
@@ -332,8 +350,23 @@ _Information about an attachment/document._
 | `fileName`      | Name of the file for the attachment.     | string    | 60     |          |
 | `fileExtension` | Extension of the file (e.g., pdf, csv, txt). | string    | 10     | pdf;csv;txt |
 
-### `chunkMeta.default`
-_"Chunking" (splitting large messages) into partial messages._
+### `investment.corporateAction`
+_Corporate action events on investment products._
+
+| Attribute Name                | Definition                                                          | Data Type | Length | Code List |
+| :---------------------------- | :------------------------------------------------------------------ | :-------- | :----- | :-------- |
+| `refKey`                      | Unique reference key assigned to an entity.                        | string    | 70     |           |
+| `corporateActionType`         | Type of corporate action.                                          | string    |        | AFDCAE    |
+| `corporateActionDate`         | Date of the corporate action.                                      | date      |        |           |
+| `description`                 | Description of the corporate action.                               | string    | 60     |           |
+| `cashDividendTotalAmount`     | Total cash dividend / rebate amount.                               | decimal   |        |           |
+| `cashDividendPerUnitAmount`   | Cash dividend / rebate amount per unit.                            | decimal   |        |           |
+| `numberOfUnits`               | Number of units involved.                                          | decimal   |        |           |
+| `currencyType`                | Currency code.                                                     | string    |        | ISOVAL    |
+| `correctionIndicator`         | Indicates whether this is a correction of a previous corporate action. | boolean |      |           |
+
+### `chunking.default`
+_Metadata for splitting and merging large messages into sub-messages (chunking)._
 
 | Attribute Name        | Definition                                     | Data Type | Length | Code List |
 | :-------------------- | :--------------------------------------------- | :-------- | :----- | :-------- |
@@ -345,27 +378,30 @@ _"Chunking" (splitting large messages) into partial messages._
 
 ## 6.4 Messages
 
-The data exchange described in this document is supported by a set of 14 messages, supplemented by a feedback message. The messages are derived from the base message described below.
+The data exchange described in this document is supported by a set of messages, supplemented by a feedback message. From release 2027, 10 content messages and the Feedback Message are active; 5 messages from the FPR layered order model have been discontinued (see §4.5).
 
 Below (in Figure 12) is an overview of the messages and the roles (sender/receiver) involved.
 
 | Message Name | Type | PUO | FM | BA | ACB | BR |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 1. Vermogen (0001a) | SPR | from | to | | | |
-| 2. Cashflow (0001b) | SPR | from | to | | | |
+| 2. Cashflow (0001b) | SPR/FPR | from | to | | | |
 | 3. Pensioenprojectie (0001c) | SPR | from | to | | | |
 | 4. Rendementsinformatie (00002) | SPR | to | | from | | |
-| 5. Orderopdracht (00541) | FPR* | from | | | | to |
-| 6. Orderconfirmation (00542) | FPR* | to | | | | from |
-| 7. Mutatiesaldi (00551) | FPR** | from | | | to | |
-| 8. Reconciliatie-informatie (00552a) | FPR** | | from | from | to | |
-| 9. PUO-reconciliatie-informatie (00552b) | FPR** | from | | | to | |
-| 10. Stuurinformatiebeleggingspools (00553) | FPR** | | to | | from | |
-| 11. Rebalancinginformatie (00554) | FPR** | | to | | from | |
-| 12. Waarde-informatie cohortenpool (00555a) | FPR** | from | to | | from | |
-| 13. Waarde-informatie beleggingspool (00555b) | FPR** | to | to | | from | |
-| 14. Betaalinformatie (00556) | FPR** | | to | | from | |
-| Feedback Message*** | Both | | | | | |
+| 5. Orderopdracht (00541) | FPR | from | | | | to |
+| 6. Orderconfirmation (00542) | FPR | to | | | | from |
+| ~~7. Mutatiesaldi (00551)~~ | ~~FPR~~ | | | | | |
+| ~~8. Reconciliatie-informatie (00552a)~~ | ~~FPR~~ | | | | | |
+| ~~9. PUO-reconciliatie-informatie (00552b)~~ | ~~FPR~~ | | | | | |
+| 10. Stuurinformatiebeleggingspools (00553) | FPR | | to | | from | |
+| ~~11. Rebalancinginformatie (00554)~~ | ~~FPR~~ | | | | | |
+| ~~12. Waarde-informatie cohortenpool (00555a)~~ | ~~FPR~~ | | | | | |
+| 13. Waarde-informatie beleggingspool (00555b) | FPR | to | to | | from | |
+| 14. Betaalinformatie (00556) | FPR | | to | | from | |
+| 15. Corporate Actions (00557) | FPR | to | from | from | | |
+| Feedback Message | Both | | | | | |
+
+Messages 7, 8, 9, 11 and 12 have been **discontinued from release 2027**. See GitHub issues [#99](https://github.com/Stichting-SIVI/VBPUOdsk/issues/99), [#119](https://github.com/Stichting-SIVI/VBPUOdsk/issues/119), [#121](https://github.com/Stichting-SIVI/VBPUOdsk/issues/121).
 
 **Legend for the roles:**
 
@@ -400,7 +436,8 @@ The table below lists the message types and their meaning. In parentheses is the
 | **FPR** | **555a** (5.5.5) | ValueAmountCohortPool | **From PUO to Fiduciary Manager (when PUO administers cohort pools).**<br>The administrator (or PUO, if applicable) calculates and distributes the participation values of the cohort pools. |
 | **FPR** | **555b** (5.5.5) | ValueAmountInvestmentPool | **Between Investment Administrator, Administrator, Fiduciary Manager, and PUO.**<br>The administrator calculates the unit value per unit in the investment pool and the participation value per participation in the cohort pool and distributes them to the PUO and fiduciary. |
 | **FPR** | **556** (5.5.6) | PaymentDetailsCreditor | **From Administrator to Fiduciary Manager.**<br>At the beginning of the month, the administrator sends the payment instruction for withdrawals to the fiduciary manager. |
-| **SPR/FPR** | Feedback | Feedback | **From the recipient of a content message (1-14) to the original sender.**<br>Provides feedback on errors or confirms the processability of a message. |
+| **FPR** | **557** | CorporateAction | **From the asset management chain to PUO.**<br>Communicates corporate action events (cash dividend, rebate, unit/capital shifts, product changes) on investment products to the PUO. Enables the PUO to keep its administration synchronized with the asset management administration. |
+| **SPR/FPR** | Feedback | Feedback | **From the recipient of a content message to the original sender.**<br>Provides feedback on errors or confirms the processability of a message. |
 
 Unlike the Dutch manual, this documentation references the `MessageStructureView` folders on GitHub to illustrate the structure of each message. For example, the structure for **Message 11** can be viewed [here](https://github.com/dma61/VBPUOdsk/tree/main/VBPUO-Bericht_11._Rebalancinginformatie_(00554)/MessageStructureView).
 
