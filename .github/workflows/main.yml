@@ -31,4 +31,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy 2027 (latest) with mike
-        run: mike deploy 2027 latest --update-aliases --alias-type redirect --push
+        run: |
+          mike deploy 2027 latest --update-aliases --alias-type redirect --push
+          mike set-default latest --push
