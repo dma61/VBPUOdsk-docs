@@ -448,34 +448,35 @@ The data exchange described in this document is supported by a set of messages, 
 
 Below (in Figure 12) is an overview of the messages and the roles (sender/receiver) involved.
 
-| Message Name | Type | PUO | FM | BA | ACB | BR |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| 1. Vermogen (0001a) | SPR | from | to | | | |
-| 2. Cashflow (0001b) | SPR/FPR | from | to | | | |
-| 3. Pensioenprojectie (0001c) | SPR | from | to | | | |
-| 4. Rendementsinformatie (00002) | SPR | to | | from | | |
-| 5. Orderopdracht (00541) | FPR | from | | | | to |
-| 6. Orderconfirmation (00542) | FPR | to | | | | from |
-| ~~7. Mutatiesaldi (00551)~~ | ~~FPR~~ | | | | | |
-| ~~8. Reconciliatie-informatie (00552a)~~ | ~~FPR~~ | | | | | |
-| ~~9. PUO-reconciliatie-informatie (00552b)~~ | ~~FPR~~ | | | | | |
-| 10. Stuurinformatiebeleggingspools (00553) | FPR | | to | | from | |
-| ~~11. Rebalancinginformatie (00554)~~ | ~~FPR~~ | | | | | |
-| ~~12. Waarde-informatie cohortenpool (00555a)~~ | ~~FPR~~ | | | | | |
-| 13. Waarde-informatie beleggingspool (00555b) | FPR | to | to | | from | |
-| 14. Betaalinformatie (00556) | FPR | | to | | from | |
-| 15. Corporate Actions (00557) | FPR | to | from | from | | |
-| Feedback Message | Both | | | | | |
+| Message Name | PUO | FM | BA | LDI |
+| :--- | :---: | :---: | :---: | :---: |
+| 1. Vermogen (0001a) | from | to | | |
+| 2. Cashflow (0001b) | from | to | | |
+| 3. Pensioenprojectie (0001c) | from | to | | to |
+| 4. Rendementsinformatie (00002) | to | | from | |
+| 5. Orderopdracht (00541) | from | | to | |
+| 6. Orderconfirmation (00542) | to | | from | |
+| 10. Stuurinformatiebeleggingspools (00553) | | to | from | |
+| 13. Waarde-informatie beleggingspool (00555b) | to | | from | |
+| 14. Betaalinformatie (00556) | from | to | from | |
+| 15. Corporate Actions (00557) | to | from | from | |
+| Feedback Message | | | | |
+
+The Feedback Message can be used for both FPR and SPR and is always a response to a received message; one of the other messages.
 
 Messages 7, 8, 9, 11 and 12 have been **discontinued from release 2027**. See GitHub issues [#99](https://github.com/Stichting-SIVI/VBPUOdsk/issues/99), [#119](https://github.com/Stichting-SIVI/VBPUOdsk/issues/119), [#121](https://github.com/Stichting-SIVI/VBPUOdsk/issues/121).
 
 **Legend for the roles:**
 
-*   **PUO:** Pension Administration Organizations
+*   **PUO:** Pension Administration Organizations — this also covers Self-Administering Funds (ZAF)
 *   **FM:** Fiduciary Managers
 *   **BA:** Investment Administrators / Asset Service Provider
-*   **ACB:** Administrators of Cohort and Investment Pools
-*   **BR:** Brokers / Transfer Agents
+*   **LDI:** Liability-Driven Investment Managers
+
+**Discontinued roles:**
+
+*   **ACB:** Administrators of Cohort and Investment Pools — discontinued as a separate actor. In practice this role is fulfilled by the BA, or sometimes by the PUO. Because the ACB role no longer appeared as a separate party as of July 2026, the column has been removed from the matrix. Should the ACB role act as an explicit party again in the future, the message schema still allows for it. See GitHub issue [#131](https://github.com/Stichting-SIVI/VBPUOdsk/issues/131).
+*   **BR:** Brokers / Transfer Agents — no longer appears in the release 2027 matrix; messages 5 and 6 now go via the BA.
 
 **Note:** Each receiving party receives its information directly from the sending party.
 
