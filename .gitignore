@@ -1,0 +1,16 @@
+# Gebouwde uitvoer van MkDocs — wordt gegenereerd uit docs/ met `mkdocs build`.
+# Afgeleid materiaal hoort niet in de repo: het is bij elke bouw opnieuw te maken
+# en zou de historie vervuilen met duizenden regels HTML per wijziging.
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor en besturingssysteem
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
