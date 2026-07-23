@@ -2690,7 +2690,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <td style="text-align: left;">Message type of the original request to which this message is a response. E.g. <code>0001a</code>, <code>0001b</code>, etc.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">0001a; 0001b; 0001c; 00002; 00541; 00542; 00551; 00552a; 00552b; 00553; 00554; 00555a; 00555b; 00556</td>
 </tr>
 </tbody>
 </table>
@@ -2752,7 +2752,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>pensionschemeName</code></td>
+<td style="text-align: left;"><code>pensionSchemeName</code></td>
 <td style="text-align: left;">Name of the pension scheme.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">60</td>
@@ -2768,7 +2768,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <tr>
 <td style="text-align: left;"><code>tradingPortfolioId</code></td>
 <td style="text-align: left;">Portfolio ID of the custodian.</td>
-<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">string</td>
 <td style="text-align: left;">10</td>
 <td style="text-align: left;"></td>
 </tr>
@@ -3156,6 +3156,13 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <td style="text-align: left;"><code>netAmount</code></td>
 <td style="text-align: left;">Net sum of contributions and withdrawals per cohort.</td>
 <td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netDate</code></td>
+<td style="text-align: left;">Settlement date on which the net cash flow for the cohort is actually paid by or received from the asset manager.</td>
+<td style="text-align: left;">date</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
@@ -3555,7 +3562,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <tbody>
 <tr>
 <td style="text-align: left;"><code>tradeDate</code></td>
-<td style="text-align: left;">Desired trade date.</td>
+<td style="text-align: left;">Actual trade date.</td>
 <td style="text-align: left;">date</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
@@ -3576,10 +3583,10 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 </tr>
 <tr>
 <td style="text-align: left;"><code>buySellId</code></td>
-<td style="text-align: left;">Buy/Sell/Switch indicator.</td>
+<td style="text-align: left;">Buy/Sell/Switch direction indicator.</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">sell, buy, switch</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">sell; buy; switchfrom; switchto</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>tradeAmount</code></td>
@@ -3691,7 +3698,7 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <td style="text-align: left;"><code>errorCodeExplanation</code></td>
 <td style="text-align: left;">Explanation of the error message.</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">300</td>
+<td style="text-align: left;">1000</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -3748,23 +3755,9 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <tbody>
 <tr>
 <td style="text-align: left;"><code>refKey</code></td>
-<td style="text-align: left;">Unique reference key assigned to an entity.</td>
+<td style="text-align: left;">Key of the corporate action.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">70</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>corporateActionType</code></td>
-<td style="text-align: left;">Type of corporate action.</td>
-<td style="text-align: left;">string</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">AFDCAE</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>corporateActionDate</code></td>
-<td style="text-align: left;">Date of the corporate action.</td>
-<td style="text-align: left;">date</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -3775,38 +3768,80 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <td style="text-align: left;"></td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>corporateActionType</code></td>
+<td style="text-align: left;">Type of corporate action.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AFDCAE (cashDividend; productChange; rebate; stockDividend)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instructionDate</code></td>
+<td style="text-align: left;">Instruction date of the corporate action.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tradeDate</code></td>
+<td style="text-align: left;">Transaction date of the corporate action.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>paymentDate</code></td>
+<td style="text-align: left;">Payment date of the corporate action.</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>cashDividendTotalAmount</code></td>
-<td style="text-align: left;">Total cash dividend / rebate amount.</td>
+<td style="text-align: left;">Total cash amount of the corporate action.</td>
 <td style="text-align: left;">decimal</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>cashDividendPerUnitAmount</code></td>
-<td style="text-align: left;">Cash dividend / rebate amount per unit.</td>
-<td style="text-align: left;">decimal</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>numberOfUnits</code></td>
-<td style="text-align: left;">Number of units involved.</td>
+<td style="text-align: left;">Cash amount per unit.</td>
 <td style="text-align: left;">decimal</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>currencyType</code></td>
-<td style="text-align: left;">Currency code.</td>
+<td style="text-align: left;">Currency of the cash amount.</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">3</td>
 <td style="text-align: left;">ISOVAL</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>correctionIndicator</code></td>
-<td style="text-align: left;">Indicates whether this is a correction of a previous corporate action.</td>
-<td style="text-align: left;">boolean</td>
+<td style="text-align: left;"><code>stockDividendPerUnitNumber</code></td>
+<td style="text-align: left;">Number of stock dividend per unit.</td>
+<td style="text-align: left;">decimal</td>
 <td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stockDividendTotalNumber</code></td>
+<td style="text-align: left;">Total number of stock dividend.</td>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newProductName</code></td>
+<td style="text-align: left;">Name of the new product.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newProductIdentifier</code></td>
+<td style="text-align: left;">Identifier of the new product.</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">60</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -3884,127 +3919,64 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 <thead>
 <tr>
 <th style="text-align: left;">Message Name</th>
-<th style="text-align: left;">Type</th>
 <th style="text-align: center;">PUO</th>
 <th style="text-align: center;">FM</th>
 <th style="text-align: center;">BA</th>
-<th style="text-align: center;">ACB</th>
-<th style="text-align: center;">BR</th>
+<th style="text-align: center;">LDI</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">1. Vermogen (0001a)</td>
-<td style="text-align: left;">SPR</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;">to</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">2. Cashflow (0001b)</td>
-<td style="text-align: left;">SPR/FPR</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;">to</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">3. Pensioenprojectie (0001c)</td>
-<td style="text-align: left;">SPR</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;">to</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">to</td>
 </tr>
 <tr>
 <td style="text-align: left;">4. Rendementsinformatie (00002)</td>
-<td style="text-align: left;">SPR</td>
 <td style="text-align: center;">to</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">from</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">5. Orderopdracht (00541)</td>
-<td style="text-align: left;">FPR</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;">to</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">6. Orderconfirmation (00542)</td>
-<td style="text-align: left;">FPR</td>
 <td style="text-align: center;">to</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;">from</td>
-</tr>
-<tr>
-<td style="text-align: left;">~~7. Mutatiesaldi (00551)~~</td>
-<td style="text-align: left;">~~FPR~~</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">~~8. Reconciliatie-informatie (00552a)~~</td>
-<td style="text-align: left;">~~FPR~~</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">~~9. PUO-reconciliatie-informatie (00552b)~~</td>
-<td style="text-align: left;">~~FPR~~</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">10. Stuurinformatiebeleggingspools (00553)</td>
-<td style="text-align: left;">FPR</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">to</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td style="text-align: left;">~~11. Rebalancinginformatie (00554)~~</td>
-<td style="text-align: left;">~~FPR~~</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">~~12. Waarde-informatie cohortenpool (00555a)~~</td>
-<td style="text-align: left;">~~FPR~~</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
 <td style="text-align: left;">13. Waarde-informatie beleggingspool (00555b)</td>
-<td style="text-align: left;">FPR</td>
-<td style="text-align: center;">to</td>
 <td style="text-align: center;">to</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">from</td>
@@ -4012,26 +3984,20 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 </tr>
 <tr>
 <td style="text-align: left;">14. Betaalinformatie (00556)</td>
-<td style="text-align: left;">FPR</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">from</td>
 <td style="text-align: center;">to</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">15. Corporate Actions (00557)</td>
-<td style="text-align: left;">FPR</td>
 <td style="text-align: center;">to</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;">from</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">Feedback Message</td>
-<td style="text-align: left;">Both</td>
-<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -4039,14 +4005,19 @@ If the receiving party has sent a feedback message with the status "Rejected," t
 </tr>
 </tbody>
 </table>
+<p>The Feedback Message can be used for both FPR and SPR and is always a response to a received message; one of the other messages.</p>
 <p>Messages 7, 8, 9, 11 and 12 have been <strong>discontinued from release 2027</strong>. See GitHub issues <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/99">#99</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/119">#119</a>, <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/121">#121</a>.</p>
 <p><strong>Legend for the roles:</strong></p>
 <ul>
-<li><strong>PUO:</strong> Pension Administration Organizations</li>
+<li><strong>PUO:</strong> Pension Administration Organizations — this also covers Self-Administering Funds (ZAF)</li>
 <li><strong>FM:</strong> Fiduciary Managers</li>
 <li><strong>BA:</strong> Investment Administrators / Asset Service Provider</li>
-<li><strong>ACB:</strong> Administrators of Cohort and Investment Pools</li>
-<li><strong>BR:</strong> Brokers / Transfer Agents</li>
+<li><strong>LDI:</strong> Liability-Driven Investment Managers</li>
+</ul>
+<p><strong>Discontinued roles:</strong></p>
+<ul>
+<li><strong>ACB:</strong> Administrators of Cohort and Investment Pools — discontinued as a separate actor. In practice this role is fulfilled by the BA, or sometimes by the PUO. Because the ACB role no longer appeared as a separate party as of July 2026, the column has been removed from the matrix. Should the ACB role act as an explicit party again in the future, the message schema still allows for it. See GitHub issue <a href="https://github.com/Stichting-SIVI/VBPUOdsk/issues/131">#131</a>.</li>
+<li><strong>BR:</strong> Brokers / Transfer Agents — no longer appears in the release 2027 matrix; messages 5 and 6 now go via the BA.</li>
 </ul>
 <p><strong>Note:</strong> Each receiving party receives its information directly from the sending party.</p>
 <p><strong>Note:</strong> Each receiving party/role gets its information directly from the sending party. In addition to the parties/roles mentioned in Figure 12, messages can also be sent to other parties, such as Liability-Driven Investment managers (LDIs). The transmission to unmentioned parties/roles is also direct. Received information is not forwarded to other parties.</p>
