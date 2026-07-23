@@ -146,7 +146,7 @@ _The commonFunctional entity covers all information about the content of the mes
 | `afdDefinitionName`    | Type of message, name of the message.                                                                  | string    | 80     |           |
 | `afdDefinitionVersion` | Version of the `afdDefinition` of the message. See section 7.5.1 for details.                          | string    | 80     |           |
 | `originalMessageId`    | The original `messageId` of the message being replaced or being responded to.                          | string    | 70     |           |
-| `originalMessageType`  | Message type of the original request to which this message is a response. E.g. `0001a`, `0001b`, etc.   | string    |        |           |
+| `originalMessageType`  | Message type of the original request to which this message is a response. E.g. `0001a`, `0001b`, etc.   | string    |        | 0001a; 0001b; 0001c; 00002; 00541; 00542; 00551; 00552a; 00552b; 00553; 00554; 00555a; 00555b; 00556 |
 
 ### `party.pensionProvider`
 _Information on the Pension Provider level (Pension Fund, Insurer, PPI, APF)._
@@ -165,9 +165,9 @@ _Data on the pension scheme level._
 | Attribute Name         | Definition                                    | Data Type | Length | Code List |
 | :--------------------- | :-------------------------------------------- | :-------- | :----- | :-------- |
 | `refKey`               | ID of the pension scheme.                     | string    | 70     |           |
-| `pensionschemeName`    | Name of the pension scheme.                   | string    | 60     |           |
+| `pensionSchemeName`    | Name of the pension scheme.                   | string    | 60     |           |
 | `StartAmount`          | Total pension assets as of the start date.    | decimal   |        |           |
-| `tradingPortfolioId`   | Portfolio ID of the custodian.                | decimal   | 10     |           |
+| `tradingPortfolioId`   | Portfolio ID of the custodian.                | string    | 10     |           |
 
 ### `financialInformation.reportingPeriod`
 _Reporting period information._
@@ -261,6 +261,7 @@ _Information on cohort (pension target audience) level._
 | `reserveDescription`       | Description for "Other" reserve type.           | string        | 60     |           |
 | `startAmount`              | Pension assets of the cohort at the start date. | decimal       |        |           |
 | `netAmount`                | Net sum of contributions and withdrawals per cohort. | decimal       |        |           |
+| `netDate`                  | Settlement date on which the net cash flow for the cohort is actually paid by or received from the asset manager. | date          |        |           |
 | `contributionAmount`       | Inflow to be invested by the fiduciary manager. | decimal       |        |           |
 | `withdrawalAmount`         | Outflow to be invested by the fiduciary manager.| decimal       |        |           |
 | `protectionReturnPercentage` | Achieved protection return as a percentage.     | Decimal (1E-12) |      |           |
@@ -351,10 +352,10 @@ _Trading/ordering; Buying and selling._
 
 | Attribute Name              | Definition                                       | Data Type | Length | Code List |
 | :-------------------------- | :----------------------------------------------- | :-------- | :----- | :-------- |
-| `tradeDate`                 | Desired trade date.                              | date      |        |           |
+| `tradeDate`                 | Actual trade date.                               | date      |        |           |
 | `refKey`                    | Unique reference key assigned to an entity.      | string    | 70     |           |
 | `adjustmentIndicator`       | Adjusted trade instruction.                      | boolean   | 1      |           |
-| `buySellId`                 | Buy/Sell/Switch indicator.                       | string    | 3      | sell, buy, switch |
+| `buySellId`                 | Buy/Sell/Switch direction indicator.             | string    |        | sell; buy; switchfrom; switchto |
 | `tradeAmount`               | Amount of the purchase in the investment's currency. | decimal |      |           |
 | `tradeQuantity`             | Number of units to be traded.                    | decimal   |        |           |
 | `tradePrice`                | Purchase price/rate.                             | decimal   |        |           |
@@ -374,7 +375,7 @@ _Error message._
 | :--------------------- | :------------------------------------------- | :-------- | :----- | :-------- |
 | `refKey`               | Unique reference key assigned to an entity.  | string    | 70     |           |
 | `errorCode`            | Error code type.                             | string    |        | ADNFTM    |
-| `errorCodeExplanation` | Explanation of the error message.            | string    | 300    |           |
+| `errorCodeExplanation` | Explanation of the error message.            | string    | 1000   |           |
 
 _See also the information about `error.default` in the SIVI All-Finance Standard._
 
@@ -392,15 +393,19 @@ _Corporate action events on investment products._
 
 | Attribute Name                | Definition                                                          | Data Type | Length | Code List |
 | :---------------------------- | :------------------------------------------------------------------ | :-------- | :----- | :-------- |
-| `refKey`                      | Unique reference key assigned to an entity.                        | string    | 70     |           |
-| `corporateActionType`         | Type of corporate action.                                          | string    |        | AFDCAE    |
-| `corporateActionDate`         | Date of the corporate action.                                      | date      |        |           |
-| `description`                 | Description of the corporate action.                               | string    | 60     |           |
-| `cashDividendTotalAmount`     | Total cash dividend / rebate amount.                               | decimal   |        |           |
-| `cashDividendPerUnitAmount`   | Cash dividend / rebate amount per unit.                            | decimal   |        |           |
-| `numberOfUnits`               | Number of units involved.                                          | decimal   |        |           |
-| `currencyType`                | Currency code.                                                     | string    |        | ISOVAL    |
-| `correctionIndicator`         | Indicates whether this is a correction of a previous corporate action. | boolean |      |           |
+| `refKey`                      | Key of the corporate action.                                        | string    | 70     |           |
+| `description`                 | Description of the corporate action.                                | string    | 60     |           |
+| `corporateActionType`         | Type of corporate action.                                           | string    |        | AFDCAE (cashDividend; productChange; rebate; stockDividend) |
+| `instructionDate`             | Instruction date of the corporate action.                           | date      |        |           |
+| `tradeDate`                   | Transaction date of the corporate action.                           | date      |        |           |
+| `paymentDate`                 | Payment date of the corporate action.                               | date      |        |           |
+| `cashDividendTotalAmount`     | Total cash amount of the corporate action.                          | decimal   |        |           |
+| `cashDividendPerUnitAmount`   | Cash amount per unit.                                               | decimal   |        |           |
+| `currencyType`                | Currency of the cash amount.                                        | string    | 3      | ISOVAL    |
+| `stockDividendPerUnitNumber`  | Number of stock dividend per unit.                                  | decimal   |        |           |
+| `stockDividendTotalNumber`    | Total number of stock dividend.                                     | decimal   |        |           |
+| `newProductName`              | Name of the new product.                                            | string    | 60     |           |
+| `newProductIdentifier`        | Identifier of the new product.                                      | string    | 60     |           |
 
 ### `chunking.default`
 _Metadata for splitting and merging large messages into sub-messages (chunking)._
